@@ -36,6 +36,8 @@ Key elements:
 - **RACI template** for eleven core roles
 - **20+ KPIs** spanning business value, adoption, quality, and operational dimensions
 
+**Starting point:** The [Business Readiness Assessment](Workshops/BusinessReadinessAssessment.md) is a facilitated workshop that completes Phase 1 of both frameworks. It produces a capability inventory, a Wardley Map, an AI disruption analysis, and a scored maturity baseline — giving teams the concrete starting point the frameworks require before moving into planning and pilots.
+
 ---
 
 ## How the Frameworks Relate

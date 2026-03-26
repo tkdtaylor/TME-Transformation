@@ -53,6 +53,7 @@ AI tools introduce challenges that traditional IT governance was not designed fo
 - **Workforce anxiety** -- AI adoption touches job security in ways other technology migrations typically do not
 - **Regulatory uncertainty** -- the EU AI Act, sector-specific rules, and emerging global frameworks are still maturing
 - **Data boundary blurring** -- sending internal content to external model APIs requires explicit data governance decisions
+- **Build/buy economics reset** -- AI-assisted development dramatically lowers the cost and time to build custom software. Capabilities that previously required vendor products or large development teams are now within reach of small teams. This creates a strategic opportunity (reassessing current vendor spend as potential build candidates) and a competitive risk (customers, partners, or new entrants can build alternatives to products and services you provide)
 
 ---
 
@@ -88,11 +89,13 @@ Each perspective defines who is responsible for what throughout the AI adoption 
 - Value realization tracking -- measuring actual vs. projected outcomes post-deployment
 - AI vendor and partner management -- licensing, contracts, SLAs, and strategic alignment
 - AI portfolio management -- visibility across all active AI initiatives to avoid duplication and manage spend
+- Build vs. buy reassessment -- evaluating current SaaS and enterprise software spend against AI-assisted build alternatives; identifying where custom-built solutions now deliver better value, differentiation, or strategic control than purchased software
 
 **Key Questions to Answer:**
 - Which business problems are we solving, and why is AI the right solution for each?
 - What does success look like in 90 days, 12 months, and 3 years?
 - How do we ensure AI spend is producing measurable returns, not just activity?
+- Which capabilities are we currently paying vendors for that AI-assisted development has made economically viable to build and own? And conversely, which products or services we provide are now at risk from customers or competitors building their own alternatives?
 
 ---
 
@@ -138,6 +141,7 @@ Each perspective defines who is responsible for what throughout the AI adoption 
 - What data can and cannot be sent to external AI APIs, and how is this enforced?
 - How do we comply with the EU AI Act, and which of our AI use cases fall into high-risk categories?
 - How do we detect and govern AI tools that employees are using outside of sanctioned channels?
+- Which of our current software vendors operate in categories now at risk of AI-driven displacement, and what is our contingency if those vendors' products or businesses are disrupted?
 
 ---
 
@@ -227,6 +231,7 @@ The framework progresses through six phases. Different use cases and teams may b
 - Data readiness assessment -- classify data assets; identify which can and cannot be used with AI tools
 - Regulatory mapping -- identify applicable AI regulations and their requirements for your sector and location
 - AI vendor landscape review -- evaluate available tools by capability, data handling, pricing, and security posture
+- Vendor displacement analysis -- map current software vendor spend against the new build/buy calculus; identify where AI-assisted development makes custom builds viable, and assess which of your own products or services are exposed to the same dynamic from your customers
 - Risk appetite definition -- establish organizational thresholds for AI risk tolerance by use case category
 - Establish AI governance body -- steering committee, working groups, accountability structure
 
