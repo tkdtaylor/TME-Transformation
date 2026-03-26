@@ -1,6 +1,6 @@
 # TME Transformation Frameworks
 
-A library of vendor-agnostic adoption frameworks for technology and AI transformation initiatives. These documents are synthesized from leading cloud and AI guidance (AWS CAF, Google Cloud AF, Microsoft Azure CAF) and adapted for practical organizational use.
+A library of vendor-agnostic adoption frameworks for technology and AI transformation initiatives. These documents are distilled from leading cloud and AI guidance (AWS CAF, Google Cloud AF, Microsoft Azure CAF) augmented and adapted with my personal experience for practical organizational use.
 
 ---
 
