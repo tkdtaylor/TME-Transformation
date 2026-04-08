@@ -16,12 +16,12 @@
    - [Security & Compliance Perspective](#5-security--compliance-perspective)
    - [Operations & Management Perspective](#6-operations--management-perspective)
 4. [Adoption Lifecycle Phases](#adoption-lifecycle-phases)
-   - [Phase 1 -- Assess & Strategize](#phase-1----assess--strategize)
-   - [Phase 2 -- Plan & Prepare](#phase-2----plan--prepare)
-   - [Phase 3 -- Implement & Migrate](#phase-3----implement--migrate)
-   - [Phase 4 -- Govern & Secure](#phase-4----govern--secure)
-   - [Phase 5 -- Optimize & Manage](#phase-5----optimize--manage)
-   - [Phase 6 -- Modernize & Innovate](#phase-6----modernize--innovate)
+   - [Phase 1: Assess & Strategize](#phase-1----assess--strategize)
+   - [Phase 2: Plan & Prepare](#phase-2----plan--prepare)
+   - [Phase 3: Implement & Migrate](#phase-3----implement--migrate)
+   - [Phase 4: Govern & Secure](#phase-4----govern--secure)
+   - [Phase 5: Optimize & Manage](#phase-5----optimize--manage)
+   - [Phase 6: Modernize & Innovate](#phase-6----modernize--innovate)
 5. [Maturity Model](#maturity-model)
 6. [Workload Strategy](#workload-strategy)
 7. [Governance & Security Model](#governance--security-model)
@@ -37,7 +37,7 @@
 
 ## Overview
 
-The **Technology Adoption Framework (TAF)** is a vendor-agnostic, structured approach for organizations planning, executing, and sustaining technology transformations -- including cloud adoption, platform modernization, and AI/data initiatives.
+The **Technology Adoption Framework (TAF)** is a vendor-agnostic, structured approach for organizations planning, executing, and sustaining technology transformations (including cloud adoption, platform modernization, and AI/data initiatives).
 
 It draws on the structural strengths of three industry-leading frameworks:
 
@@ -48,8 +48,8 @@ It draws on the structural strengths of three industry-leading frameworks:
 | **Microsoft Azure CAF** | End-to-end methodology from strategy through operations |
 
 The TAF is organized around two complementary dimensions:
-- **Horizontal axis** -- Six core perspectives that span the organization (who is involved and what they own)
-- **Vertical axis** -- Six lifecycle phases (when work happens and in what order)
+- **Horizontal axis**: Six core perspectives that span the organization (who is involved and what they own)
+- **Vertical axis**: Six lifecycle phases (when work happens and in what order)
 
 ---
 
@@ -57,13 +57,13 @@ The TAF is organized around two complementary dimensions:
 
 These principles underpin every phase and perspective of the framework:
 
-1. **Business outcomes first** -- Every technology decision must trace back to a measurable business objective.
-2. **People over tools** -- Organizational readiness, culture, and skills determine adoption success more than technology selection.
-3. **Iterative progress** -- Adopt incrementally; avoid big-bang transformations. Deliver value early and often.
-4. **Security by design** -- Security and compliance are built in, not bolted on.
-5. **Shared responsibility** -- Technology teams, business units, and leadership each own distinct parts of adoption.
-6. **Measure what matters** -- Establish baselines before transformation and track outcomes, not just outputs.
-7. **Continuous improvement** -- Adoption is never "done." Optimize, modernize, and innovate as a steady-state practice.
+1. **Business outcomes first**: Every technology decision must trace back to a measurable business objective.
+2. **People over tools**: Organizational readiness, culture, and skills determine adoption success more than technology selection.
+3. **Iterative progress**: Adopt incrementally; avoid big-bang transformations. Deliver value early and often.
+4. **Security by design**: Security and compliance are built in, not bolted on.
+5. **Shared responsibility**: Technology teams, business units, and leadership each own distinct parts of adoption.
+6. **Measure what matters**: Establish baselines before transformation and track outcomes, not just outputs.
+7. **Continuous improvement**: Adoption is never "done." Optimize, modernize, and innovate as a steady-state practice.
 
 ---
 
@@ -81,8 +81,8 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 
 **Core Capabilities:**
 - Business case development and financial modeling (TCO, ROI, NPV)
-- Strategy alignment -- connecting technology initiatives to corporate objectives
-- Value realization tracking -- measuring whether expected benefits are delivered
+- Strategy alignment: connecting technology initiatives to corporate objectives
+- Value realization tracking: measuring whether expected benefits are delivered
 - Partner and vendor ecosystem management
 - Digital product and service portfolio management
 
@@ -103,7 +103,7 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 - Skills gap analysis and workforce planning
 - Training curricula and certification pathways
 - Change management and communication planning
-- Organizational design -- restructuring teams around products, platforms, or value streams
+- Organizational design: restructuring teams around products, platforms, or value streams
 - Leadership development for technology-fluent management
 - Culture building toward psychological safety, experimentation, and continuous learning
 
@@ -126,7 +126,7 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 - Risk identification, assessment, and mitigation
 - Regulatory and compliance mapping (GDPR, HIPAA, SOC 2, ISO 27001, etc.)
 - Vendor and third-party risk management
-- FinOps -- technology financial management and cost governance
+- FinOps: technology financial management and cost governance
 - Audit and accountability mechanisms
 
 **Key Questions to Answer:**
@@ -145,11 +145,11 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 **Core Capabilities:**
 - Current-state architecture assessment (applications, data, infrastructure)
 - Target architecture design (cloud, hybrid, multi-cloud, edge, internal)
-- Platform foundation design -- network topology, identity, subscriptions/accounts
+- Platform foundation design: network topology, identity, subscriptions/accounts
 - Infrastructure-as-Code (IaC) and platform automation
 - Data platform strategy (mesh, lakes, warehouses, streaming, ML infrastructure)
 - Application portfolio rationalization (the "7 Rs": Retain, Retire, Rehost, Replatform, Repurchase, Refactor, Rearchitect)
-- Developer experience -- internal developer platforms, CI/CD, toolchains
+- Developer experience: internal developer platforms, CI/CD, toolchains
 
 **Key Questions to Answer:**
 - What is our target architecture, and what are the stepping stones to get there?
@@ -165,12 +165,12 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 **Key Stakeholders:** CISO, Security Architects, Compliance Officers, Platform Security Teams
 
 **Core Capabilities:**
-- Identity and Access Management (IAM) -- Zero Trust architecture, least-privilege, MFA/SSO
-- Data protection -- classification, encryption at rest and in transit, DLP
-- Network security -- segmentation, perimeter controls, private connectivity
+- Identity and Access Management (IAM): Zero Trust architecture, least-privilege, MFA/SSO
+- Data protection: classification, encryption at rest and in transit, DLP
+- Network security: segmentation, perimeter controls, private connectivity
 - Threat detection, monitoring, and incident response (SIEM, SOAR, XDR)
 - Vulnerability management and secure software supply chain
-- Compliance-as-Code -- automated policy enforcement and drift detection
+- Compliance-as-Code: automated policy enforcement and drift detection
 - Business continuity and disaster recovery planning
 
 **Key Questions to Answer:**
@@ -187,13 +187,13 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 **Key Stakeholders:** VP of Infrastructure/Operations, Site Reliability Engineers (SRE), IT Service Managers, FinOps Teams
 
 **Core Capabilities:**
-- Observability -- logging, metrics, tracing, alerting, and dashboards
+- Observability: logging, metrics, tracing, alerting, and dashboards
 - Incident management and on-call operations (runbooks, playbooks, post-mortems)
 - Change and release management
 - Capacity planning and performance management
-- FinOps -- cost visibility, rightsizing, reservation/savings plan management, TCO
+- FinOps: cost visibility, rightsizing, reservation/savings plan management, TCO
 - Service catalog and configuration management (CMDB)
-- Automation of toil -- reducing manual operational burden
+- Automation of toil: reducing manual operational burden
 
 **Key Questions to Answer:**
 - How will we know when something is broken before users do?
@@ -208,7 +208,7 @@ The framework progresses through six sequential-but-iterative phases. Organizati
 
 ---
 
-### Phase 1 -- Assess & Strategize
+### Phase 1: Assess & Strategize
 
 **Goal:** Establish baseline understanding of current state and define the transformation vision, business case, and priorities.
 
@@ -230,7 +230,7 @@ The framework progresses through six sequential-but-iterative phases. Organizati
 
 ---
 
-### Phase 2 -- Plan & Prepare
+### Phase 2: Plan & Prepare
 
 **Goal:** Develop detailed plans for the transformation and build the foundational capabilities required to execute.
 
@@ -252,7 +252,7 @@ The framework progresses through six sequential-but-iterative phases. Organizati
 
 ---
 
-### Phase 3 -- Implement & Migrate
+### Phase 3: Implement & Migrate
 
 **Goal:** Execute migrations, new deployments, and workload onboarding in a structured, repeatable manner.
 
@@ -284,7 +284,7 @@ The framework progresses through six sequential-but-iterative phases. Organizati
 
 ---
 
-### Phase 4 -- Govern & Secure
+### Phase 4: Govern & Secure
 
 **Goal:** Operationalize governance, security, and compliance controls across the transformed environment at scale.
 
@@ -305,7 +305,7 @@ The framework progresses through six sequential-but-iterative phases. Organizati
 
 ---
 
-### Phase 5 -- Optimize & Manage
+### Phase 5: Optimize & Manage
 
 **Goal:** Improve performance, reliability, and cost-efficiency of the operating environment while building operational excellence.
 
@@ -326,14 +326,14 @@ The framework progresses through six sequential-but-iterative phases. Organizati
 
 ---
 
-### Phase 6 -- Modernize & Innovate
+### Phase 6: Modernize & Innovate
 
 **Goal:** Leverage the transformed platform to drive competitive differentiation through modernization, AI, and net-new cloud-native development.
 
 **Key Activities:**
 - Application modernization (containers, serverless, microservices)
 - Data platform maturation: real-time analytics, data mesh, ML/AI pipelines
-- AI and generative AI adoption -- model deployment, RAG pipelines, AI agents
+- AI and generative AI adoption: model deployment, RAG pipelines, AI agents
 - Modern technology product development with product teams
 - Developer experience investment: internal developer platforms, self-service
 - Innovation experiments and rapid prototyping cycles
@@ -353,14 +353,14 @@ Organizations progress through four maturity levels. Each level applies across a
 
 | Level | Name | Description |
 |---|---|---|
-| **1 -- Tactical** | Ad-hoc | Reactive, manual processes. No formal standards. Individual heroics. High risk and inconsistency. |
-| **2 -- Defined** | Repeatable | Basic processes documented. Standards exist but inconsistently applied. Some automation. Governance emerging. |
-| **3 -- Managed** | Scalable | Consistent processes enforced. Governance automated. Teams operate with defined SLOs and cost visibility. Security controls systematic. |
-| **4 -- Optimizing** | Strategic | Continuous improvement embedded. Platform-as-a-product mindset. AI-augmented operations. Business and technology strategy fully aligned. |
+| **1: Tactical** | Ad-hoc | Reactive, manual processes. No formal standards. Individual heroics. High risk and inconsistency. |
+| **2: Defined** | Repeatable | Basic processes documented. Standards exist but inconsistently applied. Some automation. Governance emerging. |
+| **3: Managed** | Scalable | Consistent processes enforced. Governance automated. Teams operate with defined SLOs and cost visibility. Security controls systematic. |
+| **4: Optimizing** | Strategic | Continuous improvement embedded. Platform-as-a-product mindset. AI-augmented operations. Business and technology strategy fully aligned. |
 
 **How to use the maturity model:**
 - Assess current level per perspective at the start of each phase
-- Set target maturity levels that are appropriate to organizational size, risk, and ambition -- not every organization needs Level 4 in every perspective
+- Set target maturity levels that are appropriate to organizational size, risk, and ambition; not every organization needs Level 4 in every perspective
 - Use maturity gaps to prioritize roadmap items and investments
 
 ---
@@ -373,20 +373,20 @@ Not all workloads are equal. Classify every workload before making migration or 
 
 | Tier | Criticality | RTO / RPO | Typical Strategy |
 |---|---|---|---|
-| **Tier 0 -- Mission Critical** | Business stops without it | Minutes / Zero | Rearchitect or Replatform with HA/DR |
-| **Tier 1 -- Business Critical** | Significant impact if down | Hours / Minutes | Replatform or Refactor |
-| **Tier 2 -- Business Important** | Operational impact | Hours / Hours | Rehost or Replatform |
-| **Tier 3 -- Supporting** | Low impact | Days / Hours | Rehost, Repurchase, or Retire |
-| **Tier 4 -- Legacy / Candidate** | Marginal value | N/A | Retain short-term; plan Retirement |
+| **Tier 0: Mission Critical** | Business stops without it | Minutes / Zero | Rearchitect or Replatform with HA/DR |
+| **Tier 1: Business Critical** | Significant impact if down | Hours / Minutes | Replatform or Refactor |
+| **Tier 2: Business Important** | Operational impact | Hours / Hours | Rehost or Replatform |
+| **Tier 3: Supporting** | Low impact | Days / Hours | Rehost, Repurchase, or Retire |
+| **Tier 4: Legacy / Candidate** | Marginal value | N/A | Retain short-term; plan Retirement |
 
 ### Portfolio Rationalization Process
 
-1. **Inventory** -- Catalog all applications with owner, business function, tech stack, hosting, cost
-2. **Classify** -- Assign tier and identify dependencies
-3. **Decide** -- Apply 7 Rs per workload
-4. **Sequence** -- Build migration waves (low risk → high complexity)
-5. **Execute** -- Migrate per wave with gates between waves
-6. **Validate** -- Confirm outcomes against targets post-migration
+1. **Inventory**: Catalog all applications with owner, business function, tech stack, hosting, cost
+2. **Classify**: Assign tier and identify dependencies
+3. **Decide**: Apply 7 Rs per workload
+4. **Sequence**: Build migration waves (low risk → high complexity)
+5. **Execute**: Migrate per wave with gates between waves
+6. **Validate**: Confirm outcomes against targets post-migration
 
 ---
 
@@ -403,9 +403,9 @@ Not all workloads are equal. Classify every workload before making migration or 
 
 ### Zero Trust Security Principles
 
-1. **Verify explicitly** -- Authenticate and authorize every request based on all available data points
-2. **Use least privilege** -- Limit access with just-in-time, just-enough-access (JIT/JEA)
-3. **Assume breach** -- Minimize blast radius, segment access, encrypt everything, use analytics to detect threats
+1. **Verify explicitly**: Authenticate and authorize every request based on all available data points
+2. **Use least privilege**: Limit access with just-in-time, just-enough-access (JIT/JEA)
+3. **Assume breach**: Minimize blast radius, segment access, encrypt everything, use analytics to detect threats
 
 ### Shared Responsibility Model
 

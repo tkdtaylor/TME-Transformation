@@ -1,6 +1,6 @@
 # AI Adoption Framework (AIAF)
 
-> An organization-level framework for responsibly adopting AI tools -- including large language models, AI assistants, AI coding tools, and autonomous AI agents -- derived from the [Comprehensive Technology Adoption Framework](TechAdoptionFramework.md).
+> An organization-level framework for responsibly adopting AI tools (including large language models, AI assistants, AI coding tools, and autonomous AI agents), derived from the [Comprehensive Technology Adoption Framework](TechAdoptionFramework.md).
 
 ---
 
@@ -16,12 +16,12 @@
    - [AI Security & Trust Perspective](#5-ai-security--trust-perspective)
    - [AI Operations & Quality Perspective](#6-ai-operations--quality-perspective)
 4. [Adoption Lifecycle Phases](#adoption-lifecycle-phases)
-   - [Phase 1 -- Discover & Assess](#phase-1----discover--assess)
-   - [Phase 2 -- Pilot & Validate](#phase-2----pilot--validate)
-   - [Phase 3 -- Deploy & Integrate](#phase-3----deploy--integrate)
-   - [Phase 4 -- Govern & Control](#phase-4----govern--control)
-   - [Phase 5 -- Optimize & Measure](#phase-5----optimize--measure)
-   - [Phase 6 -- Scale & Innovate](#phase-6----scale--innovate)
+   - [Phase 1: Discover & Assess](#phase-1----discover--assess)
+   - [Phase 2: Pilot & Validate](#phase-2----pilot--validate)
+   - [Phase 3: Deploy & Integrate](#phase-3----deploy--integrate)
+   - [Phase 4: Govern & Control](#phase-4----govern--control)
+   - [Phase 5: Optimize & Measure](#phase-5----optimize--measure)
+   - [Phase 6: Scale & Innovate](#phase-6----scale--innovate)
 5. [AI Maturity Model](#ai-maturity-model)
 6. [Use Case Classification](#use-case-classification)
 7. [Responsible AI Model](#responsible-ai-model)
@@ -40,15 +40,15 @@
 
 The **AI Adoption Framework (AIAF)** is a structured, vendor-agnostic approach for organizations planning, governing, and scaling the adoption of AI tools across their workforce and products. It applies specifically to:
 
-- **AI assistants** -- conversational AI for search, writing, analysis, and Q&A
-- **AI coding tools** -- AI-powered developer assistants operating in IDEs and terminals
-- **AI agents** -- autonomous or semi-autonomous systems that use tools, browse, write code, or take multi-step actions
-- **AI-embedded products** -- internal or customer-facing products that integrate AI model APIs
-- **Generative AI pipelines** -- retrieval-augmented generation (RAG), summarization, classification, and structured output systems
+- **AI assistants**: conversational AI for search, writing, analysis, and Q&A
+- **AI coding tools**: AI-powered developer assistants operating in IDEs and terminals
+- **AI agents**: autonomous or semi-autonomous systems that use tools, browse, write code, or take multi-step actions
+- **AI-embedded products**: internal or customer-facing products that integrate AI model APIs
+- **Generative AI pipelines**: retrieval-augmented generation (RAG), summarization, classification, and structured output systems
 
 ### Relationship to the Base Framework
 
-The AIAF is a specialization of the [Technology Adoption Framework (TAF)](TechAdoptionFramework.md). It inherits the same structural DNA -- six perspectives, six lifecycle phases, and a four-level maturity model -- but adapts every element to the unique characteristics of AI adoption:
+The AIAF is a specialization of the [Technology Adoption Framework (TAF)](TechAdoptionFramework.md). It inherits the same structural DNA (six perspectives, six lifecycle phases, and a four-level maturity model) but adapts every element to the unique characteristics of AI adoption:
 
 | TAF Concept | AIAF Adaptation |
 |---|---|
@@ -63,26 +63,26 @@ The AIAF is a specialization of the [Technology Adoption Framework (TAF)](TechAd
 
 AI tools introduce challenges that traditional IT governance was not designed for:
 
-- **Non-deterministic outputs** -- the same prompt can produce different results; quality must be measured statistically, not by unit tests
-- **Shadow AI** -- employees often adopt AI tools personally before organizational policy exists, creating ungoverned data exposure
-- **Prompt as attack surface** -- prompt injection, jailbreaking, and data exfiltration via model APIs are novel threat vectors
-- **Workforce anxiety** -- AI adoption touches job security in ways other technology migrations typically do not
-- **Regulatory uncertainty** -- the EU AI Act, sector-specific rules, and emerging global frameworks are still maturing
-- **Data boundary blurring** -- sending internal content to external model APIs requires explicit data governance decisions
-- **Build/buy economics reset** -- AI-assisted development dramatically lowers the cost and time to build custom software. Capabilities that previously required vendor products or large development teams are now within reach of small teams. This creates a strategic opportunity (reassessing current vendor spend as potential build candidates) and a competitive risk (customers, partners, or new entrants can build alternatives to products and services you provide)
+- **Non-deterministic outputs**: the same prompt can produce different results; quality must be measured statistically, not by unit tests
+- **Shadow AI**: employees often adopt AI tools personally before organizational policy exists, creating ungoverned data exposure
+- **Prompt as attack surface**: prompt injection, jailbreaking, and data exfiltration via model APIs are novel threat vectors
+- **Workforce anxiety**: AI adoption touches job security in ways other technology migrations typically do not
+- **Regulatory uncertainty**: the EU AI Act, sector-specific rules, and emerging global frameworks are still maturing
+- **Data boundary blurring**: sending internal content to external model APIs requires explicit data governance decisions
+- **Build/buy economics reset**: AI-assisted development dramatically lowers the cost and time to build custom software. Capabilities that previously required vendor products or large development teams are now within reach of small teams. This creates a strategic opportunity (reassessing current vendor spend as potential build candidates) and a competitive risk (customers, partners, or new entrants can build alternatives to products and services you provide)
 
 ---
 
 ## Guiding Principles
 
-1. **Outcomes before models** -- Select AI tools based on the specific outcomes you need, not on which model is most popular. Avoid vendor lock-in by abstracting model choice behind internal interfaces where possible.
-2. **Humans remain accountable** -- AI augments human judgment; it does not replace human accountability. Every AI output that influences a consequential decision must have a named human owner.
-3. **Responsible by design** -- Fairness, transparency, and privacy considerations are designed into AI use cases from the start, not evaluated after deployment.
-4. **Govern shadow AI, don't just prohibit it** -- Employees are already using AI. A prohibition-only approach drives usage underground. Provide sanctioned tools and clear policies instead.
-5. **Start narrow, expand with evidence** -- Begin with well-scoped, low-risk use cases. Expand scope and automation level only when quality and safety thresholds are demonstrably met.
-6. **Measure quality, not just usage** -- Adoption metrics (seats, sessions) are vanity metrics. Track whether AI outputs are accurate, trusted, and delivering business value.
-7. **Preserve the right to intervene** -- Every AI-driven process must have a defined mechanism for humans to override, pause, or roll back AI behavior.
-8. **Continuous evaluation** -- AI model capabilities, risks, and costs change rapidly. Treat AI tool selection and configuration as a continuously reviewed decision, not a one-time purchase.
+1. **Outcomes before models**: Select AI tools based on the specific outcomes you need, not on which model is most popular. Avoid vendor lock-in by abstracting model choice behind internal interfaces where possible.
+2. **Humans remain accountable**: AI augments human judgment; it does not replace human accountability. Every AI output that influences a consequential decision must have a named human owner.
+3. **Responsible by design**: Fairness, transparency, and privacy considerations are designed into AI use cases from the start, not evaluated after deployment.
+4. **Govern shadow AI, don't just prohibit it**: Employees are already using AI. A prohibition-only approach drives usage underground. Provide sanctioned tools and clear policies instead.
+5. **Start narrow, expand with evidence**: Begin with well-scoped, low-risk use cases. Expand scope and automation level only when quality and safety thresholds are demonstrably met.
+6. **Measure quality, not just usage**: Adoption metrics (seats, sessions) are vanity metrics. Track whether AI outputs are accurate, trusted, and delivering business value.
+7. **Preserve the right to intervene**: Every AI-driven process must have a defined mechanism for humans to override, pause, or roll back AI behavior.
+8. **Continuous evaluation**: AI model capabilities, risks, and costs change rapidly. Treat AI tool selection and configuration as a continuously reviewed decision, not a one-time purchase.
 
 ---
 
@@ -99,13 +99,13 @@ Each perspective defines who is responsible for what throughout the AI adoption 
 **Key Stakeholders:** CEO, CFO, COO, Business Unit Leaders, Product Owners, Strategy Teams
 
 **Core Capabilities:**
-- AI opportunity identification -- systematic scanning of workflows for high-value AI use cases
-- Business case development -- quantifying productivity gains, cost reduction, revenue uplift, and risk reduction
-- Use case prioritization -- scoring opportunities by value, feasibility, and risk
-- Value realization tracking -- measuring actual vs. projected outcomes post-deployment
-- AI vendor and partner management -- licensing, contracts, SLAs, and strategic alignment
-- AI portfolio management -- visibility across all active AI initiatives to avoid duplication and manage spend
-- Build vs. buy reassessment -- evaluating current SaaS and enterprise software spend against AI-assisted build alternatives; identifying where custom-built solutions now deliver better value, differentiation, or strategic control than purchased software
+- AI opportunity identification: systematic scanning of workflows for high-value AI use cases
+- Business case development: quantifying productivity gains, cost reduction, revenue uplift, and risk reduction
+- Use case prioritization: scoring opportunities by value, feasibility, and risk
+- Value realization tracking: measuring actual vs. projected outcomes post-deployment
+- AI vendor and partner management: licensing, contracts, SLAs, and strategic alignment
+- AI portfolio management: visibility across all active AI initiatives to avoid duplication and manage spend
+- Build vs. buy reassessment: evaluating current SaaS and enterprise software spend against AI-assisted build alternatives; identifying where custom-built solutions now deliver better value, differentiation, or strategic control than purchased software
 
 **Key Questions to Answer:**
 - Which business problems are we solving, and why is AI the right solution for each?
@@ -122,36 +122,39 @@ Each perspective defines who is responsible for what throughout the AI adoption 
 **Key Stakeholders:** Head of HR, L&D Leaders, Team Managers, Union Representatives (where applicable), Internal Communications
 
 **Core Capabilities:**
-- Workforce impact assessment -- identifying roles and tasks most affected by AI adoption
-- Skills gap analysis -- mapping required AI literacy, prompt engineering, and critical evaluation skills against current workforce capabilities
-- Tiered training programs -- role-specific learning paths (executive awareness, practitioner proficiency, builder/developer depth)
-- Change management -- communication strategies that address both the opportunity and the fear of AI adoption
-- Augmentation mindset -- cultivating the expectation that AI handles routine work, freeing humans for higher-value judgment and creativity
-- AI acceptable use policy communication -- ensuring every employee understands what is and isn't permitted
-- Feedback culture -- creating mechanisms for employees to report when AI tools are underperforming or producing harmful outputs
+- Workforce impact assessment: identifying roles and tasks most affected by AI adoption
+- Skills gap analysis: mapping required AI literacy, prompt engineering, and critical evaluation skills against current workforce capabilities
+- Tiered training programs: role-specific learning paths (executive awareness, practitioner proficiency, builder/developer depth)
+- Change management: communication strategies that address both the opportunity and the fear of AI adoption
+- Augmentation mindset: cultivating the expectation that AI handles routine work, freeing humans for higher-value judgment and creativity
+- Thin work / valued work classification: systematically categorizing tasks within each role as either **thin work** (repetitive, low-value, machine-ready tasks that AI should absorb) or **valued work** (creative, strategic, judgment-intensive tasks that humans should be freed to focus on). This classification drives both AI use case prioritization and workforce transition planning
+- AI acceptable use policy communication: ensuring every employee understands what is and isn't permitted
+- Feedback culture: creating mechanisms for employees to report when AI tools are underperforming or producing harmful outputs
 
 **Key Questions to Answer:**
 - What tasks are being automated, and how do affected employees transition to higher-value work?
 - How do we build AI literacy across all roles, not just technical teams?
 - How do we address the fear that AI will replace jobs while being honest about changing role requirements?
+- As workflows progress from human-performed to AI-augmented to AI-automated, leaders shift from managing people who *do the work* to managing people who *direct AI that does the work*. Have our leaders been prepared for this transition?
 
 ---
 
 ### 3. AI Governance & Risk Perspective
 
-**Purpose:** Establish the policies, processes, and controls required to manage AI-specific risks -- including ethical risks, regulatory compliance, and ungoverned usage.
+**Purpose:** Establish the policies, processes, and controls required to manage AI-specific risks: including ethical risks, regulatory compliance, and ungoverned usage.
 
 **Key Stakeholders:** CIO, Chief Risk Officer, Chief Compliance Officer, Legal, Privacy Officer, Internal Audit, AI Ethics Officer
 
 **Core Capabilities:**
-- AI policy framework -- acceptable use policies, data handling rules, approved tool registry, prohibition list
-- AI risk taxonomy -- classifying AI risks by type: accuracy, bias, privacy, security, legal, reputational, operational
-- AI Impact Assessment (AIIA) process -- mandatory evaluation before deploying AI to consequential use cases
-- Regulatory compliance mapping -- EU AI Act, GDPR, CCPA, HIPAA, sector-specific rules (financial services, healthcare, etc.)
-- Shadow AI governance -- detection, remediation, and channeling of unsanctioned AI tool usage
-- AI audit and accountability -- logging AI interactions for regulated use cases, maintaining evidence of human oversight
-- Third-party AI vendor risk -- due diligence on AI providers' data handling, model training practices, and security posture
-- AI cost governance -- token usage budgets, cost allocation, and FinOps for AI APIs
+- AI policy framework: acceptable use policies, data handling rules, approved tool registry, prohibition list
+- AI risk taxonomy: classifying AI risks by type: accuracy, bias, privacy, security, legal, reputational, operational
+- AI Impact Assessment (AIIA) process: mandatory evaluation before deploying AI to consequential use cases
+- Regulatory compliance mapping: EU AI Act, GDPR, CCPA, HIPAA, sector-specific rules (financial services, healthcare, etc.)
+- Shadow AI governance: detection, remediation, and channeling of unsanctioned AI tool usage. Governance should define safe experimentation boundaries rather than blanket prohibition: personal exploration with unsanctioned tools is acceptable when those tools are not connected to company data, not invited into meetings or internal systems, and not authenticated with organizational credentials
+- AI Decision Register: a maintained record of where AI is making, shaping, or influencing decisions inside the organization, who owns those decisions, what guardrails apply, and how exceptions are handled. Distinct from audit logging (which captures interactions); the decision register captures the *design* of AI's role in decision-making
+- AI audit and accountability: logging AI interactions for regulated use cases, maintaining evidence of human oversight
+- Third-party AI vendor risk: due diligence on AI providers' data handling, model training practices, and security posture
+- AI cost governance: token usage budgets, cost allocation, and FinOps for AI APIs
 
 **Key Questions to Answer:**
 - What data can and cannot be sent to external AI APIs, and how is this enforced?
@@ -168,14 +171,14 @@ Each perspective defines who is responsible for what throughout the AI adoption 
 **Key Stakeholders:** CTO, AI/ML Platform Engineers, Enterprise Architects, Data Engineers, Developer Experience Teams
 
 **Core Capabilities:**
-- AI gateway / API management -- centralized routing, rate limiting, logging, and model-switching without application changes
-- Data pipeline architecture -- retrieval-augmented generation (RAG) infrastructure, embedding stores, knowledge bases, and document ingestion
-- Identity and access for AI -- ensuring AI agents and APIs use scoped, auditable credentials with least-privilege access
-- AI tool integration patterns -- IDE plugins, chat platform integrations, workflow automation hooks, API-first design
-- Prompt management -- centralized prompt libraries, versioning, testing, and deployment
-- Evaluation infrastructure -- automated evals, golden dataset management, regression testing for AI output quality
-- Model abstraction -- designing systems so the underlying model can be swapped without full rewrites
-- Developer platform for AI -- self-service tooling that lets teams build AI features safely within guardrails
+- AI gateway / API management: centralized routing, rate limiting, logging, and model-switching without application changes
+- Data pipeline architecture: retrieval-augmented generation (RAG) infrastructure, embedding stores, knowledge bases, and document ingestion
+- Identity and access for AI: ensuring AI agents and APIs use scoped, auditable credentials with least-privilege access
+- AI tool integration patterns: IDE plugins, chat platform integrations, workflow automation hooks, API-first design
+- Prompt management: centralized prompt libraries, versioning, testing, and deployment
+- Evaluation infrastructure: automated evals, golden dataset management, regression testing for AI output quality
+- Model abstraction: designing systems so the underlying model can be swapped without full rewrites
+- Developer platform for AI: self-service tooling that lets teams build AI features safely within guardrails
 
 **Key Questions to Answer:**
 - How do we prevent every team from independently integrating the same AI APIs with no shared governance?
@@ -191,14 +194,14 @@ Each perspective defines who is responsible for what throughout the AI adoption 
 **Key Stakeholders:** CISO, AI Security Engineers, Privacy Engineers, Red Team / Offensive Security, Compliance
 
 **Core Capabilities:**
-- Data classification for AI -- determining what data classes (PII, confidential, IP) can be processed by which AI tools
-- Prompt injection defense -- detecting and preventing adversarial inputs that attempt to hijack AI behavior or exfiltrate data
-- Output filtering and content safety -- post-processing AI outputs to detect harmful, sensitive, or policy-violating content before surfacing to users
-- AI supply chain security -- vetting model providers, third-party fine-tuning, open-source models, and AI plugins
-- Agentic action boundaries -- defining and enforcing the scope of actions that AI agents are permitted to take (read vs. write vs. execute)
-- Audit logging for AI -- immutable logs of prompts, retrieved context, and AI outputs for regulated use cases
-- Incident response for AI -- playbooks for handling AI-related incidents: data leakage via prompts, hallucinations in critical decisions, agent actions that cause harm
-- Model reliability and availability -- ensuring AI dependencies have fallback behavior and do not create single points of failure
+- Data classification for AI: determining what data classes (PII, confidential, IP) can be processed by which AI tools
+- Prompt injection defense: detecting and preventing adversarial inputs that attempt to hijack AI behavior or exfiltrate data
+- Output filtering and content safety: post-processing AI outputs to detect harmful, sensitive, or policy-violating content before surfacing to users
+- AI supply chain security: vetting model providers, third-party fine-tuning, open-source models, and AI plugins
+- Agentic action boundaries: defining and enforcing the scope of actions that AI agents are permitted to take (read vs. write vs. execute)
+- Audit logging for AI: immutable logs of prompts, retrieved context, and AI outputs for regulated use cases
+- Incident response for AI: playbooks for handling AI-related incidents: data leakage via prompts, hallucinations in critical decisions, agent actions that cause harm
+- Model reliability and availability: ensuring AI dependencies have fallback behavior and do not create single points of failure
 
 **Key Questions to Answer:**
 - What happens if a user or attacker crafts a prompt that causes the AI to leak confidential data?
@@ -214,14 +217,14 @@ Each perspective defines who is responsible for what throughout the AI adoption 
 **Key Stakeholders:** AI Operations Teams, SRE, FinOps, Product Managers, Quality Assurance
 
 **Core Capabilities:**
-- AI observability -- monitoring latency, error rates, token usage, and model availability across all AI integrations
-- Output quality measurement -- evaluation frameworks (LLM-as-judge, human review panels, task-specific evals) to measure accuracy, relevance, and safety
-- Feedback loops -- structured collection of user ratings and corrections to identify quality drift and improvement opportunities
-- Token cost management -- tracking spend per use case, team, and model; rightsizing context windows; optimizing prompt efficiency
-- Model version management -- tracking which model version is in use where, and managing upgrades without quality regressions
-- Capacity and rate limit management -- handling API rate limits gracefully, planning for usage growth
-- AI service catalog -- internal directory of approved AI tools, their data handling properties, approved use cases, and owners
-- Continuous improvement cycles -- regular review of AI use cases to retire underperforming ones, improve prompts, and upgrade to better models
+- AI observability: monitoring latency, error rates, token usage, and model availability across all AI integrations
+- Output quality measurement: evaluation frameworks (LLM-as-judge, human review panels, task-specific evals) to measure accuracy, relevance, and safety
+- Feedback loops: structured collection of user ratings and corrections to identify quality drift and improvement opportunities
+- Token cost management: tracking spend per use case, team, and model; rightsizing context windows; optimizing prompt efficiency
+- Model version management: tracking which model version is in use where, and managing upgrades without quality regressions
+- Capacity and rate limit management: handling API rate limits gracefully, planning for usage growth
+- AI service catalog: internal directory of approved AI tools, their data handling properties, approved use cases, and owners
+- Continuous improvement cycles: regular review of AI use cases to retire underperforming ones, improve prompts, and upgrade to better models
 
 **Key Questions to Answer:**
 - How do we know when an AI tool's output quality has degraded?
@@ -236,20 +239,20 @@ The framework progresses through six phases. Different use cases and teams may b
 
 ---
 
-### Phase 1 -- Discover & Assess
+### Phase 1: Discover & Assess
 
 **Goal:** Build a shared understanding of the AI landscape, identify high-value opportunities, assess organizational readiness, and establish the governance foundation before any deployment.
 
 **Key Activities:**
-- AI opportunity workshops with business units -- systematic identification of use cases by workflow
-- Workforce readiness survey -- AI literacy, awareness, and sentiment baseline
-- Shadow AI audit -- inventory of AI tools already in use across the organization
-- Data readiness assessment -- classify data assets; identify which can and cannot be used with AI tools
-- Regulatory mapping -- identify applicable AI regulations and their requirements for your sector and location
-- AI vendor landscape review -- evaluate available tools by capability, data handling, pricing, and security posture
-- Vendor displacement analysis -- map current software vendor spend against the new build/buy calculus; identify where AI-assisted development makes custom builds viable, and assess which of your own products or services are exposed to the same dynamic from your customers
-- Risk appetite definition -- establish organizational thresholds for AI risk tolerance by use case category
-- Establish AI governance body -- steering committee, working groups, accountability structure
+- AI opportunity workshops with business units: systematic identification of use cases by workflow
+- Workforce readiness survey: AI literacy, awareness, and sentiment baseline
+- Shadow AI audit: inventory of AI tools already in use across the organization
+- Data readiness assessment: classify data assets; identify which can and cannot be used with AI tools
+- Regulatory mapping: identify applicable AI regulations and their requirements for your sector and location
+- AI vendor landscape review: evaluate available tools by capability, data handling, pricing, and security posture
+- Vendor displacement analysis: map current software vendor spend against the new build/buy calculus; identify where AI-assisted development makes custom builds viable, and assess which of your own products or services are exposed to the same dynamic from your customers
+- Risk appetite definition: establish organizational thresholds for AI risk tolerance by use case category
+- Establish AI governance body: steering committee, working groups, accountability structure
 
 **Gate Criteria to Proceed:**
 - Approved AI Policy Framework (v1) published
@@ -266,22 +269,24 @@ The framework progresses through six phases. Different use cases and teams may b
 
 ---
 
-### Phase 2 -- Pilot & Validate
+### Phase 2: Pilot & Validate
 
 **Goal:** Run structured, time-boxed pilots of selected AI use cases to validate value, test governance controls, and build organizational confidence before broad rollout.
 
 **Key Activities:**
 - Define pilot scope: specific use case, target user group, success criteria, and time boundary
+- Document target workflow as SOP: before any AI tool is applied, the target process must be documented with its steps, decision points, exceptions, and handoffs. If the process is not documented, it is not ready to automate or augment. Classify each step as thin work (repetitive, machine-ready) or valued work (judgment-intensive, human-required)
 - Stand up AI platform foundation: API gateway, logging, access controls, data boundary enforcement
 - Conduct AI Impact Assessment (AIIA) for each pilot use case
 - Deploy AI tools to pilot group with onboarding, training, and feedback mechanisms
-- Establish evaluation baseline -- measure pre-AI performance of the target task
+- Establish evaluation baseline: measure pre-AI performance of the target task
 - Run pilot with structured feedback collection (quantitative + qualitative)
 - Red-team the pilot: attempt prompt injection, data leakage, and policy violations
 - Measure outcomes against baseline: quality, speed, user satisfaction, cost
 - Document learnings: what worked, what failed, what needs governance adjustment
 
 **Gate Criteria to Proceed:**
+- Target workflow documented as SOP with decision points, exceptions, and handoffs identified
 - Pilot outcomes meet or exceed pre-defined success thresholds
 - No unresolved critical security or compliance findings
 - Governance controls validated under realistic usage
@@ -295,7 +300,7 @@ The framework progresses through six phases. Different use cases and teams may b
 
 ---
 
-### Phase 3 -- Deploy & Integrate
+### Phase 3: Deploy & Integrate
 
 **Goal:** Roll out validated AI use cases to broader populations in a structured, wave-based approach with active monitoring and user support.
 
@@ -303,7 +308,7 @@ The framework progresses through six phases. Different use cases and teams may b
 - Wave-based rollout: pilot group → department → organization (gated by adoption and quality metrics)
 - Integration with existing tools and workflows (chat platforms, IDEs, ticketing systems, document management)
 - Employee onboarding: role-specific training, acceptable use policy acknowledgment, feedback channels
-- Enable AI service catalog entry -- published documentation, owner, data handling classification
+- Enable AI service catalog entry: published documentation, owner, data handling classification
 - Activate production monitoring: token usage, error rates, latency, quality sampling
 - Establish support channel for AI-related questions and issues
 - Communicate proactively: what the tool does, what it doesn't do, and how employees should use it
@@ -326,14 +331,15 @@ The framework progresses through six phases. Different use cases and teams may b
 
 ---
 
-### Phase 4 -- Govern & Control
+### Phase 4: Govern & Control
 
-**Goal:** Operationalize AI governance at scale -- ensuring policies are enforced, risks are tracked, and accountability is maintained across all active AI use cases.
+**Goal:** Operationalize AI governance at scale, ensuring policies are enforced, risks are tracked, and accountability is maintained across all active AI use cases.
 
 **Key Activities:**
 - Activate centralized AI audit logging for regulated use cases
+- Establish and maintain the AI Decision Register: a living record of every point where AI is making, shaping, or influencing decisions; who owns each decision; what guardrails apply; and how exceptions are escalated. Review the register quarterly with the governance body
 - Enforce data classification rules via AI gateway (block, redact, or alert on policy violations)
-- Conduct first AI use case review cycle -- reassess risk ratings and quality thresholds
+- Conduct first AI use case review cycle: reassess risk ratings and quality thresholds
 - Vendor risk reviews for all AI API providers
 - Establish AI cost governance: budgets by team/use case, alerts, chargeback model
 - Formalize AI incident response process and run tabletop exercise
@@ -361,19 +367,19 @@ The framework progresses through six phases. Different use cases and teams may b
 
 ---
 
-### Phase 5 -- Optimize & Measure
+### Phase 5: Optimize & Measure
 
 **Goal:** Improve the quality, efficiency, and business impact of AI use cases based on operational data, user feedback, and evolving model capabilities.
 
 **Key Activities:**
 - Analyze quality metrics: identify use cases with high error rates, low satisfaction, or drift from baseline
-- Prompt optimization -- systematic improvement of prompts based on evaluation data
-- Cost optimization -- reduce token costs through prompt efficiency, context window management, caching, and model tier selection
-- Model upgrade evaluation -- assess newer or alternative models against established evals before switching
-- Retire underperforming use cases -- apply a structured review to discontinue AI integrations that are not delivering value
-- A/B testing infrastructure -- compare prompt variants, model versions, or integration patterns
-- Expand feedback loops -- increase coverage of structured user feedback and human evaluation
-- Benchmark against external standards -- compare quality and safety metrics to industry benchmarks where available
+- Prompt optimization: systematic improvement of prompts based on evaluation data
+- Cost optimization: reduce token costs through prompt efficiency, context window management, caching, and model tier selection
+- Model upgrade evaluation: assess newer or alternative models against established evals before switching
+- Retire underperforming use cases: apply a structured review to discontinue AI integrations that are not delivering value
+- A/B testing infrastructure: compare prompt variants, model versions, or integration patterns
+- Expand feedback loops: increase coverage of structured user feedback and human evaluation
+- Benchmark against external standards: compare quality and safety metrics to industry benchmarks where available
 
 **Optimization Levers:**
 
@@ -393,23 +399,25 @@ The framework progresses through six phases. Different use cases and teams may b
 
 ---
 
-### Phase 6 -- Scale & Innovate
+### Phase 6: Scale & Innovate
 
 **Goal:** Extend AI adoption across the organization, enable teams to build new AI capabilities with guardrails, and explore next-generation patterns like autonomous agents and AI-native workflows.
 
 **Key Activities:**
-- Self-service AI platform -- enable teams to build and deploy AI integrations within pre-approved guardrails without central team bottlenecks
-- Agent framework adoption -- structured approach to deploying AI agents with defined action scopes, escalation paths, and audit trails
-- AI-native workflow design -- redesigning processes around AI capabilities, not just adding AI to existing processes
-- Cross-functional AI communities of practice -- knowledge sharing, prompt libraries, eval frameworks shared across teams
-- Innovation pipeline -- structured process for teams to propose, prototype, and validate new AI use cases
-- External AI product features -- embedding AI into customer-facing products with appropriate transparency and consent
-- AI strategy refresh -- periodic review of the AI opportunity landscape, competitive positioning, and framework evolution
+- Self-service AI platform: enable teams to build and deploy AI integrations within pre-approved guardrails without central team bottlenecks
+- Agent framework adoption: structured approach to deploying AI agents with defined action scopes, escalation paths, and audit trails. Agentic deployment is a *graduation*, not a starting point: a use case must have demonstrated reliability at the Automate or Augment stage before progressing to Agentic (see Use Case Maturity Progression)
+- AI-native workflow design: redesigning processes around AI capabilities, not just adding AI to existing processes
+- Cross-functional AI communities of practice: knowledge sharing, prompt libraries, eval frameworks shared across teams
+- Innovation pipeline: structured process for teams to propose, prototype, and validate new AI use cases
+- External AI product features: embedding AI into customer-facing products with appropriate transparency and consent
+- AI strategy refresh: periodic review of the AI opportunity landscape, competitive positioning, and framework evolution
 
 **Agentic AI Adoption Criteria:**
 
 Before deploying AI agents that take autonomous actions, the following must be true:
 
+- [ ] Use case has operated successfully at the Automate or Augment stage with documented reliability evidence
+- [ ] Target workflow is documented as an SOP with decision points, exceptions, and handoffs mapped
 - [ ] Scope of permitted actions explicitly defined and technically enforced
 - [ ] All agent actions logged with full audit trail
 - [ ] Human escalation trigger defined (confidence threshold, action type, cost threshold)
@@ -428,20 +436,20 @@ Before deploying AI agents that take autonomous actions, the following must be t
 
 ## AI Maturity Model
 
-Organizations progress through four maturity levels. Assess each of the six perspectives independently -- it is common to be at Level 3 in Platform while still at Level 1 in Governance.
+Organizations progress through four maturity levels. Assess each of the six perspectives independently; it is common to be at Level 3 in Platform while still at Level 1 in Governance.
 
 | Level | Name | Characteristics |
 |---|---|---|
-| **1 -- Exploring** | Uncoordinated | Individual employees using personal or trial AI accounts. No organizational policy. No data governance for AI. Value is anecdotal. Shadow AI prevalent. |
-| **2 -- Piloting** | Emerging | Sanctioned pilots underway. Basic AI policy published. A small team owns AI governance. Use cases are internal and low-risk. Quality measured informally. |
-| **3 -- Scaling** | Governed | AI governance body active. Approved tool registry maintained. Data boundaries enforced. Quality measured systematically. Use cases span multiple business units. Cost tracked and allocated. |
-| **4 -- Transforming** | AI-native | AI embedded in core workflows and products. Self-service platform for teams. Autonomous agents deployed with full governance. AI strategy directly tied to business strategy. Continuous evaluation and improvement as steady state. |
+| **1: Exploring** | Uncoordinated | Individual employees using personal or trial AI accounts. No organizational policy. No data governance for AI. Value is anecdotal. Shadow AI prevalent. |
+| **2: Piloting** | Emerging | Sanctioned pilots underway. Basic AI policy published. A small team owns AI governance. Use cases are internal and low-risk. Quality measured informally. |
+| **3: Scaling** | Governed | AI governance body active. Approved tool registry maintained. Data boundaries enforced. Quality measured systematically. Use cases span multiple business units. Cost tracked and allocated. |
+| **4: Transforming** | AI-native | AI embedded in core workflows and products. Self-service platform for teams. Autonomous agents deployed with full governance. AI strategy directly tied to business strategy. Continuous evaluation and improvement as steady state. |
 
 ### Maturity by Perspective
 
 Use this grid to assess your current state and set targets per perspective:
 
-| Perspective | Level 1 -- Exploring | Level 2 -- Piloting | Level 3 -- Scaling | Level 4 -- Transforming |
+| Perspective | Level 1: Exploring | Level 2: Piloting | Level 3: Scaling | Level 4: Transforming |
 |---|---|---|---|---|
 | **Business Value** | No use case tracking | Pilot ROI tracked informally | Use case portfolio managed | AI drives strategic differentiation |
 | **People & Workforce** | No AI training | Ad-hoc training for power users | Role-based training programs | AI fluency is a hiring and performance standard |
@@ -472,10 +480,10 @@ Every AI use case must be assigned a risk tier before deployment. The tier deter
 
 | Tier | Risk Level | Trigger Criteria | Required Controls |
 |---|---|---|---|
-| **Tier 1 -- Low** | Minimal | Internal use only. No sensitive data. Human reviews all outputs before any action. Easily reversible. | Acceptable use policy. Basic training. |
-| **Tier 2 -- Medium** | Moderate | Involves confidential or sensitive internal data. Outputs influence (but don't drive) decisions. Customer-facing with human review. | AI Impact Assessment. Data classification review. Prompt security review. Logging enabled. |
-| **Tier 3 -- High** | Significant | Consequential decisions affecting people (HR, finance, legal, clinical). Regulated data. Outputs drive automated actions. | Full AIIA. Legal review. Executive approval. Bias audit. Mandatory human review before action. Quarterly review cycle. |
-| **Tier 4 -- Critical** | Severe | Fully autonomous actions with real-world consequences. Irreversible or high-blast-radius outcomes. External-facing agents. | Extensive red-teaming. Narrow action scope enforced technically. Board-level awareness. Continuous monitoring. Incident response plan specific to use case. |
+| **Tier 1: Low** | Minimal | Internal use only. No sensitive data. Human reviews all outputs before any action. Easily reversible. | Acceptable use policy. Basic training. |
+| **Tier 2: Medium** | Moderate | Involves confidential or sensitive internal data. Outputs influence (but don't drive) decisions. Customer-facing with human review. | AI Impact Assessment. Data classification review. Prompt security review. Logging enabled. |
+| **Tier 3: High** | Significant | Consequential decisions affecting people (HR, finance, legal, clinical). Regulated data. Outputs drive automated actions. | Full AIIA. Legal review. Executive approval. Bias audit. Mandatory human review before action. Quarterly review cycle. |
+| **Tier 4: Critical** | Severe | Fully autonomous actions with real-world consequences. Irreversible or high-blast-radius outcomes. External-facing agents. | Extensive red-teaming. Narrow action scope enforced technically. Board-level awareness. Continuous monitoring. Incident response plan specific to use case. |
 
 ### Use Case Classification Matrix
 
@@ -493,11 +501,25 @@ Low Value  │  Tier 1                 │  Tier 2 / Tier 3
                     Low Risk                 High Risk
 ```
 
+### Use Case Maturity Progression
+
+The five categories above classify *what AI does*. The maturity progression below guides *how a use case should evolve over time*. The sequence matters.
+
+**Stage 1, Automate:** Start here. Identify workflows (or steps within workflows) where AI can handle the task end-to-end without human judgment. These are typically thin work (repetitive, rule-based, low-ambiguity tasks). Automating thin work first delivers quick wins and builds organizational confidence.
+
+**Stage 2, Augment:** Where full automation is not possible because the workflow requires human judgment at decision points, augment instead. AI handles the heavy lifting (research, drafting, analysis, preparation); the human makes the judgment call. The human's role shifts from *doing the work* to *overseeing the work*.
+
+**Stage 3, Agentic:** When an automated or augmented workflow has proven reliable over time and the human decision point is no longer adding value, the workflow may graduate to agentic. AI operates independently within defined governance boundaries. **Do not start here.** Agentic deployment requires demonstrated automation reliability, established governance, and the full checklist in Phase 6.
+
+**Why the sequence matters:** Each stage builds the evidence, governance muscle, and organizational trust required for the next. An organization that jumps to agentic without first proving automation reliability will lack the monitoring, override mechanisms, and cultural readiness to manage autonomous AI safely. Courts, regulators, insurers, and boards will still look for accountable people, not autonomous software.
+
+**The leadership transition:** As workflows progress through these stages, people leaders must be prepared for a fundamental shift. Managing a team that *does work* is different from managing a team that *directs AI that does work*. If leaders have not been developed for this transition, the progression from augmented to agentic will fail, not because the technology isn't ready, but because the management layer isn't.
+
 ---
 
 ## Responsible AI Model
 
-Responsible AI is not a checklist -- it is an ongoing practice embedded in how the organization designs, deploys, and reviews AI systems.
+Responsible AI is not a checklist; it is an ongoing practice embedded in how the organization designs, deploys, and reviews AI systems.
 
 ### Six Responsible AI Principles
 
@@ -545,7 +567,7 @@ An AIIA is required for all Tier 2, 3, and 4 use cases before deployment.
 
 | Risk Tier | Human Review Requirement |
 |---|---|
-| Tier 1 | User reviews output before acting -- no system requirement |
+| Tier 1 | User reviews output before acting; no system requirement |
 | Tier 2 | Process design must include human review step; outputs are advisory |
 | Tier 3 | Mandatory human approval before any consequential action; human identity and decision logged |
 | Tier 4 | Human operator must explicitly authorize each autonomous action sequence; kill switch accessible |
@@ -558,18 +580,18 @@ Unlike traditional software, AI systems involve a three-party responsibility mod
 
 | Responsibility Area | Model Provider | Platform / Gateway Layer | Application Consumer |
 |---|---|---|---|
-| Model safety and alignment | Owner | -- | -- |
-| Model accuracy and capability | Owner | -- | Prompt design influence |
+| Model safety and alignment | Owner | - |: |
+| Model accuracy and capability | Owner | - | Prompt design influence |
 | API availability and uptime | Owner | Partially | Fallback design |
-| Data sent in prompts | -- | Policy enforcement | Owner |
+| Data sent in prompts | - | Policy enforcement | Owner |
 | Output filtering (post-processing) | Partially | Can implement | Can implement |
-| Identity and access to AI APIs | -- | Owner | User-level controls |
-| Audit logging of interactions | -- | Owner | Owner (for regulated use) |
+| Identity and access to AI APIs | - | Owner | User-level controls |
+| Audit logging of interactions | - | Owner | Owner (for regulated use) |
 | Prompt injection defense | Partially | Can implement | Owner |
 | Data residency and sovereignty | Owner (by region) | Routing policy | Configuration |
-| Regulatory compliance for use | -- | -- | Owner |
-| User disclosure (AI transparency) | -- | -- | Owner |
-| Business outcomes of AI use | -- | -- | Owner |
+| Regulatory compliance for use | - |: | Owner |
+| User disclosure (AI transparency) | - |: | Owner |
+| Business outcomes of AI use | - |: | Owner |
 
 **Key implication:** The AI provider is responsible for the model; your organization is responsible for what you do with it.
 
@@ -693,4 +715,4 @@ AI ADOPTION FRAMEWORK (AIAF)
 
 ---
 
-*Derived from the [Comprehensive Technology Adoption Framework (TAF)](TechAdoptionFramework.md), which is based on [AWS CAF](https://aws.amazon.com/cloud-adoption-framework/), [Google Cloud Adoption Framework](https://cloud.google.com/adoption-framework), and [Microsoft Azure CAF](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/). Not affiliated or endorsed in any way with any of the parent companies.*
+*Derived from the [Comprehensive Technology Adoption Framework (TAF)](TechAdoptionFramework.md), which is based on [AWS CAF](https://aws.amazon.com/cloud-adoption-framework/), [Google Cloud Adoption Framework](https://cloud.google.com/adoption-framework), and [Microsoft Azure CAF](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/). Elements of the Use Case Maturity Progression, thin work/valued work classification, AI Decision Register, and process documentation prerequisites were informed by the [GEM Blueprint](https://www.gemblueprint.com/) by Timothy J. Hitchens / Techshin Partners. Not affiliated or endorsed in any way with any of the referenced companies or authors.*

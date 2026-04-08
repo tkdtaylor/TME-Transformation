@@ -8,7 +8,7 @@ A library of vendor-agnostic adoption frameworks for technology and AI transform
 
 ### [Technology Adoption Framework (TAF)](TechAdoptionFramework.md)
 
-A comprehensive guide for technology transformations — cloud adoption, platform modernization, and data initiatives. It organizes work across **six perspectives** (Business, People & Culture, Governance & Risk, Platform & Technology, Security & Compliance, Operations & Management) and a **six-phase lifecycle** from initial assessment through continuous innovation.
+A comprehensive guide for technology transformations (cloud adoption, platform modernization, and data initiatives). It organizes work across **six perspectives** (Business, People & Culture, Governance & Risk, Platform & Technology, Security & Compliance, Operations & Management) and a **six-phase lifecycle** from initial assessment through continuous innovation.
 
 Key elements:
 - **Maturity model** with four levels: Tactical → Defined → Managed → Optimizing
@@ -24,7 +24,7 @@ TAF is the base framework. The AI Adoption Framework below inherits its structur
 
 ### [AI Adoption Framework (AIAF)](AIAdoptionFramework.md)
 
-A specialization of TAF for AI initiatives — LLMs, AI assistants, AI coding tools, autonomous agents, and AI-embedded products. It adapts the same six perspectives and six phases with AI-specific depth on governance, responsible use, and operational quality.
+A specialization of TAF for AI initiatives: LLMs, AI assistants, AI coding tools, autonomous agents, and AI-embedded products. It adapts the same six perspectives and six phases with AI-specific depth on governance, responsible use, and operational quality.
 
 Key elements:
 - **Eight guiding principles** including governing shadow AI rather than prohibiting it, human accountability for consequential outputs, and continuous evaluation
@@ -36,7 +36,7 @@ Key elements:
 - **RACI template** for eleven core roles
 - **20+ KPIs** spanning business value, adoption, quality, and operational dimensions
 
-**Starting point:** The [Business Readiness Assessment](Workshops/BusinessReadinessAssessment.md) is a facilitated workshop that feeds into and speeds up Phase 1 of both frameworks. It produces a capability inventory, a Wardley Map, an AI disruption analysis, and a scored maturity baseline — giving teams the concrete starting point the frameworks require before moving into planning and pilots.
+**Starting point:** The [Business Readiness Assessment](Workshops/BusinessReadinessAssessment.md) is a facilitated workshop that feeds into and speeds up Phase 1 of both frameworks. It produces a capability inventory, a Wardley Map, an AI disruption analysis, and a scored maturity baseline, giving teams the concrete starting point the frameworks require before moving into planning and pilots.
 
 ---
 
