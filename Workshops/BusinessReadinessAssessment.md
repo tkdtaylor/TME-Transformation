@@ -2,7 +2,7 @@
 ### A Starting Point for Technology & AI Adoption
 
 > "If you don't know where you want to go, then it doesn't matter which path you take"
-> -- The Cheshire Cat
+> *The Cheshire Cat*
 
 This assessment gives you a clear picture of where you are today and a structured path to where you want to go.
 
@@ -17,8 +17,10 @@ This assessment is designed to be run as a **facilitated workshop** with cross-f
 **What it produces:**
 - A documented inventory of your business capabilities, classified by strategic importance
 - A data asset inventory with AI-readiness classification
+- A thin work / valued work classification for each capability
 - A Wardley Map of your capability landscape showing competitive position and evolution
 - An AI/Technology disruption analysis for each capability
+- An initial AI Decision Register documenting where AI is already influencing decisions
 - A maturity baseline score against both frameworks
 - A prioritized discussion agenda for your adoption roadmap
 
@@ -45,8 +47,8 @@ This assessment is designed to be run as a **facilitated workshop** with cross-f
 
 **Facilitator notes:**
 - Each module includes a **worksheet** (fill in during session) and **discussion prompts** (use to drive conversation)
-- Answers do not need to be perfect -- honest and approximate is more valuable than polished and incomplete
-- Disagreement between participants is a signal, not a problem -- capture it
+- Answers do not need to be perfect: honest and approximate is more valuable than polished and incomplete
+- Disagreement between participants is a signal, not a problem; capture it
 - All outputs feed directly into the Wardley Map in Module 5
 
 ---
@@ -174,7 +176,7 @@ Document any hard constraints that will shape your adoption approach:
 
 ### 2.1 What Is a Business Capability?
 
-A **capability** is something your organization can do -- a combination of people, process, technology, and knowledge that delivers a repeatable outcome. Capabilities are described as nouns or gerunds, not as organizational units.
+A **capability** is something your organization can do, a combination of people, process, technology, and knowledge that delivers a repeatable outcome. Capabilities are described as nouns or gerunds, not as organizational units.
 
 **Examples:**
 - Customer order processing
@@ -193,7 +195,7 @@ Capabilities are **not** job titles, departments, or systems (though systems ena
 
 Work through your value chain from left to right: start with what the customer experiences, then trace backward through what must be true for that experience to exist.
 
-**Step 1 -- List all capabilities your organization performs.** Don't filter yet -- aim for 20–40.
+**Step 1. List all capabilities your organization performs.** Don't filter yet; aim for 20–40.
 
 | # | Capability Name | Brief Description | Which Business Unit Owns It? |
 |---|---|---|---|
@@ -230,17 +232,17 @@ Work through your value chain from left to right: start with what the customer e
 
 For each capability, assign two ratings:
 
-**Strategic Importance** -- How critical is this to delivering your value proposition?
-- **Core** -- Without this, the business cannot function or deliver its product
-- **Strategic** -- Differentiates you from competitors; a source of competitive advantage
-- **Supporting** -- Necessary but not differentiating; competitors also have this
-- **Commodity** -- Indistinguishable from how any organization would do it; could be outsourced
+**Strategic Importance**: How critical is this to delivering your value proposition?
+- **Core**: Without this, the business cannot function or deliver its product
+- **Strategic**: Differentiates you from competitors; a source of competitive advantage
+- **Supporting**: Necessary but not differentiating; competitors also have this
+- **Commodity**: Indistinguishable from how any organization would do it; could be outsourced
 
-**Current Execution Quality** -- How well do you perform this today?
-- **Leading** -- Best-in-class; competitors cannot match this
-- **Competitive** -- At market standard; equivalent to peers
-- **Lagging** -- Below market standard; a known weakness
-- **Absent/Nascent** -- Not yet developed; being built or doesn't exist
+**Current Execution Quality**: How well do you perform this today?
+- **Leading**: Best-in-class; competitors cannot match this
+- **Competitive**: At market standard; equivalent to peers
+- **Lagging**: Below market standard; a known weakness
+- **Absent/Nascent**: Not yet developed; being built or doesn't exist
 
 **Capability Classification Table:**
 
@@ -329,7 +331,7 @@ Use this five-tier classification for all data assets:
 
 ### 3.2 Data Asset Inventory
 
-For each data asset, complete the following. Focus on data types, not individual databases -- one row per logical data category.
+For each data asset, complete the following. Focus on data types, not individual databases; one row per logical data category.
 
 | # | Data Asset Name | Description | Classification (D1–D5) | Volume / Scale | Where Stored | Data Owner | Retention Policy | Used in AI Today? | Notes |
 |---|---|---|---|---|---|---|---|---|---|
@@ -365,9 +367,9 @@ For data assets you intend to use with AI (for RAG pipelines, fine-tuning, analy
 | &nbsp; | | | | | | |
 
 **Scoring guide:**
-- **5** -- Excellent; no remediation needed
-- **3** -- Adequate; minor issues to address
-- **1** -- Poor; significant remediation required before AI use
+- **5**: Excellent; no remediation needed
+- **3**: Adequate; minor issues to address
+- **1**: Poor; significant remediation required before AI use
 
 ---
 
@@ -386,7 +388,7 @@ For your most strategically important data assets, document how data flows throu
 
 ### 3.5 Strategic Data Assets
 
-Identify data assets that represent a unique competitive advantage -- data that competitors do not have and cannot easily replicate:
+Identify data assets that represent a unique competitive advantage: data that competitors do not have and cannot easily replicate:
 
 | Data Asset | Why It Is Unique | Competitive Advantage It Enables | AI Opportunity |
 |---|---|---|---|
@@ -448,7 +450,7 @@ Identify data you wish you had but currently don't, or data that exists but is n
 
 ### 4.2 Shadow AI Audit
 
-List every AI tool you are aware of being used in the organization -- sanctioned or not:
+List every AI tool you are aware of being used in the organization, sanctioned or not:
 
 | AI Tool / Service | Used By (team or role) | Use Case Description | Sanctioned? (Y/N/Unknown) | Data Sent to It | Risk Concern |
 |---|---|---|---|---|---|
@@ -459,6 +461,8 @@ List every AI tool you are aware of being used in the organization -- sanctioned
 | &nbsp; | | | | | |
 
 > **Facilitation tip:** Be honest. Shadow AI is nearly universal. Treat unsanctioned usage as a signal of unmet need, not misconduct. The goal is to understand what employees are actually doing so you can channel it safely.
+>
+> **On personal experimentation:** Governance should define safe boundaries for exploration, not blanket prohibition. A practical starting point: personal experimentation with AI tools is acceptable when the tool is not connected to company data, not invited into meetings or internal systems, and not authenticated with organizational credentials. Anything beyond that boundary requires the tool to go through the approval process.
 
 ---
 
@@ -503,11 +507,11 @@ AI-assisted development has shifted the economics of custom software. For system
 | &nbsp; | | | | | |
 
 **Guidance:**
-- **Keep** -- Commodity tool; no competitive advantage in owning it; build and maintenance cost exceeds value
-- **Evaluate** -- Ownership would deliver differentiation, cost savings, or reduced vendor dependency; worth a scoping exercise
-- **Build** -- Clear strategic or financial case; AI-assisted development makes this achievable with current team capacity
+- **Keep**: Commodity tool; no competitive advantage in owning it; build and maintenance cost exceeds value
+- **Evaluate**: Ownership would deliver differentiation, cost savings, or reduced vendor dependency; worth a scoping exercise
+- **Build**: Clear strategic or financial case; AI-assisted development makes this achievable with current team capacity
 
-> **Facilitation tip:** The goal is not to build everything -- it is to identify where current vendor dependency is a strategic or financial risk, and where AI has shifted the calculus from "can't afford to build" to "can't afford not to."
+> **Facilitation tip:** The goal is not to build everything; it is to identify where current vendor dependency is a strategic or financial risk, and where AI has shifted the calculus from "can't afford to build" to "can't afford not to."
 
 ---
 
@@ -534,18 +538,18 @@ AI-assisted development has shifted the economics of custom software. For system
 
 A Wardley Map is a strategic tool that plots **what your organization does** (capabilities and components) against two axes:
 
-**Y-axis -- Visibility (Value Chain)**
+**Y-axis: Visibility (Value Chain)**
 - Top: directly visible to and valued by the customer/user
 - Bottom: invisible infrastructure the customer never sees but which must exist
-- This reflects your value chain -- things at the top depend on things below them
+- This reflects your value chain; things at the top depend on things below them
 
-**X-axis -- Evolution**
-- Left: **Genesis** -- novel, poorly understood, custom-built, high uncertainty
-- Moving right: **Custom Built** -- understood but still bespoke per organization
-- Further right: **Product** -- available as an off-the-shelf product or service
-- Far right: **Commodity** -- standardized, utility-like, interchangeable (e.g., electricity, cloud compute)
+**X-axis: Evolution**
+- Left: **Genesis**: novel, poorly understood, custom-built, high uncertainty
+- Moving right: **Custom Built**: understood but still bespoke per organization
+- Further right: **Product**: available as an off-the-shelf product or service
+- Far right: **Commodity**: standardized, utility-like, interchangeable (e.g., electricity, cloud compute)
 
-**The key insight:** Everything evolves rightward over time. Competitive advantage comes from capabilities in Genesis or Custom Built -- but only if you understand which ones actually matter to your customers. Commodity capabilities should be bought, not built.
+**The key insight:** Everything evolves rightward over time. Competitive advantage comes from capabilities in Genesis or Custom Built, but only if you understand which ones actually matter to your customers. Commodity capabilities should be bought, not built.
 
 **Why this matters for AI:** AI tools are rapidly pushing many capabilities from "Custom Built" (requiring skilled humans) to "Product" or "Commodity" (achievable by any organization with access to AI tools). Understanding where your capabilities sit today reveals which ones are about to be disrupted.
 
@@ -553,7 +557,7 @@ A Wardley Map is a strategic tool that plots **what your organization does** (ca
 
 ### 5.2 Plotting Your Capabilities
 
-**Step 1 -- Assign each capability an Evolution stage** using the guide below:
+**Step 1. Assign each capability an Evolution stage** using the guide below:
 
 | Evolution Stage | Characteristics | Signal Words |
 |---|---|---|
@@ -562,17 +566,17 @@ A Wardley Map is a strategic tool that plots **what your organization does** (ca
 | **Product** | Available from vendors as a product; can be purchased and configured; industry standard options exist | "We use [vendor] for this", "we could switch vendors", "there are 3–4 options on the market" |
 | **Commodity** | Interchangeable; utility-like; price is the only differentiator; you'd notice only if it broke | "Everyone uses the same thing", "AWS / Google / standard SaaS", "we don't think about it" |
 
-**Step 2 -- Assign each capability a Visibility level** (1 = pure infrastructure, 5 = directly customer-facing):
+**Step 2. Assign each capability a Visibility level** (1 = pure infrastructure, 5 = directly customer-facing):
 
 | Visibility Level | Description |
 |---|---|
-| 5 -- Direct | The customer interacts with this directly |
-| 4 -- Near | The customer feels the output of this (speed, quality, reliability) |
-| 3 -- Indirect | Internal teams that serve customers depend on this |
-| 2 -- Supporting | Enables the internal teams that serve internal teams |
-| 1 -- Foundation | Pure infrastructure; nobody notices until it breaks |
+| 5: Direct | The customer interacts with this directly |
+| 4: Near | The customer feels the output of this (speed, quality, reliability) |
+| 3: Indirect | Internal teams that serve customers depend on this |
+| 2: Supporting | Enables the internal teams that serve internal teams |
+| 1: Foundation | Pure infrastructure; nobody notices until it breaks |
 
-**Step 3 -- Complete the Wardley Positioning Table:**
+**Step 3. Complete the Wardley Positioning Table:**
 
 | Capability | Evolution Stage | Visibility (1–5) | Dependencies (what does this depend on?) | Notes |
 |---|---|---|---|---|
@@ -604,7 +608,7 @@ A Wardley Map is a strategic tool that plots **what your organization does** (ca
 Draw your map using the grid below. Place each capability as a labeled node at the intersection of its visibility (Y) and evolution (X). Connect dependent capabilities with lines.
 
 ```
-                         WARDLEY MAP -- [Organization Name]
+                         WARDLEY MAP: [Organization Name]
                          Date: ____________
 
 HIGH        │
@@ -650,13 +654,13 @@ Once your capabilities are plotted, overlay AI disruption signals:
 
 **Mark each of the following directly on your map:**
 
-1. **Evolution acceleration arrows (→→)** -- Capabilities being pushed rightward by AI. A capability that is currently "Custom Built" (requires skilled humans) may become a "Product" in 2–3 years because AI makes it accessible to anyone.
+1. **Evolution acceleration arrows (→→)**: Capabilities being pushed rightward by AI. A capability that is currently "Custom Built" (requires skilled humans) may become a "Product" in 2–3 years because AI makes it accessible to anyone.
 
-2. **Displacement marks (✕)** -- Capabilities that AI may make entirely redundant. If the task itself disappears, mark with ✕.
+2. **Displacement marks (✕)**: Capabilities that AI may make entirely redundant. If the task itself disappears, mark with ✕.
 
-3. **Amplification marks (★+)** -- Capabilities where AI dramatically amplifies human output, potentially turning a current weakness into a strength or a current strength into an insurmountable advantage.
+3. **Amplification marks (★+)**: Capabilities where AI dramatically amplifies human output, potentially turning a current weakness into a strength or a current strength into an insurmountable advantage.
 
-4. **New capability emergence (○)** -- Net-new capabilities that AI enables that didn't previously exist for your organization (e.g., 24/7 AI-driven customer interaction, automated document analysis at scale).
+4. **New capability emergence (○)**: Net-new capabilities that AI enables that didn't previously exist for your organization (e.g., 24/7 AI-driven customer interaction, automated document analysis at scale).
 
 ---
 
@@ -666,10 +670,10 @@ After drawing the map, work through these questions as a group:
 
 | Question | Answer / Observation |
 |---|---|
-| Which Core or Strategic capabilities are positioned in Commodity -- meaning you're investing in something that should be bought, not built? | |
+| Which Core or Strategic capabilities are positioned in Commodity, meaning you're investing in something that should be bought, not built? | |
 | Which Commodity-positioned capabilities are you still running manually or with heavy customization? | |
 | Which capabilities are in Genesis or Custom Built that a well-resourced competitor could accelerate with AI? | |
-| Where do your dependency chains create brittleness -- a single critical path? | |
+| Where do your dependency chains create brittleness, a single critical path? | |
 | Which capabilities in the map are actually the same thing described differently by different business units? | |
 | Which capabilities, if they evolved to Commodity tomorrow, would reduce your competitive advantage? | |
 | Which capabilities, if they evolved to Commodity tomorrow, would reduce your costs significantly? | |
@@ -703,12 +707,39 @@ Use these five disruption types to classify what AI will do to each capability:
 | **Automate** | AI can perform the entire capability end-to-end without human involvement | The capability still needs to exist; humans may no longer need to perform it |
 | **Augment** | AI assists humans performing the capability, making them faster, more accurate, or higher quality | Role changes; output quality improves; fewer people may be needed per unit of output |
 | **Accelerate** | AI speeds up a step within the capability without changing who does it or how | Time savings; cost reduction; competitive advantage if faster than competitors |
-| **Displace** | AI makes the capability itself unnecessary -- the problem it solves no longer needs solving the same way | The capability may shrink significantly or disappear |
+| **Displace** | AI makes the capability itself unnecessary: the problem it solves may no longer need solving the same way | The capability may shrink significantly or disappear |
 | **Create** | AI enables a new version of this capability that was previously impossible or unaffordable | New competitive advantage; new product/service possibilities |
 
 ---
 
-### 6.2 AI Disruption Assessment Table
+### 6.2 Thin Work vs. Valued Work Classification
+
+Before assessing AI disruption at the capability level, classify the *work within* each capability. This determines where AI should be applied first and where human effort should be preserved.
+
+- **Thin work**: Repetitive, low-value, machine-ready tasks. These are the primary targets for automation. Examples: data entry, status reporting, formatting, scheduling, first-pass review, copy-paste between systems.
+- **Valued work**: Creative, strategic, judgment-intensive tasks that represent the human contribution worth protecting and amplifying. Examples: relationship building, novel problem-solving, ethical judgment, stakeholder negotiation, strategic planning.
+
+For each capability, estimate the split:
+
+| # | Capability Name | % Thin Work | % Valued Work | Highest-Value Thin Work to Eliminate | Notes |
+|---|---|---|---|---|---|
+| 1 | | | | | |
+| 2 | | | | | |
+| 3 | | | | | |
+| 4 | | | | | |
+| 5 | | | | | |
+| 6 | | | | | |
+| 7 | | | | | |
+| 8 | | | | | |
+| 9 | | | | | |
+| 10 | | | | | |
+| *(continue for all capabilities)* | | | | | |
+
+> **Facilitation tip:** Capabilities with a high thin work percentage are natural automation candidates. Capabilities with a high valued work percentage should be augmented, not automated; AI should absorb the thin work within them so humans can focus on the valued work.
+
+---
+
+### 6.3 AI Disruption Assessment Table
 
 For each capability from Module 2, complete this analysis:
 
@@ -748,7 +779,7 @@ For each capability from Module 2, complete this analysis:
 
 ---
 
-### 6.3 Workforce Impact Assessment
+### 6.4 Workforce Impact Assessment
 
 For capabilities identified as Automate, Augment, or Displace, assess the workforce implications:
 
@@ -761,13 +792,13 @@ For capabilities identified as Automate, Augment, or Displace, assess the workfo
 | &nbsp; | | | | | |
 
 **Nature of impact:**
-- **Role eliminated** -- this specific job function ceases to exist
-- **Role changed** -- the job exists but is substantially different; requires reskilling
-- **Role expanded** -- AI handles routine aspects, freeing the person for higher-value work
+- **Role eliminated**: this specific job function ceases to exist
+- **Role changed**: the job exists but is substantially different; requires reskilling
+- **Role expanded**: AI handles routine aspects, freeing the person for higher-value work
 
 ---
 
-### 6.4 Disruption Priority Matrix
+### 6.5 Disruption Priority Matrix
 
 Plot your top capabilities on this 2×2. Focus attention on the top-right quadrant.
 
@@ -797,7 +828,7 @@ Impact      │    lower likelihood)    │    higher likelihood)
 
 ---
 
-### 6.5 Competitor & Market Disruption
+### 6.6 Competitor & Market Disruption
 
 Assess disruption at the market level, not just the capability level:
 
@@ -806,7 +837,7 @@ Assess disruption at the market level, not just the capability level:
 | Are any known competitors already using AI in ways that affect these capabilities? | |
 | Are there AI-native startups in your market that compete on any of these capabilities? | |
 | Which of your customer relationships are most at risk if a competitor deploys AI ahead of you? | |
-| What would a fully AI-native competitor in your market look like -- what capabilities would they have that you don't? | |
+| What would a fully AI-native competitor in your market look like, and what capabilities would they have that you don't? | |
 | Could your customers or prospects now build an alternative to what you sell or provide using AI-assisted development? Which products or services are most exposed to this? | |
 
 ---
@@ -814,9 +845,11 @@ Assess disruption at the market level, not just the capability level:
 ### Module 6 Discussion Prompts
 
 - Which capabilities, if disrupted, would your customers notice most quickly?
-- Where do you have irreplaceable human judgment today that AI genuinely cannot replicate -- and is that still true in 3 years?
+- Where do you have irreplaceable human judgment today that AI genuinely cannot replicate, and is that still true in 3 years?
 - Which threats are you most tempted to dismiss, and why? (These are often the most important ones.)
-- Where could you use AI disruption offensively -- to take market share from competitors who are slower to adapt?
+- Where could you use AI disruption offensively, to take market share from competitors who are slower to adapt?
+- As AI absorbs thin work and your people shift from *doing the work* to *directing AI that does the work*, are your current managers and leaders prepared for that transition? What would need to change in how you develop leaders?
+- Looking at the thin work / valued work split across capabilities, where is the greatest opportunity to free up human capacity for higher-value contribution?
 
 ---
 
@@ -825,7 +858,7 @@ Assess disruption at the market level, not just the capability level:
 **Time:** 45–60 minutes
 **Participants:** CTO/CIO, CISO, Data Lead, HR Lead, Operations Lead
 
-**Purpose:** Establish a scored baseline against both the TAF and AIAF maturity models. This produces your official "starting point" -- a repeatable assessment you can run again in 12 months to measure progress.
+**Purpose:** Establish a scored baseline against both the TAF and AIAF maturity models. This produces your official "starting point", a repeatable assessment you can run again in 12 months to measure progress.
 
 ---
 
@@ -884,10 +917,10 @@ Score each of the six AIAF perspectives. Use the AIAF maturity model from [AIAdo
 
 | Score | AIAF Level |
 |---|---|
-| 1.0 – 1.5 | Level 1 -- Exploring |
-| 1.6 – 2.5 | Level 2 -- Piloting |
-| 2.6 – 3.5 | Level 3 -- Scaling |
-| 3.6 – 4.0 | Level 4 -- Transforming |
+| 1.0 – 1.5 | Level 1: Exploring |
+| 1.6 – 2.5 | Level 2: Piloting |
+| 2.6 – 3.5 | Level 3: Scaling |
+| 3.6 – 4.0 | Level 4: Transforming |
 
 **Your current AIAF level: _______________**
 
@@ -915,13 +948,18 @@ Answer each question honestly. Each "No" is a gap to address before or during AI
 - [ ] A process exists for employees to report AI quality or safety concerns
 - [ ] The workforce impact of AI on specific roles has been assessed
 
+**Process**
+- [ ] Standard operating procedures (SOPs) exist for the top candidate workflows being considered for AI
+- [ ] Decision points, exceptions, and handoffs are documented for those workflows
+- [ ] Work within key capabilities has been classified as thin work (machine-ready) vs. valued work (human-required)
+
 **Technology**
 - [ ] AI API keys / credentials are managed centrally (not embedded in individual accounts)
 - [ ] Logging of AI interactions is possible for regulated use cases
 - [ ] At least one AI use case has been piloted in a controlled way
 - [ ] A feedback mechanism exists for users of AI tools
 
-**Readiness score:** _____ / 16 items checked
+**Readiness score:** _____ / 19 items checked
 
 ---
 
@@ -941,7 +979,7 @@ Answer each question honestly. Each "No" is a gap to address before or during AI
 ### Module 7 Discussion Prompts
 
 - Where are the biggest gaps between your current maturity and where you need to be to achieve your strategic drivers?
-- Which perspective scored lowest -- and is that a resource problem, a knowledge problem, or a prioritization problem?
+- Which perspective scored lowest, and is that a resource problem, a knowledge problem, or a prioritization problem?
 - If you could only improve one perspective by 12 months from now, which would have the highest leverage?
 - Are your target scores ambitious enough? Are they realistic?
 
@@ -972,7 +1010,7 @@ Complete this summary as a group. This is your official baseline document.
 | **Top AI disruption threats** | (2–3 capabilities most at risk from competitors using AI) |
 | **Top AI opportunities** | (2–3 capabilities where AI could deliver the most value) |
 | **Biggest constraint** | (The single thing most likely to slow down adoption) |
-| **Readiness checklist score** | (X / 16 -- note which categories are weakest) |
+| **Readiness checklist score** | (X / 19; note which categories are weakest) |
 
 ---
 
@@ -988,7 +1026,26 @@ Complete this summary as a group. This is your official baseline document.
 
 ---
 
-### 8.3 Prioritized Action Backlog
+### 8.3 AI Decision Register (Initial Draft)
+
+Based on the shadow AI audit (Module 4) and disruption analysis (Module 6), draft the initial AI Decision Register. This will be maintained and expanded as AI adoption progresses through the AIAF lifecycle.
+
+For every point where AI is currently making, shaping, or influencing a decision in the organization (including shadow AI), record:
+
+| # | Decision Being Influenced | AI Tool Involved | Decision Owner (Person) | Guardrails in Place | Exception Handling | Sanctioned? (Y/N) | Risk Tier |
+|---|---|---|---|---|---|---|---|
+| 1 | | | | | | | |
+| 2 | | | | | | | |
+| 3 | | | | | | | |
+| 4 | | | | | | | |
+| 5 | | | | | | | |
+| *(add rows as needed)* | | | | | | | |
+
+> **Facilitation tip:** Most organizations discover during this exercise that AI is already influencing more decisions than they realized. That's the point. The register makes the invisible visible so it can be governed.
+
+---
+
+### 8.4 Prioritized Action Backlog
 
 Using the outputs of all modules, list the 10–15 most important actions to take in the next 90 days and the next 12 months:
 
@@ -1019,24 +1076,24 @@ Using the outputs of all modules, list the 10–15 most important actions to tak
 
 ---
 
-### 8.4 Framework Phase Entry Point
+### 8.5 Framework Phase Entry Point
 
 Based on this assessment, confirm which phase of each framework you are entering:
 
 | Framework | Entry Phase | Rationale |
 |---|---|---|
-| **TAF** | Phase __ -- ___________ | |
-| **AIAF** | Phase __ -- ___________ | |
+| **TAF** | Phase __: ___________ | |
+| **AIAF** | Phase __: ___________ | |
 
 **For most organizations completing this assessment for the first time, the entry point is:**
-- TAF: Phase 1 (Assess & Strategize) -- the assessment itself is Phase 1
-- AIAF: Phase 1 (Discover & Assess) -- this assessment completes AIAF Phase 1
+- TAF: Phase 1 (Assess & Strategize); the assessment itself is Phase 1
+- AIAF: Phase 1 (Discover & Assess); this assessment completes AIAF Phase 1
 
-If your AIAF readiness checklist scored above 12/16 and your AIAF maturity is 2.0+, you may be ready to enter AIAF Phase 2 (Pilot & Validate) immediately.
+If your AIAF readiness checklist scored above 15/19 and your AIAF maturity is 2.0+, you may be ready to enter AIAF Phase 2 (Pilot & Validate) immediately.
 
 ---
 
-### 8.5 Assessment Review Schedule
+### 8.6 Assessment Review Schedule
 
 This assessment should be repeated to measure progress:
 
@@ -1051,7 +1108,7 @@ This assessment should be repeated to measure progress:
 ### Module 8 Discussion Prompts
 
 - What surprised you most during this assessment?
-- Where did the group disagree -- and what does that disagreement tell you?
+- Where did the group disagree, and what does that disagreement tell you?
 - What are you most worried about that didn't fit neatly into any of the worksheets?
 - Who is not in this room today who should be involved in the next steps?
 
@@ -1172,7 +1229,7 @@ This assessment should be repeated to measure progress:
 - High uncertainty; methods change frequently
 - Requires significant experimentation and tolerance for failure
 - Cannot be bought; must be built or discovered
-- Competitive advantage is high if it's in your core value chain -- but only while it stays in Genesis
+- Competitive advantage is high if it's in your core value chain, but only while it stays in Genesis
 
 **Custom Built**
 - Well understood within your organization or industry
@@ -1186,7 +1243,7 @@ This assessment should be repeated to measure progress:
 - Can be purchased, configured, and used without custom development
 - Industry standard options exist; pricing is transparent
 - Talent is widely available
-- Differentiating on this stage is difficult -- competitors can buy the same thing
+- Differentiating on this stage is difficult; competitors can buy the same thing
 
 **Commodity (or Utility)**
 - Interchangeable; selection based on price and availability
