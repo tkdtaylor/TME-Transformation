@@ -23,6 +23,8 @@
    - [Phase 5: Optimize & Manage](#phase-5----optimize--manage)
    - [Phase 6: Modernize & Innovate](#phase-6----modernize--innovate)
 5. [Maturity Model](#maturity-model)
+   - [Maturity by Perspective](#maturity-by-perspective)
+   - [Technology Center of Excellence: Operating Model Evolution](#technology-center-of-excellence-operating-model-evolution)
 6. [Workload Strategy](#workload-strategy)
 7. [Governance & Security Model](#governance--security-model)
 8. [Roles & Responsibilities](#roles--responsibilities)
@@ -50,6 +52,12 @@ It draws on the structural strengths of three industry-leading frameworks:
 The TAF is organized around two complementary dimensions:
 - **Horizontal axis**: Six core perspectives that span the organization (who is involved and what they own)
 - **Vertical axis**: Six lifecycle phases (when work happens and in what order)
+
+### Specializations
+
+The TAF is designed to be extended for specific adoption contexts. The current specialization is:
+
+- **[AI Adoption Framework (AIAF)](AIAdoptionFramework.md)** — expands the TAF with a seventh perspective (Data & Knowledge) and AI-specific governance, security, and operations concerns (Responsible AI, OWASP LLM Top 10, agent personas, GenAIOps, measurable RAI goals). Use the AIAF when the transformation involves LLMs, AI assistants, AI coding tools, AI-embedded products, or autonomous agents.
 
 ---
 
@@ -124,9 +132,9 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 - Technology governance frameworks (policies, standards, guardrails)
 - Portfolio and program management (prioritization, funding gates, stage reviews)
 - Risk identification, assessment, and mitigation
-- Regulatory and compliance mapping (GDPR, HIPAA, SOC 2, ISO 27001, etc.)
+- Regulatory and compliance mapping: e.g., GDPR, CCPA/CPRA and the US state privacy patchwork, HIPAA, SOC 2, ISO 27001, PCI DSS 4.0, DORA (EU financial services operational resilience), and sector-specific rules
 - Vendor and third-party risk management
-- FinOps: technology financial management and cost governance
+- FinOps policy and cost governance (budgets, tagging policies, chargeback models, spend approval thresholds). Execution and optimization live in the Operations & Management perspective
 - Audit and accountability mechanisms
 
 **Key Questions to Answer:**
@@ -140,12 +148,12 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 
 **Purpose:** Design, build, and maintain enterprise-grade technology platforms that are scalable, resilient, and fit for workload requirements.
 
-**Key Stakeholders:** CTO, Enterprise Architects, Platform Engineers, Cloud Engineers, Data Engineers
+**Key Stakeholders:** CTO, Enterprise Architects, Platform Engineers, Data Engineers, Site Reliability Engineers
 
 **Core Capabilities:**
 - Current-state architecture assessment (applications, data, infrastructure)
-- Target architecture design (cloud, hybrid, multi-cloud, edge, internal)
-- Platform foundation design: network topology, identity, subscriptions/accounts
+- Target architecture design (on-premises, cloud, hybrid, multi-cloud, edge)
+- Platform foundation design: network topology, identity, tenancy boundaries (e.g., subscriptions, accounts, or projects in cloud; organizational units in on-premises)
 - Infrastructure-as-Code (IaC) and platform automation
 - Data platform strategy (mesh, lakes, warehouses, streaming, ML infrastructure)
 - Application portfolio rationalization (the "7 Rs": Retain, Retire, Rehost, Replatform, Repurchase, Refactor, Rearchitect)
@@ -191,7 +199,7 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 - Incident management and on-call operations (runbooks, playbooks, post-mortems)
 - Change and release management
 - Capacity planning and performance management
-- FinOps: cost visibility, rightsizing, reservation/savings plan management, TCO
+- FinOps execution: cost visibility, rightsizing, capacity commitment management (reservations, savings plans, committed-use discounts), TCO tracking. Policy and guardrails are set in the Governance & Risk perspective
 - Service catalog and configuration management (CMDB)
 - Automation of toil: reducing manual operational burden
 
@@ -246,7 +254,7 @@ The framework progresses through six sequential-but-iterative phases. Organizati
 
 **Outputs:**
 - Detailed project/program plan
-- Deployed platform foundation (landing zone, core infrastructure)
+- Deployed platform foundation: the baseline environment in which all subsequent workloads will run, including network topology, identity baseline, tenancy structure, core security controls, observability wiring, and policy guardrails. In cloud contexts this is often called the "landing zone"; in on-premises or hybrid contexts the equivalents are the reference environment, platform baseline, or core infrastructure pattern
 - Workforce training program launched
 - Pilot scope defined and approved
 
@@ -316,7 +324,7 @@ The framework progresses through six sequential-but-iterative phases. Organizati
 - Observability maturity improvements
 - Operational runbook automation and AIOps adoption
 - Platform consolidation and rationalization
-- Well-Architected / design review assessments for key workloads
+- Well-Architected and design review assessments for key workloads (see [AWS Well-Architected](https://aws.amazon.com/architecture/well-architected/), [Azure Well-Architected](https://learn.microsoft.com/en-us/azure/well-architected/), or [Google Cloud Architecture Framework](https://cloud.google.com/architecture/framework) for vendor-specific pillar guidance)
 
 **Outputs:**
 - Cost reduction and performance improvement reports
@@ -328,7 +336,7 @@ The framework progresses through six sequential-but-iterative phases. Organizati
 
 ### Phase 6: Modernize & Innovate
 
-**Goal:** Leverage the transformed platform to drive competitive differentiation through modernization, AI, and net-new cloud-native development.
+**Goal:** Leverage the transformed platform to drive competitive differentiation through modernization, AI, and net-new modern application development (cloud-native, container-based, serverless, or event-driven patterns as appropriate).
 
 **Key Activities:**
 - Application modernization (containers, serverless, microservices)
@@ -358,10 +366,38 @@ Organizations progress through four maturity levels. Each level applies across a
 | **3: Managed** | Scalable | Consistent processes enforced. Governance automated. Teams operate with defined SLOs and cost visibility. Security controls systematic. |
 | **4: Optimizing** | Strategic | Continuous improvement embedded. Platform-as-a-product mindset. AI-augmented operations. Business and technology strategy fully aligned. |
 
+### Maturity by Perspective
+
+Use this grid to assess current state and set targets per perspective. It is common and expected to be at Level 3 in one perspective while still at Level 1 in another; balanced progress across perspectives is more valuable than pushing any single perspective to Level 4 in isolation.
+
+| Perspective | Level 1: Tactical | Level 2: Defined | Level 3: Managed | Level 4: Optimizing |
+|---|---|---|---|---|
+| **Business** | No formal business case; project-led funding; value unmeasured | Business cases developed per initiative; basic ROI tracking | Portfolio managed against business outcomes; value realization tracked | Technology strategy directly shapes business strategy; continuous outcome measurement |
+| **People & Culture** | Ad-hoc training; skills gaps undocumented; change management reactive | Training curricula in place; some role-based paths; change plans per initiative | Role-based learning with certification targets; org design aligned to platforms or products; change as a steady practice | Continuous learning culture; leadership development continuous; org design evolves with strategy |
+| **Governance & Risk** | Informal guardrails; shadow IT prevalent; compliance reactive | Basic policies documented; manual compliance checks; risk register exists | Policy-as-Code enforced; automated compliance scanning; portfolio governance active | Predictive governance; risk posture proactively managed; controls continuously tuned |
+| **Platform & Technology** | Siloed infrastructure; manual provisioning; inconsistent architecture | Platform foundation built; some IaC; target architecture defined but not enforced | Consistent platform with self-service; IaC as standard; architecture governance active | Platform-as-a-product; internal developer platform; architecture continuously refreshed |
+| **Security & Compliance** | Perimeter-based; reactive; manual audits | Basic Zero Trust principles; some automation; compliance evidence gathered per audit | Zero Trust broadly applied; continuous compliance monitoring; automated policy enforcement | Threat intelligence integrated; compliance-as-Code; security embedded in dev and ops |
+| **Operations & Management** | Manual operations; firefighting culture; limited visibility | Runbooks documented; basic monitoring; change management process | SLOs defined; observability integrated; FinOps governance active; incident response drilled | Self-healing systems; automation-first operations; continuous cost and performance optimization |
+
+### Technology Center of Excellence: Operating Model Evolution
+
+As maturity increases, the central Technology CoE's role must shift. A CoE stuck in gatekeeper mode at Level 3+ becomes a bottleneck that teams will route around, recreating the shadow-IT problem the CoE was stood up to solve. A CoE that jumps to self-service before guardrails are automated leaves policy enforcement to goodwill. Plan the evolution deliberately:
+
+| Stage | Maturity Range | CoE Role | Primary Activities | Failure Signal |
+|---|---|---|---|---|
+| **Gatekeeper** | Levels 1 → 2 | Central approval authority | Review architectures by hand, source tools, publish standards, block unsanctioned usage, execute first migration waves | High friction is acceptable here; if teams are not waiting on you, unsanctioned work is routing around |
+| **Enabler / Advisor** | Level 3 | Consultant and accelerator | Provide reference architectures, reusable IaC modules, design review services, embedded advisors; curate the approved tool registry | Advisor queue depth is the bottleneck; teams stall waiting for consultation |
+| **Platform / Self-service** | Level 4 | Platform owner | Operate the platform foundation, automated guardrails, internal developer platform, service catalog; teams self-serve within policy | Platform usage is high but policy or quality incidents rise: guardrails are not keeping up with what teams can do |
+
+**Design implication:** Every control the gatekeeper enforces by hand in Stage 1 is a candidate to be codified into platform automation by Stage 3. Anything that cannot be automated must be designed as a lightweight self-attestation with sample-audit, not synchronous review. A CoE whose Stage 3 controls still require a human reviewer for every change is not actually at Stage 3.
+
+**Naming note:** This pattern is often called "CCoE" (Cloud Center of Excellence) in cloud-specific contexts, "Platform CoE" in platform-engineering contexts, and simply "CoE" in technology-agnostic contexts. The same operating-model evolution applies regardless of the domain label.
+
 **How to use the maturity model:**
 - Assess current level per perspective at the start of each phase
 - Set target maturity levels that are appropriate to organizational size, risk, and ambition; not every organization needs Level 4 in every perspective
 - Use maturity gaps to prioritize roadmap items and investments
+- Align the CoE operating mode to your dominant maturity level; mismatches (gatekeeper at Level 4, self-service at Level 1) create predictable failures
 
 ---
 
@@ -432,7 +468,7 @@ The boundary between provider and consumer responsibility varies by service mode
 | **Executive Sponsor** | Business | Champions program, removes blockers, owns business case |
 | **Program Director** | Governance | End-to-end program accountability, budget, stakeholder reporting |
 | **Enterprise Architect** | Platform | Target architecture ownership, design authority |
-| **Cloud Platform Lead** | Platform | Landing zone build, platform services, IaC ownership |
+| **Platform Lead** | Platform | Platform foundation build, shared platform services, IaC ownership |
 | **Security Architect** | Security | Security baseline design, compliance mapping, threat modeling |
 | **Change Manager** | People | Change impact assessments, communications, training coordination |
 | **FinOps Lead** | Operations | Cost governance, optimization, chargeback modeling |
@@ -466,17 +502,20 @@ Track metrics across four outcome categories aligned to the business case.
 | Technology ROI | Return on transformation investment | Positive within 24 months |
 | Time-to-market | Speed of new feature/product delivery | 30% reduction |
 | Business agility | Ability to respond to market changes | Qualitative + deployment frequency |
-| ESG impact | Energy/carbon reduction from efficiency gains | Measurable reduction in PUE/carbon |
+| ESG impact | Energy and carbon footprint reduction from efficiency gains | Measurable reduction in energy use, carbon intensity, or data-center PUE |
 
 ### Operational Outcomes
 
 | KPI | Description | Target Example |
 |---|---|---|
 | System availability | Uptime against SLAs | 99.9%+ for Tier 0/1 |
-| MTTR | Mean time to resolve incidents | < 1 hour for P1 |
 | Deployment frequency | How often code ships to production | Daily or on-demand |
+| Lead time for changes | Time from code commit to production | Hours to a day (high maturity) |
+| MTTR | Mean time to resolve incidents | < 1 hour for P1 |
 | Change failure rate | % of changes causing incidents | < 5% |
 | Cost per workload | Total cost of ownership per application | Tracked and trending down |
+
+*Deployment frequency, lead time for changes, MTTR, and change failure rate are the [DORA Four Keys](https://dora.dev/) and serve as the industry baseline for software delivery performance. Use them to benchmark against published DORA annual research.*
 
 ### Security Outcomes
 
@@ -491,7 +530,7 @@ Track metrics across four outcome categories aligned to the business case.
 
 | KPI | Description | Target Example |
 |---|---|---|
-| Certification attainment | % of target staff certified | 80% of cloud engineers |
+| Certification attainment | % of target staff certified against role-relevant standards | 80% of platform and engineering staff |
 | Change readiness score | Survey-based change readiness | > 70/100 |
 | Adoption rate | % of teams using new platform/tools | > 85% |
 | Attrition rate | Staff lost during transformation | Within normal range |
@@ -518,13 +557,32 @@ COMPREHENSIVE TECHNOLOGY ADOPTION FRAMEWORK
   FOUR MATURITY LEVELS
   1. Tactical (Ad-hoc) → 2. Defined (Repeatable) → 3. Managed (Scalable) → 4. Optimizing (Strategic)
 
+  COE OPERATING MODEL EVOLUTION (tracks maturity)
+  Gatekeeper (L1-L2) → Enabler/Advisor (L3) → Platform/Self-service (L4)
+
   SEVEN MIGRATION STRATEGIES (7 Rs)
   Retain | Retire | Rehost | Replatform | Repurchase | Refactor | Rearchitect
 
+  FIVE WORKLOAD CRITICALITY TIERS
+  Tier 0 Mission-Critical | Tier 1 Business-Critical | Tier 2 Business-Important |
+  Tier 3 Supporting | Tier 4 Legacy/Candidate
+
+  FOUR GOVERNANCE LAYERS
+  Enterprise Policies | Platform Controls | Workload Controls | FinOps Controls
+
+  THREE ZERO TRUST PRINCIPLES
+  Verify Explicitly | Use Least Privilege | Assume Breach
+
+  THREE SERVICE MODELS (for Shared Responsibility)
+  IaaS | PaaS | SaaS
+
   KEY OUTCOME CATEGORIES
-  Business Outcomes | Operational Outcomes | Security Outcomes | People Outcomes
+  Business | Operational (incl. DORA Four Keys) | Security | People
+
+  SPECIALIZATIONS
+  AI Adoption Framework (AIAF) — seven perspectives, AI-specific controls
 ```
 
 ---
 
-*Sources: [AWS CAF](https://aws.amazon.com/cloud-adoption-framework/) · [Google Cloud Adoption Framework](https://cloud.google.com/adoption-framework) · [Microsoft Azure CAF](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/)*
+*Synthesized from three industry-leading cloud adoption frameworks: [AWS Cloud Adoption Framework](https://aws.amazon.com/cloud-adoption-framework/) (six-perspective structure, 47 foundational capabilities), [Google Cloud Adoption Framework](https://cloud.google.com/adoption-framework) (phased adoption lifecycle with maturity measurement), and [Microsoft Azure Cloud Adoption Framework](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/) (end-to-end methodology from strategy through operations). Software delivery performance metrics reference the [DORA Four Keys](https://dora.dev/). Architectural quality pillars reference the [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/), [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/), and [Google Cloud Architecture Framework](https://cloud.google.com/architecture/framework). Zero Trust principles align with [NIST SP 800-207](https://csrc.nist.gov/pubs/sp/800/207/final). For AI, ML, or generative-AI-specific adoption, see the specialized [AI Adoption Framework (AIAF)](AIAdoptionFramework.md), which expands this base framework with a seventh perspective (Data & Knowledge) and AI-specific controls (Responsible AI, OWASP LLM Top 10, agent personas, GenAIOps). Not affiliated or endorsed in any way with any of the referenced companies or authors.*
