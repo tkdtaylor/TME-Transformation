@@ -7,6 +7,8 @@
 This assessment gives you a clear picture of where you are today and a structured path to where you want to go.
 
 > **Companion to:** [AI Adoption Framework (AIAF)](../AIAdoptionFramework.md). It uses selected concepts from the [Technology Adoption Framework (TAF)](../TechAdoptionFramework.md) where they help clarify the business and technology baseline, but it is not intended to replace a dedicated TAF assessment.
+>
+> **Facilitator guide:** [FacilitatorGuide.md](FacilitatorGuide.md)
 
 ---
 

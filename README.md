@@ -60,6 +60,16 @@ The [Templates](Templates) folder contains vendor-neutral source templates inten
 
 ---
 
+## Supporting Docs
+
+| Document | Use For |
+|---|---|
+| [References.md](References.md) | External source links, review cadences, and maintenance notes |
+| [CHANGELOG.md](CHANGELOG.md) | Project change history |
+| [FacilitatorGuide.md](Workshops/FacilitatorGuide.md) | Running the AIAF-grounded Business Readiness Assessment workshop |
+
+---
+
 ## How the Frameworks Relate
 
 ```
