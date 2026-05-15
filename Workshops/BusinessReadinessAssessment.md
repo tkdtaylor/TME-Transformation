@@ -1,18 +1,18 @@
 # Business Readiness Assessment
-### A Starting Point for Technology & AI Adoption
+### A Starting Point for AI Adoption
 
 > "If you don't know where you want to go, then it doesn't matter which path you take"
 > *The Cheshire Cat*
 
 This assessment gives you a clear picture of where you are today and a structured path to where you want to go.
 
-> **Companion to:** [Technology Adoption Framework (TAF)](../TechAdoptionFramework.md) and [AI Adoption Framework (AIAF)](../AIAdoptionFramework.md)
+> **Companion to:** [AI Adoption Framework (AIAF)](../AIAdoptionFramework.md). It uses selected concepts from the [Technology Adoption Framework (TAF)](../TechAdoptionFramework.md) where they help clarify the business and technology baseline, but it is not intended to replace a dedicated TAF assessment.
 
 ---
 
 ## How to Use This Assessment
 
-This assessment is designed to be run as a **facilitated workshop** with cross-functional leadership. Its outputs serve as the direct input to Phase 1 (Assess & Strategize) of both the TAF and AIAF.
+This assessment is designed to be run as a **facilitated workshop** with cross-functional leadership. Its outputs serve as the direct input to AIAF Phase 1 (Discover & Assess), creating the baseline needed before selecting pilots or designing production guardrails.
 
 **What it produces:**
 - A documented inventory of your business capabilities, classified by strategic importance
@@ -21,7 +21,7 @@ This assessment is designed to be run as a **facilitated workshop** with cross-f
 - A Wardley Map of your capability landscape showing competitive position and evolution
 - An AI/Technology disruption analysis for each capability
 - An initial AI Decision Register documenting where AI is already influencing decisions
-- A maturity baseline score against both frameworks
+- An AIAF maturity baseline, with optional TAF context where broader technology readiness affects AI adoption
 - A prioritized discussion agenda for your adoption roadmap
 
 **Who should participate:**
@@ -323,7 +323,7 @@ Use this five-tier classification for all data assets:
 | **D2** | Internal | For employees only; not confidential but not for external sharing | Permitted with approved internal AI tools; not external APIs without review | Internal process docs, meeting notes, non-sensitive reports |
 | **D3** | Confidential | Business-sensitive; limited distribution; could harm the business if disclosed | Permitted only with approved tools that have data processing agreements; no training on data | Customer lists, pricing strategies, financial forecasts, M&A activity, IP |
 | **D4** | Restricted | Highly sensitive; access on a need-to-know basis; regulatory or legal obligations | Requires explicit governance approval per use case; data minimization required | Trade secrets, board materials, legal privilege, unreleased product plans |
-| **D5** | Regulated | Governed by law; specific handling rules apply regardless of business sensitivity | Subject to legal review per AI use case; strict residency and processing rules | PII (GDPR), PHI (HIPAA), financial data (PCI-DSS), children's data (COPPA) |
+| **D5** | Regulated | Governed by law; specific handling rules apply regardless of business sensitivity | Subject to legal review per AI use case; strict residency and processing rules | Personal data / PII subject to privacy law, PHI, cardholder data, children's data, employment data, financial / credit data |
 
 > **Note on D5:** Regulated data may also be D3 or D4 in terms of business sensitivity. Apply both classifications when both apply.
 
@@ -898,48 +898,11 @@ Assess disruption at the market level, not just the capability level:
 **Time:** 45–60 minutes
 **Participants:** CTO/CIO, CISO, Data Lead, HR Lead, Operations Lead
 
-**Purpose:** Establish a scored baseline against both the TAF and AIAF maturity models. This produces your official "starting point", a repeatable assessment you can run again in 12 months to measure progress.
+**Purpose:** Establish a scored baseline against the AIAF maturity model. This produces your official AI adoption starting point, a repeatable assessment you can run again in 12 months to measure progress. Where broader technology maturity materially affects AI adoption, use the optional TAF context score as a supporting lens.
 
 ---
 
-### 7.1 TAF Maturity Scoring
-
-Score each of the six TAF perspectives on the 1–4 scale. Use the scoring rubric in Appendix A.
-
-| Perspective | Current Score (1–4) | Evidence / Justification | Target Score (12 months) | Gap |
-|---|---|---|---|---|
-| 1. Business Perspective | | | | |
-| 2. People & Culture Perspective | | | | |
-| 3. Governance & Risk Perspective | | | | |
-| 4. Platform & Technology Perspective | | | | |
-| 5. Security & Compliance Perspective | | | | |
-| 6. Operations & Management Perspective | | | | |
-| **Overall TAF Maturity** | **Average:** | | **Target Average:** | |
-
-**TAF Maturity Radar:**
-
-```
-                    Business
-                       5
-                    ───●───
-                   /       \
-   Operations    ●           ●   People & Culture
-        |         \         /         |
-        |           \     /           |
-        |        ────●───●────        |
-        |       /               \     |
-   Security  ●                   ●  Governance
-                \               /
-                 ───────●───────
-                    Platform
-
-Instructions: Mark your current score (1–4) on each axis, connect the dots.
-Scale: 1 = near center, 4 = near edge.
-```
-
----
-
-### 7.2 AIAF Maturity Scoring
+### 7.1 AIAF Maturity Scoring
 
 Score each of the seven AIAF perspectives. Use the [AI Maturity Model](../AIAdoptionFramework.md#ai-maturity-model) from the AIAF.
 
@@ -964,6 +927,24 @@ Score each of the seven AIAF perspectives. Use the [AI Maturity Model](../AIAdop
 | 3.6 – 4.0 | Level 4: Transforming |
 
 **Your current AIAF level: _______________**
+
+---
+
+### 7.2 Optional TAF Context Scoring
+
+Use this section only if broader technology maturity is a material blocker or enabler for AI adoption. This is not a substitute for a dedicated TAF workshop; it is a lightweight context check so AI roadmap decisions are not made in isolation from platform, security, operations, or people readiness.
+
+Score each of the six TAF perspectives on the 1–4 scale. Use the scoring rubric in Appendix A.
+
+| Perspective | Current Score (1–4) | Evidence / Justification | Target Score (12 months) | AI Adoption Implication |
+|---|---|---|---|---|
+| 1. Business Perspective | | | | |
+| 2. People & Culture Perspective | | | | |
+| 3. Governance & Risk Perspective | | | | |
+| 4. Platform & Technology Perspective | | | | |
+| 5. Security & Compliance Perspective | | | | |
+| 6. Operations & Management Perspective | | | | |
+| **Overall TAF Context** | **Average:** | | **Target Average:** | |
 
 ---
 
@@ -1032,7 +1013,7 @@ Answer each question honestly. Each "No" is a gap to address before or during AI
 **Time:** 30–45 minutes
 **Participants:** All
 
-**Purpose:** Synthesize the outputs of all modules into a clear starting-point profile and a set of prioritized next steps that directly feed into Phase 2 (Plan & Prepare) of both the TAF and AIAF.
+**Purpose:** Synthesize the outputs of all modules into a clear AI adoption starting-point profile and a set of prioritized next steps that directly feed into AIAF Phase 2 (Pilot & Validate).
 
 ---
 
@@ -1047,8 +1028,8 @@ Complete this summary as a group. This is your official baseline document.
 | **Data strengths** | (List 2–3 data assets that represent unique competitive advantage) |
 | **Data risks** | (List 2–3 data risks that must be addressed before AI adoption) |
 | **Shadow AI status** | (What AI tools are already in use? What's the data risk?) |
-| **TAF overall maturity** | (Score and level) |
 | **AIAF overall maturity** | (Score and level) |
+| **Technology readiness context** | (Optional TAF context score or the 2-3 technology constraints most likely to affect AI adoption) |
 | **Top AI disruption threats** | (2–3 capabilities most at risk from competitors using AI) |
 | **Top AI opportunities** | (2–3 capabilities where AI could deliver the most value) |
 | **Biggest constraint** | (The single thing most likely to slow down adoption) |
@@ -1118,20 +1099,19 @@ Using the outputs of all modules, list the 10–15 most important actions to tak
 
 ---
 
-### 8.5 Framework Phase Entry Point
+### 8.5 AIAF Phase Entry Point
 
-Based on this assessment, confirm which phase of each framework you are entering:
+Based on this assessment, confirm which AIAF phase you are entering:
 
 | Framework | Entry Phase | Rationale |
 |---|---|---|
-| **TAF** | Phase __: ___________ | |
 | **AIAF** | Phase __: ___________ | |
 
-**For most organizations completing this assessment for the first time, the entry point is:**
-- TAF: Phase 1 (Assess & Strategize); the assessment itself is Phase 1
-- AIAF: Phase 1 (Discover & Assess); this assessment completes AIAF Phase 1
+**For most organizations completing this assessment for the first time, the entry point is AIAF Phase 1 (Discover & Assess); the assessment itself completes or accelerates that phase.**
 
 If your AIAF readiness checklist scored above 16/20 and your AIAF maturity is 2.0+, you may be ready to enter AIAF Phase 2 (Pilot & Validate) immediately.
+
+If the optional TAF context score reveals major non-AI technology gaps, run a separate TAF-specific assessment or roadmap exercise in parallel rather than expanding this workshop beyond its AI adoption purpose.
 
 > **Note on the Pilot-to-Production Gate:** Organizations entering AIAF Phase 2 should plan ahead for the [Pilot-to-Production Gate](../AIAdoptionFramework.md#pilot-to-production-gate) that sits between Phase 2 and Phase 3. It defines the criteria a pilot must meet (evals passing, governance approvals, runbooks, cost ceilings, rollback plan) before a use case is allowed into production. Knowing those criteria up front shapes how pilots are designed.
 
@@ -1357,4 +1337,4 @@ These require human qualities that AI currently augments but does not replace:
 
 ---
 
-*This assessment is a companion document to the [Technology Adoption Framework (TAF)](TechAdoptionFramework.md) and the [AI Adoption Framework (AIAF)](AIAdoptionFramework.md). Complete this assessment at the start of Phase 1 of either framework. Repeat annually or when strategic context changes significantly.*
+*This assessment is a companion document to the [AI Adoption Framework (AIAF)](../AIAdoptionFramework.md). It borrows selected baseline concepts from the [Technology Adoption Framework (TAF)](../TechAdoptionFramework.md), but a full technology transformation program should use a separate TAF-specific assessment. Complete this assessment at the start of AIAF Phase 1 and repeat annually or when strategic context changes significantly.*

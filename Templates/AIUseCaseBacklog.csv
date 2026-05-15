@@ -1,0 +1,2 @@
+Use Case ID,Use Case Name,Business Unit,Business Owner,Use Case Category,Initial Risk Tier,Business Value Score,Data Readiness Score,Risk Inverted Score,Technical Feasibility Score,Strategic Fit Score,Time to Value Score,Composite Score,Recommendation,Status,Target Phase,Dependencies,Notes
+UC-001,,,,Augmentation / Analysis / Generation / Automation / Agency,Tier 1 / Tier 2 / Tier 3 / Tier 4,,,,,,,,Pursue / Defer / Reject / Needs discovery,Proposed / In Discovery / Pilot / Production / Retired,Discover / Pilot / Deploy / Govern / Optimize / Scale,,

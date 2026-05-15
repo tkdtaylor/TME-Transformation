@@ -17,13 +17,13 @@
    - [AI Security & Trust Perspective](#6-ai-security--trust-perspective)
    - [AI Operations & Quality Perspective](#7-ai-operations--quality-perspective)
 4. [Adoption Lifecycle Phases](#adoption-lifecycle-phases)
-   - [Phase 1: Discover & Assess](#phase-1----discover--assess)
-   - [Phase 2: Pilot & Validate](#phase-2----pilot--validate)
+   - [Phase 1: Discover & Assess](#phase-1-discover--assess)
+   - [Phase 2: Pilot & Validate](#phase-2-pilot--validate)
    - [Pilot-to-Production Gate](#pilot-to-production-gate)
-   - [Phase 3: Deploy & Integrate](#phase-3----deploy--integrate)
-   - [Phase 4: Govern & Control](#phase-4----govern--control)
-   - [Phase 5: Optimize & Measure](#phase-5----optimize--measure)
-   - [Phase 6: Scale & Innovate](#phase-6----scale--innovate)
+   - [Phase 3: Deploy & Integrate](#phase-3-deploy--integrate)
+   - [Phase 4: Govern & Control](#phase-4-govern--control)
+   - [Phase 5: Optimize & Measure](#phase-5-optimize--measure)
+   - [Phase 6: Scale & Innovate](#phase-6-scale--innovate)
 5. [AI Maturity Model](#ai-maturity-model)
 6. [Use Case Classification](#use-case-classification)
 7. [Responsible AI Model](#responsible-ai-model)
@@ -95,7 +95,7 @@ AI tools introduce challenges that traditional IT governance was not designed fo
 - **Shadow AI**: employees often adopt AI tools personally before organizational policy exists, creating ungoverned data exposure
 - **Prompt as attack surface**: prompt injection, jailbreaking, and data exfiltration via model APIs are novel threat vectors
 - **Workforce anxiety**: AI adoption touches job security in ways other technology migrations typically do not
-- **Regulatory landscape in motion with concrete deadlines**: the EU AI Act is partially in force (prohibited-practice provisions applied Feb 2025, general-purpose AI model obligations Aug 2025, high-risk system obligations apply Aug 2026, Annex I regulated-product systems Aug 2027). Alongside the Act, **NIST AI RMF** is the US voluntary reference increasingly cited in contracts, and **ISO/IEC 42001** (the AI management system standard) is being adopted for certification. Sector-specific AI rules (financial services, healthcare, employment, education) continue to layer on top. Deadlines are now concrete, not theoretical
+- **Regulatory landscape in motion with concrete deadlines**: the EU AI Act is partially in force (prohibited-practice and AI literacy provisions applied Feb 2025; general-purpose AI model governance and obligations applied Aug 2025; transparency obligations and many rules apply Aug 2026). Current European Commission guidance following the May 2026 AI Omnibus political agreement indicates later dates for high-risk systems: Dec 2027 for certain high-risk areas and Aug 2028 for high-risk systems embedded in regulated products. Alongside the Act, **NIST AI RMF** is the US voluntary reference increasingly cited in contracts, and **ISO/IEC 42001** (the AI management system standard) is being adopted for certification. Sector-specific AI rules (financial services, healthcare, employment, education) continue to layer on top. Deadlines are now concrete, but roadmap dates should be reviewed against current guidance before legal reliance
 - **Data boundary blurring**: sending internal content to external model APIs requires explicit data governance decisions
 - **Build/buy economics reset**: AI-assisted development dramatically lowers the cost and time to build custom software. Capabilities that previously required vendor products or large development teams are now within reach of small teams. This creates a strategic opportunity (reassessing current vendor spend as potential build candidates) and a competitive risk (customers, partners, or new entrants can build alternatives to products and services you provide)
 
@@ -177,7 +177,7 @@ Each perspective defines who is responsible for what throughout the AI adoption 
 - AI policy framework: acceptable use policies, data handling rules, approved tool registry, prohibition list
 - AI risk taxonomy: classifying AI risks by type: accuracy, bias, privacy, security, legal, reputational, operational
 - AI Impact Assessment (AIIA) process: mandatory evaluation before deploying AI to consequential use cases
-- Regulatory compliance mapping: **EU AI Act** (applicability by system risk class with obligations staggered from Feb 2025 through Aug 2027); **NIST AI Risk Management Framework** (US voluntary reference widely adopted and increasingly contract-cited); **ISO/IEC 42001** (AI management system standard, available for certification and analogous to ISO 27001 for infosec); **GDPR and CCPA** as they intersect with AI training data, inference data, and automated decision-making; **HIPAA**; and sector-specific rules (financial services, healthcare, employment, education, safety-critical systems)
+- Regulatory compliance mapping: **EU AI Act** (applicability by system risk class with staged obligations and implementation guidance last reviewed 2026-05-15); **NIST AI Risk Management Framework** (US voluntary reference widely adopted and increasingly contract-cited); **ISO/IEC 42001** (AI management system standard, available for certification and analogous to ISO 27001 for infosec); **GDPR and CCPA** as they intersect with AI training data, inference data, and automated decision-making; **HIPAA**; and sector-specific rules (financial services, healthcare, employment, education, safety-critical systems)
 - Shadow AI governance: detection, remediation, and channeling of unsanctioned AI tool usage. Governance should define safe experimentation boundaries rather than blanket prohibition: personal exploration with unsanctioned tools is acceptable when those tools are not connected to company data, not invited into meetings or internal systems, and not authenticated with organizational credentials
 - AI Decision Register: a maintained record of where AI is making, shaping, or influencing decisions inside the organization, who owns those decisions, what guardrails apply, and how exceptions are handled. Distinct from audit logging (which captures interactions); the decision register captures the *design* of AI's role in decision-making
 - AI audit and accountability: logging AI interactions for regulated use cases, maintaining evidence of human oversight
@@ -186,7 +186,7 @@ Each perspective defines who is responsible for what throughout the AI adoption 
 
 **Key Questions to Answer:**
 - What data can and cannot be sent to external AI APIs, and how is this enforced?
-- Which of our AI use cases fall into the EU AI Act's high-risk categories, and are we on track for the Aug 2026 obligations? Are we aligning controls with NIST AI RMF? Is ISO/IEC 42001 certification a customer, partner, or procurement requirement we need to plan for?
+- Which of our AI use cases fall into the EU AI Act's high-risk categories, and which staged obligations or transition timelines apply to each? Are we aligning controls with NIST AI RMF? Is ISO/IEC 42001 certification a customer, partner, or procurement requirement we need to plan for?
 - How do we detect and govern AI tools that employees are using outside of sanctioned channels?
 - Which of our current software vendors operate in categories now at risk of AI-driven displacement, and what is our contingency if those vendors' products or businesses are disrupted?
 
@@ -414,6 +414,8 @@ Between Phase 2 and Phase 3, a specific class of failure deserves its own gate: 
 
 Before a pilot progresses to Phase 3, confirm each of the following is in place and funded, not merely named:
 
+Use [PilotToProductionGate.md](Templates/PilotToProductionGate.md) as the source template for this review. Convert it into your preferred working format (change ticket, release checklist, GRC workflow, or approval document) while preserving the evidence links and decision history.
+
 | Readiness Dimension | Question | Evidence |
 |---|---|---|
 | **Production owner** | Who is accountable for this use case in production, as part of their day job (not as a pilot volunteer)? | Named individual with this responsibility in their objectives and time allocation |
@@ -556,7 +558,7 @@ AI costs behave unlike traditional cloud costs: they scale with *content* (token
 
 **Key Activities:**
 - Self-service AI platform: enable teams to build and deploy AI integrations within pre-approved guardrails without central team bottlenecks. By this phase, the CoE should be operating at the Platform / Self-service stage of the [CoE Evolution model](#ai-center-of-excellence-operating-model-evolution)
-- Agent framework adoption: structured approach to deploying AI agents with defined action scopes, escalation paths, and audit trails. Every agent is registered as an [Agent or System Persona](#non-human-actors-agent-and-system-personas) with its own principal, scope, and named human owner. Agentic deployment is a *graduation*, not a starting point: a use case must have demonstrated reliability at the Automate or Augment stage before progressing to Agentic (see Use Case Maturity Progression)
+- Agent framework adoption: structured approach to deploying AI agents with defined action scopes, escalation paths, and audit trails. Every agent is registered as an [Agent or System Persona](#non-human-actors-agent-and-system-personas) with its own principal, scope, and named human owner. Agentic deployment is a *graduation*, not a starting point: a use case must have demonstrated reliability at the Task Automation or Human Augmentation stage before progressing to Agentic Autonomy (see Use Case Maturity Progression)
 - AI-native workflow design: redesigning processes around AI capabilities, not just adding AI to existing processes
 - Cross-functional AI communities of practice: knowledge sharing, prompt libraries, eval frameworks shared across teams (see [Access & Reuse](#4-data--knowledge-perspective))
 - Innovation pipeline: structured process for teams to propose, prototype, and validate new AI use cases
@@ -567,7 +569,7 @@ AI costs behave unlike traditional cloud costs: they scale with *content* (token
 
 Before deploying AI agents that take autonomous actions, the following must be true:
 
-- [ ] Use case has operated successfully at the Automate or Augment stage with documented reliability evidence
+- [ ] Use case has operated successfully at the Task Automation or Human Augmentation stage with documented reliability evidence
 - [ ] Target workflow is documented as an SOP with decision points, exceptions, and handoffs mapped
 - [ ] Scope of permitted actions explicitly defined and technically enforced
 - [ ] All agent actions logged with full audit trail
@@ -649,7 +651,7 @@ Every AI use case must be assigned a risk tier before deployment. The tier deter
 | **Tier 1: Low** | Minimal | Internal use only. No sensitive data. Human reviews all outputs before any action. Easily reversible. | Acceptable use policy. Basic training. |
 | **Tier 2: Medium** | Moderate | Involves confidential or sensitive internal data. Outputs influence (but don't drive) decisions. Customer-facing with human review. | AI Impact Assessment. Data classification review. Prompt security review. Logging enabled. |
 | **Tier 3: High** | Significant | Consequential decisions affecting people (HR, finance, legal, clinical). Regulated data. Outputs drive automated actions. | Full AIIA. Legal review. Executive approval. Bias audit. Mandatory human review before action. Quarterly review cycle. |
-| **Tier 4: Critical** | Severe | Fully autonomous actions with real-world consequences. Irreversible or high-blast-radius outcomes. External-facing agents. | Extensive red-teaming. Narrow action scope enforced technically. Board-level awareness. Continuous monitoring. Incident response plan specific to use case. |
+| **Tier 4: Critical** | Severe | Fully autonomous actions with real-world consequences. Irreversible or high-blast-radius outcomes. External-facing agents with tool use, write access, destructive actions, financial authority, safety impact, or privileged system access. | Extensive red-teaming. Narrow action scope enforced technically. Board-level awareness. Continuous monitoring. Incident response plan specific to use case. |
 
 ### Use Case Classification Matrix
 
@@ -691,11 +693,13 @@ Most AI initiatives in most organizations resolve to a small number of recurring
 
 The 2x2 Matrix above is adequate for rough triage but insufficient for ranking a backlog of 30 candidate use cases or defending investment decisions to a steering committee. When rigor is needed, score each candidate along six weighted dimensions. The weights below are defaults; adjust to reflect your organization's priorities (regulated industries may weight risk higher; growth-stage companies may weight time-to-value higher).
 
+Use [AIUseCaseCard.md](Templates/AIUseCaseCard.md) for individual use case intake and [AIUseCaseBacklog.csv](Templates/AIUseCaseBacklog.csv) for a sortable portfolio view. Convert these source templates into your preferred working format if your team runs intake or portfolio management in another tool.
+
 | Dimension | Weight | Score 1 | Score 3 | Score 5 |
 |---|---|---|---|---|
 | **Business value** | 25% | Marginal or hard-to-quantify impact | Measurable productivity gain or cost avoidance for a defined group | Material revenue uplift, cost reduction, or strategic capability with executive sponsorship |
 | **Data readiness** | 20% | Data is scattered, unclassified, or missing; heavy prep required | Data exists but needs classification, cleansing, or access work | Classified, governed, accessible data already flows to the right place |
-| **Risk inverted** | 20% | Tier 3/4: regulated, consequential, or external-facing | Tier 2: internal sensitive data; human review mandatory | Tier 1: internal, non-sensitive, reversible |
+| **Risk inverted** | 20% | Tier 3/4: regulated, consequential, external-facing without effective human review, or agentic with elevated action authority | Tier 2: internal sensitive data; human review mandatory | Tier 1: internal, non-sensitive, reversible |
 | **Technical feasibility** | 15% | Capability gap; research required; integration complexity high | Proven pattern exists; modest integration work | Off-the-shelf tools solve this; integration is days, not months |
 | **Strategic fit** | 10% | Tactical; does not advance stated AI strategy or differentiators | Aligned with a strategic theme | Advances a named strategic differentiator or builds a reusable capability |
 | **Time to value** | 10% | 6+ months to realized value | 3–6 months | Under 90 days |
@@ -720,13 +724,13 @@ The 2x2 Matrix above is adequate for rough triage but insufficient for ranking a
 
 The five categories above classify *what AI does*. The maturity progression below guides *how a use case should evolve over time*. The sequence matters.
 
-**Stage 1, Automate:** Start here. Identify workflows (or steps within workflows) where AI can handle the task end-to-end without human judgment. These are typically thin work (repetitive, rule-based, low-ambiguity tasks). Automating thin work first delivers quick wins and builds organizational confidence.
+**Stage 1, Task Automation:** Start with narrow, repetitive, reversible workflow steps where AI can complete a bounded task under human-supervised process controls. These are typically thin work: data extraction, classification, formatting, routing, summarization, or first-pass drafting. The output may be automatically produced, but the workflow remains owned by a human or team, with exceptions and failures routed to people.
 
-**Stage 2, Augment:** Where full automation is not possible because the workflow requires human judgment at decision points, augment instead. AI handles the heavy lifting (research, drafting, analysis, preparation); the human makes the judgment call. The human's role shifts from *doing the work* to *overseeing the work*.
+**Stage 2, Human Augmentation:** Where full task automation is not possible because the workflow requires human judgment at decision points, augment instead. AI handles the heavy lifting (research, drafting, analysis, preparation); the human makes the judgment call. The human's role shifts from *doing the work* to *overseeing the work*.
 
-**Stage 3, Agentic:** When an automated or augmented workflow has proven reliable over time and the human decision point is no longer adding value, the workflow may graduate to agentic. AI operates independently within defined governance boundaries. **Do not start here.** Agentic deployment requires demonstrated automation reliability, established governance, and the full checklist in Phase 6.
+**Stage 3, Agentic Autonomy:** When a task-automated or human-augmented workflow has proven reliable over time and the human decision point is no longer adding value, the workflow may graduate to agentic autonomy. AI operates independently within defined governance boundaries. **Do not start here.** Agentic deployment requires demonstrated task automation or human augmentation reliability, established governance, and the full checklist in Phase 6.
 
-**Why the sequence matters:** Each stage builds the evidence, governance muscle, and organizational trust required for the next. An organization that jumps to agentic without first proving automation reliability will lack the monitoring, override mechanisms, and cultural readiness to manage autonomous AI safely. Courts, regulators, insurers, and boards will still look for accountable people, not autonomous software.
+**Why the sequence matters:** Each stage builds the evidence, governance muscle, and organizational trust required for the next. An organization that jumps to agentic autonomy without first proving task automation or human augmentation reliability will lack the monitoring, override mechanisms, and cultural readiness to manage autonomous AI safely. Courts, regulators, insurers, and boards will still look for accountable people, not autonomous software.
 
 **The leadership transition:** As workflows progress through these stages, people leaders must be prepared for a fundamental shift. Managing a team that *does work* is different from managing a team that *directs AI that does work*. If leaders have not been developed for this transition, the progression from augmented to agentic will fail, not because the technology isn't ready, but because the management layer isn't.
 
@@ -777,6 +781,8 @@ Principles alone are not auditable. Each principle decomposes into concrete goal
 ### AI Impact Assessment (AIIA) Process
 
 An AIIA is required for all Tier 2, 3, and 4 use cases before deployment.
+
+Use [AIImpactAssessment.md](Templates/AIImpactAssessment.md) as the source template for the assessment. Convert it into your preferred working format (document, form, ticket, GRC record, or approval workflow) while preserving the risk rationale, evidence links, and review history.
 
 **Step 1: Use Case Description**
 - What problem is being solved?
@@ -877,6 +883,8 @@ Unlike traditional software, AI systems involve a three-party responsibility mod
 | Incident response | I | **A** | C | C | R | R | C |
 
 *R = Responsible, A = Accountable, C = Consulted, I = Informed*
+
+For operational tracking, use [AIDecisionRegister.csv](Templates/AIDecisionRegister.csv) as the source template for the AI Decision Register and [ApprovedAIToolRegistry.csv](Templates/ApprovedAIToolRegistry.csv) as the source template for approved AI tooling. Convert either CSV into your preferred working format (spreadsheet, database, service catalog, GRC record, or workflow tool) while keeping ownership and review fields intact.
 
 ---
 
@@ -1042,7 +1050,7 @@ AI ADOPTION FRAMEWORK (AIAF)
   Augmentation | Analysis | Generation | Automation | Agency
 
   USE CASE MATURITY PROGRESSION (a graduation, not a starting point)
-  Automate → Augment → Agentic
+  Task Automation → Human Augmentation → Agentic Autonomy
 
   FOUR RISK TIERS
   Tier 1 (Low) → Tier 2 (Medium) → Tier 3 (High) → Tier 4 (Critical)
@@ -1070,7 +1078,7 @@ AI ADOPTION FRAMEWORK (AIAF)
   Multi-Agent System | Tool-Using Agent
 
   REGULATORY BASELINE
-  EU AI Act (staged 2025-2027) | NIST AI RMF | ISO/IEC 42001 |
+  EU AI Act (staged obligations; review current guidance) | NIST AI RMF | ISO/IEC 42001 |
   GDPR/CCPA | HIPAA | Sector rules (FS, HC, HR, education, safety-critical)
 
   TWO SCALES OF APPLICATION

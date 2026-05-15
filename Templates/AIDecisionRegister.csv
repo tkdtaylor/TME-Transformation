@@ -1,0 +1,2 @@
+Decision ID,Decision Being Influenced,AI Tool or System,Use Case Name,Decision Owner,Human Accountable,Risk Tier,Use Case Category,Guardrails in Place,Exception Handling,Sanctioned,Status,Review Cadence,Last Reviewed,Next Review,Evidence Link,Notes
+ADR-001,,,,,,Tier 1 / Tier 2 / Tier 3 / Tier 4,Augmentation / Analysis / Generation / Automation / Agency,,,,Proposed / Active / Retired,Quarterly / Annual,,,, 
