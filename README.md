@@ -60,6 +60,12 @@ The [Templates](Templates) folder contains vendor-neutral source templates inten
 
 ---
 
+## Worked Example
+
+The [Internal Employee Lifecycle Assistant](Examples/InternalEmployeeLifecycleAssistant) example shows how to apply the AIAF to a common internal use case covering onboarding, role changes, and offboarding. It demonstrates a Tier 2, internal-only pattern that starts with Human Augmentation and narrow Task Automation rather than customer-facing or agentic autonomy.
+
+---
+
 ## Supporting Docs
 
 | Document | Use For |

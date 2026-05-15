@@ -10,6 +10,7 @@ The format is inspired by Keep a Changelog, and this project uses calendar dates
 
 - Added vendor-neutral templates for AI impact assessments, use case cards, pilot-to-production gates, decision registers, use case backlogs, and approved AI tool registries.
 - Added a template data dictionary with CSV column definitions, conventions, and recommended controlled values.
+- Added a worked example for an internal employee lifecycle assistant covering onboarding, role changes, and offboarding.
 - Added source reference tracking with review cadences for regulatory, standards, security, and adoption-framework sources.
 - Added a facilitator guide for running the AIAF-grounded Business Readiness Assessment workshop.
 
