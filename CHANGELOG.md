@@ -11,11 +11,14 @@ The format is inspired by Keep a Changelog, and this project uses calendar dates
 - Added the vendor-neutral [AI Foundational Suite](AIFoundationalSuite) (`00` through `14`): a 15-document Center of Excellence (CoE) governance and operations starter kit ordered chronologically across four execution tiers (Day-0 Guardrails, Wave-1 Enablement and Kill-Switch Safety, FinOps Seat Governance and Maturity, and Custom Agent Production Gates, OWASP LLM Controls, GenAIOps, and Vendor AI Procurement).
 - Added a FinOps Foundation (`FinOps for AI`) reference entry in [References.md](References.md) for cloud AI financial governance and license reclamation.
 - Added a `License & Disclaimer` section to [README.md](README.md).
+- Added [CONTRIBUTING.md](CONTRIBUTING.md) covering repository scope, vendor-neutrality rules, modern punctuation, anchor stability, and CC BY 4.0 licensing, plus a standard [.gitignore](.gitignore).
+- Added workshop-to-suite handoff mappings in [FacilitatorGuide.md](Workshops/FacilitatorGuide.md) and [BusinessReadinessAssessment.md](Workshops/BusinessReadinessAssessment.md), and linked pre-populated baselines and worked examples from [Templates/README.md](Templates/README.md).
 
 ### Changed
 
 - Replaced the short summary deed in [LICENSE](LICENSE) with the full verbatim Creative Commons Attribution 4.0 International (`CC-BY-4.0`) legalcode so repository tooling detects the SPDX license identifier cleanly.
 - Linked the [AI Foundational Suite](AIFoundationalSuite) from [README.md](README.md) and across Phases 1 through 6 and the Pilot-to-Production Gate in [AIAdoptionFramework.md](AIAdoptionFramework.md).
+- Updated the EU AI Act staged implementation timeline (reflecting Aug 2026 Article 50 enforcement and Digital Omnibus on AI Regulation (EU) 2026/1744 high-risk compliance dates) and refreshed the `last reviewed` date in [AIAdoptionFramework.md](AIAdoptionFramework.md) and [References.md](References.md) to `2026-11-21`.
 
 ## 2026-05-15
 

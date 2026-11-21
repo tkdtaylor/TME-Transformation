@@ -23,6 +23,11 @@ Use them as canonical starting points, then convert them into the format your or
 | [ApprovedAIToolRegistry.csv](ApprovedAIToolRegistry.csv) | Approved, conditional, and prohibited AI tools |
 | [DataDictionary.md](DataDictionary.md) | Column definitions, recommended values, and conversion guidance for CSV registers |
 
+## Pre-Populated Baselines & Worked Examples
+
+- **[AI Foundational Suite](../AIFoundationalSuite/README.md)** (`00` through `14`): Use these pre-populated, industry-agnostic program policies, classification matrices, incident runbooks, and CoE playbooks when establishing organization-wide governance rather than starting from blank templates.
+- **[Internal Employee Lifecycle Assistant Example](../Examples/InternalEmployeeLifecycleAssistant/README.md)**: Reference a completed single-use-case set of artifacts (`AIUseCaseCard`, `AIImpactAssessment`, `PilotToProductionGate`, and CSV registers) for an end-to-end worked example.
+
 ## Conversion Rule
 
 When converting these templates into another tool, preserve the core fields for ownership, risk tier, evidence, review cadence, and decision history. The working format can change; the accountability structure should not.

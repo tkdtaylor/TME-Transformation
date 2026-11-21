@@ -1117,6 +1117,8 @@ If the optional TAF context score reveals major non-AI technology gaps, run a se
 
 > **Note on the Pilot-to-Production Gate:** Organizations entering AIAF Phase 2 should plan ahead for the [Pilot-to-Production Gate](../AIAdoptionFramework.md#pilot-to-production-gate) that sits between Phase 2 and Phase 3. It defines the criteria a pilot must meet (evals passing, governance approvals, runbooks, cost ceilings, rollback plan) before a use case is allowed into production. Knowing those criteria up front shapes how pilots are designed.
 
+> **From Workshop to Operational Governance:** Use the [AI Foundational Suite](../AIFoundationalSuite/README.md) (starting with [00_CoEProductionGuide.md](../AIFoundationalSuite/00_CoEProductionGuide.md)) alongside the standalone [Templates](../Templates/README.md) to translate your completed Module 1-8 worksheets directly into operational policies, acceptable use guides, use case backlogs, and governance registers.
+
 ---
 
 ### 8.6 Assessment Review Schedule

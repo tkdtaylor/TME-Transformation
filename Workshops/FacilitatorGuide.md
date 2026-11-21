@@ -70,6 +70,19 @@ By the end of the workshop, the group should have:
 - AIAF maturity baseline and readiness checklist score
 - 0-90 day and 12-month action backlog
 
+## Mapping Workshop Outputs to Downstream Artifacts
+
+Use this table to convert completed [BusinessReadinessAssessment.md](BusinessReadinessAssessment.md) worksheets into standing program baselines in [AIFoundationalSuite](../AIFoundationalSuite/README.md) and operational records in [Templates](../Templates/README.md):
+
+| Workshop Module & Outputs | Primary Suite Baseline(s) | Companion Blank Template(s) |
+|---|---|---|
+| Module 1: Business context & strategic drivers | [01_EnterpriseAIStrategyCharter.md](../AIFoundationalSuite/01_EnterpriseAIStrategyCharter.md), [07_StrategicDriversAndThinValuedWork.md](../AIFoundationalSuite/07_StrategicDriversAndThinValuedWork.md) | - |
+| Modules 2 & 6: Capability inventory, thin/valued work & AI disruption | [07_StrategicDriversAndThinValuedWork.md](../AIFoundationalSuite/07_StrategicDriversAndThinValuedWork.md), [08_AIUseCaseIntakeAndPortfolioBacklog.md](../AIFoundationalSuite/08_AIUseCaseIntakeAndPortfolioBacklog.md) | [AIUseCaseCard.md](../Templates/AIUseCaseCard.md) |
+| Module 3: Data inventory & classification | [02_EnterpriseAIPolicyAndDataClassification.md](../AIFoundationalSuite/02_EnterpriseAIPolicyAndDataClassification.md), [03_DataClassificationMatrixAndSourceRegister.md](../AIFoundationalSuite/03_DataClassificationMatrixAndSourceRegister.md), [05_KnowledgeNotebookAndPromptPlaybook.md](../AIFoundationalSuite/05_KnowledgeNotebookAndPromptPlaybook.md) | - |
+| Module 4: Technology landscape, shadow AI & build/buy | [04_EmployeeAcceptableUseGuide.md](../AIFoundationalSuite/04_EmployeeAcceptableUseGuide.md), [13_OperationalGovernanceRegistersAndGenAIOps.md](../AIFoundationalSuite/13_OperationalGovernanceRegistersAndGenAIOps.md), [14_VendorAIProcurementChecklist.md](../AIFoundationalSuite/14_VendorAIProcurementChecklist.md) | [ApprovedAIToolRegistry.csv](../Templates/ApprovedAIToolRegistry.csv) |
+| Module 7: Maturity & readiness scoring | [10_AIMaturityScorecardAndReadinessRoadmap.md](../AIFoundationalSuite/10_AIMaturityScorecardAndReadinessRoadmap.md) | - |
+| Module 8: Starting profile, decision register & action backlog | [08_AIUseCaseIntakeAndPortfolioBacklog.md](../AIFoundationalSuite/08_AIUseCaseIntakeAndPortfolioBacklog.md), [13_OperationalGovernanceRegistersAndGenAIOps.md](../AIFoundationalSuite/13_OperationalGovernanceRegistersAndGenAIOps.md), [11_PilotToProductionGatePackage.md](../AIFoundationalSuite/11_PilotToProductionGatePackage.md) | [AIUseCaseBacklog.csv](../Templates/AIUseCaseBacklog.csv), [AIDecisionRegister.csv](../Templates/AIDecisionRegister.csv), [PilotToProductionGate.md](../Templates/PilotToProductionGate.md) |
+
 ## After the Workshop
 
 | Timing | Action |

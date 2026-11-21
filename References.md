@@ -2,7 +2,7 @@
 
 This file records the external sources that inform the frameworks and identifies which references should be rechecked regularly. Regulatory and standards references change over time; do not treat this list as legal advice.
 
-**Last reviewed:** 2026-05-15
+**Last reviewed:** 2026-11-21
 
 ## Review Cadence
 

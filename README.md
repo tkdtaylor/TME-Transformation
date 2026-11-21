@@ -86,6 +86,7 @@ The [Internal Employee Lifecycle Assistant](Examples/InternalEmployeeLifecycleAs
 |---|---|
 | [References.md](References.md) | External source links, review cadences, and maintenance notes |
 | [CHANGELOG.md](CHANGELOG.md) | Project change history |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Scope, vendor-neutrality rules, formatting conventions, and licensing |
 | [FacilitatorGuide.md](Workshops/FacilitatorGuide.md) | Running the AIAF-grounded Business Readiness Assessment workshop |
 
 ---
