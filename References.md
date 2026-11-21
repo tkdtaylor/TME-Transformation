@@ -32,6 +32,7 @@ This file records the external sources that inform the frameworks and identifies
 | OWASP GenAI Security Project | https://genai.owasp.org/ | Broader generative AI application security guidance | Semi-annually |
 | AWS Well-Architected Generative AI Lens | https://docs.aws.amazon.com/wellarchitected/latest/generative-ai-lens/generative-ai-lens.html | GenAI operational and cost optimization patterns | Annually |
 | AWS GenAI Maturity Model | https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-gen-ai-maturity-model/introduction.html | AI maturity and adoption progression context | Annually |
+| FinOps Foundation: FinOps for AI | https://www.finops.org/topic/finops-for-ai/ | Cloud AI financial governance, license reclamation, and token cost optimization | Annually |
 
 ## Adoption and Cloud Transformation Frameworks
 

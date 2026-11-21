@@ -44,6 +44,20 @@ Key elements:
 
 ---
 
+## AI Foundational Suite
+
+The [AI Foundational Suite](AIFoundationalSuite) contains a 15-document (`00` through `14`), vendor-neutral governance and operations starter kit for an organization's AI Center of Excellence (CoE). While [Templates](Templates) provides blank per-use-case forms and CSV register schemas, this suite provides pre-populated program-level baselines ordered chronologically across four execution tiers so internal teams do not start from a blank page:
+
+| Tier | Documents | Focus |
+|---|---|---|
+| **Master Guide** | [00_CoEProductionGuide.md](AIFoundationalSuite/00_CoEProductionGuide.md) | Priority sequencing (`01` to `14`), internal ownership, and CoE facilitation patterns |
+| **Tier 1: Day-0 Guardrails** | `01` to `04` ([Strategy Charter](AIFoundationalSuite/01_EnterpriseAIStrategyCharter.md), [Enterprise AI Policy](AIFoundationalSuite/02_EnterpriseAIPolicyAndDataClassification.md), [Data Matrix & Source Register](AIFoundationalSuite/03_DataClassificationMatrixAndSourceRegister.md), [Employee Traffic-Light AUP](AIFoundationalSuite/04_EmployeeAcceptableUseGuide.md)) | Executive trade-off rules, `D1`-`D5` data boundaries, Non-Human Actor standards, and Day-1 workforce guidance |
+| **Tier 2: Wave-1 Enablement & Safety** | `05` to `08` ([Knowledge & Prompt Playbook](AIFoundationalSuite/05_KnowledgeNotebookAndPromptPlaybook.md), [Incident & Kill-Switch Runbook](AIFoundationalSuite/06_AISecurityIncidentAndKillSwitchRunbook.md), [Drivers & Thin-vs.-Valued Work](AIFoundationalSuite/07_StrategicDriversAndThinValuedWork.md), [Intake & Scored Backlog](AIFoundationalSuite/08_AIUseCaseIntakeAndPortfolioBacklog.md)) | Curated departmental workspaces, `<15-minute` 5-layer kill switches, work decomposition, and portfolio scoring |
+| **Tier 3: Seat FinOps & Maturity** | `09` to `10` ([Value & 60-Day Seat SOP](AIFoundationalSuite/09_ValueRealizationAndSeatGovernanceSOP.md), [Maturity Scorecard & Roadmap](AIFoundationalSuite/10_AIMaturityScorecardAndReadinessRoadmap.md)) | Verified ROI formulas, 30/45/60-day inactive license reclamation, and 7-perspective readiness scoring |
+| **Tier 4: Custom Agents & GenAIOps** | `11` to `14` ([P2P Gate Package](AIFoundationalSuite/11_PilotToProductionGatePackage.md), [AIIA & OWASP Controls](AIFoundationalSuite/12_AIImpactAssessmentAndOWASPControls.md), [Governance Registers & GenAIOps](AIFoundationalSuite/13_OperationalGovernanceRegistersAndGenAIOps.md), [Vendor AI Procurement Checklist](AIFoundationalSuite/14_VendorAIProcurementChecklist.md)) | 10-dimension production gates, measurable RAI and OWASP `LLM01`-`LLM10` controls, Golden Dataset evaluation, and SaaS AI TPRM |
+
+---
+
 ## Templates
 
 The [Templates](Templates) folder contains vendor-neutral source templates intended to be converted into your preferred working format: documents, spreadsheets, forms, tickets, GRC records, or workflow tools. Markdown is used for judgment artifacts; CSV is used for operational registers.

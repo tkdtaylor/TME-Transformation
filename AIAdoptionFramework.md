@@ -344,6 +344,8 @@ Both disciplines coexist: an organization fine-tuning a model and serving it via
 
 The framework progresses through six phases. Different use cases and teams may be at different phases simultaneously. Each gate requires evidence before proceeding.
 
+For teams standing up an AI Center of Excellence, the [AI Foundational Suite](AIFoundationalSuite/README.md) ([00_CoEProductionGuide.md](AIFoundationalSuite/00_CoEProductionGuide.md)) provides 14 pre-populated, vendor-neutral governance and operational baselines (`01` through `14`) sequenced across these phases, complementing the blank per-use-case forms and CSV schemas in [Templates](Templates/README.md).
+
 ---
 
 ### Phase 1: Discover & Assess
@@ -374,6 +376,8 @@ The framework progresses through six phases. Different use cases and teams may b
 - Organizational AI readiness assessment
 - AI Policy Framework v1
 - Approved AI governance structure
+
+Companion baselines in [AIFoundationalSuite](AIFoundationalSuite/README.md): [01 Strategy Charter](AIFoundationalSuite/01_EnterpriseAIStrategyCharter.md), [02 Enterprise AI Policy](AIFoundationalSuite/02_EnterpriseAIPolicyAndDataClassification.md), [03 Data Classification Matrix & Source Register](AIFoundationalSuite/03_DataClassificationMatrixAndSourceRegister.md), [07 Drivers & Thin-vs.-Valued Work](AIFoundationalSuite/07_StrategicDriversAndThinValuedWork.md), [08 Intake & Scored Backlog](AIFoundationalSuite/08_AIUseCaseIntakeAndPortfolioBacklog.md), and [10 Maturity Scorecard & Readiness Roadmap](AIFoundationalSuite/10_AIMaturityScorecardAndReadinessRoadmap.md).
 
 ---
 
@@ -406,6 +410,8 @@ The framework progresses through six phases. Different use cases and teams may b
 - Refined prompts, configurations, and integration patterns
 - Rollout plan for Phase 3
 
+Companion baselines in [AIFoundationalSuite](AIFoundationalSuite/README.md): [05 Knowledge Notebook & Prompt Playbook](AIFoundationalSuite/05_KnowledgeNotebookAndPromptPlaybook.md) and [12 AI Impact Assessment, Measurable RAI & OWASP Controls](AIFoundationalSuite/12_AIImpactAssessmentAndOWASPControls.md).
+
 ---
 
 ### Pilot-to-Production Gate
@@ -414,7 +420,7 @@ Between Phase 2 and Phase 3, a specific class of failure deserves its own gate: 
 
 Before a pilot progresses to Phase 3, confirm each of the following is in place and funded, not merely named:
 
-Use [PilotToProductionGate.md](Templates/PilotToProductionGate.md) as the source template for this review. Convert it into your preferred working format (change ticket, release checklist, GRC workflow, or approval document) while preserving the evidence links and decision history.
+Use [PilotToProductionGate.md](Templates/PilotToProductionGate.md) as the source template for this review, or see [11_PilotToProductionGatePackage.md](AIFoundationalSuite/11_PilotToProductionGatePackage.md) for a pre-populated 10-dimension gate package. Convert it into your preferred working format (change ticket, release checklist, GRC workflow, or approval document) while preserving the evidence links and decision history.
 
 | Readiness Dimension | Question | Evidence |
 |---|---|---|
@@ -461,6 +467,8 @@ Use [PilotToProductionGate.md](Templates/PilotToProductionGate.md) as the source
 - AI service catalog entry
 - Baseline quality and usage metrics established
 
+Companion baselines in [AIFoundationalSuite](AIFoundationalSuite/README.md): [04 Employee Acceptable Use Guide](AIFoundationalSuite/04_EmployeeAcceptableUseGuide.md) and [06 AI Security Incident & Kill-Switch Runbook](AIFoundationalSuite/06_AISecurityIncidentAndKillSwitchRunbook.md).
+
 ---
 
 ### Phase 4: Govern & Control
@@ -497,6 +505,8 @@ Use [PilotToProductionGate.md](Templates/PilotToProductionGate.md) as the source
 - Updated risk register with AI-specific entries
 - Regulatory compliance evidence package
 - Incident response playbooks tested and validated
+
+Companion baselines in [AIFoundationalSuite](AIFoundationalSuite/README.md): [13 Operational Governance Registers & GenAIOps Guide](AIFoundationalSuite/13_OperationalGovernanceRegistersAndGenAIOps.md) and [14 Vendor AI Procurement Checklist](AIFoundationalSuite/14_VendorAIProcurementChecklist.md).
 
 ---
 
@@ -550,6 +560,8 @@ AI costs behave unlike traditional cloud costs: they scale with *content* (token
 - Model selection decisions with supporting evidence
 - Retired use case list with rationale
 
+Companion baselines in [AIFoundationalSuite](AIFoundationalSuite/README.md): [09 Value Realization, FinOps & 60-Day Seat Governance SOP](AIFoundationalSuite/09_ValueRealizationAndSeatGovernanceSOP.md) and [13 Operational Governance Registers & GenAIOps Guide](AIFoundationalSuite/13_OperationalGovernanceRegistersAndGenAIOps.md).
+
 ---
 
 ### Phase 6: Scale & Innovate
@@ -584,6 +596,8 @@ Before deploying AI agents that take autonomous actions, the following must be t
 - Active AI community of practice
 - Innovation pipeline with quarterly review
 - Agentic AI use cases deployed with full governance artifacts
+
+Companion baselines in [AIFoundationalSuite](AIFoundationalSuite/README.md): [02 Enterprise AI Policy (Non-Human Actor Standard)](AIFoundationalSuite/02_EnterpriseAIPolicyAndDataClassification.md), [10 Maturity Scorecard & CoE Evolution](AIFoundationalSuite/10_AIMaturityScorecardAndReadinessRoadmap.md), and [11 Pilot-to-Production Gate Package](AIFoundationalSuite/11_PilotToProductionGatePackage.md).
 
 ---
 

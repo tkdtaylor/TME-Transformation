@@ -4,6 +4,19 @@ All notable changes to this project are recorded here.
 
 The format is inspired by Keep a Changelog, and this project uses calendar dates until formal versioning is introduced.
 
+## 2026-11-21
+
+### Added
+
+- Added the vendor-neutral [AI Foundational Suite](AIFoundationalSuite) (`00` through `14`): a 15-document Center of Excellence (CoE) governance and operations starter kit ordered chronologically across four execution tiers (Day-0 Guardrails, Wave-1 Enablement and Kill-Switch Safety, FinOps Seat Governance and Maturity, and Custom Agent Production Gates, OWASP LLM Controls, GenAIOps, and Vendor AI Procurement).
+- Added a FinOps Foundation (`FinOps for AI`) reference entry in [References.md](References.md) for cloud AI financial governance and license reclamation.
+- Added a `License & Disclaimer` section to [README.md](README.md).
+
+### Changed
+
+- Replaced the short summary deed in [LICENSE](LICENSE) with the full verbatim Creative Commons Attribution 4.0 International (`CC-BY-4.0`) legalcode so repository tooling detects the SPDX license identifier cleanly.
+- Linked the [AI Foundational Suite](AIFoundationalSuite) from [README.md](README.md) and across Phases 1 through 6 and the Pilot-to-Production Gate in [AIAdoptionFramework.md](AIAdoptionFramework.md).
+
 ## 2026-05-15
 
 ### Added
