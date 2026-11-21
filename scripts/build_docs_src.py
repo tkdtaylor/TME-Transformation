@@ -141,10 +141,6 @@ def build_docs_src(root: Path) -> Path:
             encoding="utf-8",
         )
 
-    readme_copy = docs_dir / "README.md"
-    if readme_copy.is_file():
-        shutil.copy2(readme_copy, docs_dir / "index.md")
-
     rewritten = rewrite_markdown_tree(docs_dir, root)
     print(f"Staged {rewritten} Markdown files into {docs_dir}.")
     return docs_dir

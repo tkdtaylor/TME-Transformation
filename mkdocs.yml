@@ -42,7 +42,7 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Home: index.md
+  - Home: README.md
   - Frameworks:
       - Technology Adoption Framework (TAF): TechAdoptionFramework.md
       - AI Adoption Framework (AIAF): AIAdoptionFramework.md
