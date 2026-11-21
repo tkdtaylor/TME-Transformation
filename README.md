@@ -90,3 +90,11 @@ AIAF ─────────────────────────
 ```
 
 Both frameworks are designed to be used together. An organization running a cloud modernization program would use TAF as the primary guide, while a parallel or subsequent AI initiative would layer in AIAF across the same organizational perspectives.
+
+---
+
+## License & Disclaimer
+
+Copyright (c) 2026 TME Transformation ([@tkdtaylor](https://github.com/tkdtaylor)). Released under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE) license.
+
+*Disclaimer: This is an independent personal open-source project. The views, frameworks, and templates expressed here are my own and do not represent those of my current or past employers.*
