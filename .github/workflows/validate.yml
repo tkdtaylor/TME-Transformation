@@ -1,0 +1,35 @@
+# Copyright 2026 The TME-Transformation Authors. Licensed under CC-BY-4.0 (SPDX-License-Identifier: CC-BY-4.0).
+
+name: Validate Repository
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Stage MkDocs docs source
+        run: python3 scripts/build_docs_src.py
+
+      - name: Run repository integrity validator
+        run: python3 scripts/validate_repo.py --check-nav mkdocs.yml
+
+      - name: Install MkDocs Material
+        run: python3 -m pip install --upgrade pip && pip install "mkdocs-material>=9.5,<10"
+
+      - name: Build strict MkDocs site
+        run: mkdocs build --strict
