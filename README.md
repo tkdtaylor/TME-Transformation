@@ -104,6 +104,7 @@ The [Templates](Templates) folder contains vendor-neutral source templates inten
 | [References.md](References.md) | External source links, review cadences, and maintenance notes |
 | [CHANGELOG.md](CHANGELOG.md) | Project change history |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Scope, vendor-neutrality rules, formatting conventions, and licensing |
+| [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) | Community participation standards and maintainer reporting channel |
 | [FacilitatorGuide.md](Workshops/FacilitatorGuide.md) | Running the AIAF-grounded Business Readiness Assessment workshop |
 
 ---

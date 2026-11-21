@@ -1,0 +1,99 @@
+# Copyright 2026 The TME-Transformation Authors. Licensed under CC-BY-4.0 (SPDX-License-Identifier: CC-BY-4.0).
+
+site_name: TME Transformation Frameworks
+site_description: Vendor-agnostic adoption frameworks, workshops, CoE governance baselines, and program delivery kits for technology and AI transformation.
+site_url: https://tkdtaylor.github.io/TME-Transformation/
+repo_url: https://github.com/tkdtaylor/TME-Transformation
+repo_name: tkdtaylor/TME-Transformation
+
+docs_dir: .docs_build
+site_dir: site
+use_directory_urls: false
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - tables
+  - fenced_code
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Frameworks:
+      - Technology Adoption Framework (TAF): TechAdoptionFramework.md
+      - AI Adoption Framework (AIAF): AIAdoptionFramework.md
+  - Workshops:
+      - Business Readiness Assessment: Workshops/BusinessReadinessAssessment.md
+      - Facilitator Guide: Workshops/FacilitatorGuide.md
+  - AI Foundational Suite:
+      - Overview: AIFoundationalSuite/README.md
+      - 00 CoE Production Guide: AIFoundationalSuite/00_CoEProductionGuide.md
+      - 01 Enterprise AI Strategy Charter: AIFoundationalSuite/01_EnterpriseAIStrategyCharter.md
+      - 02 Enterprise AI Policy & D1-D5: AIFoundationalSuite/02_EnterpriseAIPolicyAndDataClassification.md
+      - 03 Data Matrix & Source Register: AIFoundationalSuite/03_DataClassificationMatrixAndSourceRegister.md
+      - 04 Employee Acceptable Use Guide: AIFoundationalSuite/04_EmployeeAcceptableUseGuide.md
+      - 05 Knowledge Notebook & Prompt Playbook: AIFoundationalSuite/05_KnowledgeNotebookAndPromptPlaybook.md
+      - 06 AI Security Incident & Kill-Switch Runbook: AIFoundationalSuite/06_AISecurityIncidentAndKillSwitchRunbook.md
+      - 07 Strategic Drivers & Thin vs. Valued Work: AIFoundationalSuite/07_StrategicDriversAndThinValuedWork.md
+      - 08 Use Case Intake & Scored Backlog: AIFoundationalSuite/08_AIUseCaseIntakeAndPortfolioBacklog.md
+      - 09 Value Realization & 60-Day Seat SOP: AIFoundationalSuite/09_ValueRealizationAndSeatGovernanceSOP.md
+      - 10 AI Maturity Scorecard & Roadmap: AIFoundationalSuite/10_AIMaturityScorecardAndReadinessRoadmap.md
+      - 11 Pilot-to-Production Gate Package: AIFoundationalSuite/11_PilotToProductionGatePackage.md
+      - 12 AI Impact Assessment & OWASP Controls: AIFoundationalSuite/12_AIImpactAssessmentAndOWASPControls.md
+      - 13 Operational Registers & GenAIOps: AIFoundationalSuite/13_OperationalGovernanceRegistersAndGenAIOps.md
+      - 14 Vendor AI Procurement Checklist: AIFoundationalSuite/14_VendorAIProcurementChecklist.md
+  - Program Delivery Kit:
+      - Overview: ProgramDelivery/README.md
+      - 01 Executive Kickoff Briefing Outline: ProgramDelivery/01_ExecutiveKickoffBriefingOutline.md
+      - 02 Day-0 Readiness & Bi-Weekly Health Check: ProgramDelivery/02_Day0ReadinessAndBiWeeklyHealthCheck.md
+      - 03 Agent Requirement & Design Spec: ProgramDelivery/03_AgentRequirementAndDesignSpec.md
+      - 04 Closeout & BAU Warm Handoff Package: ProgramDelivery/04_CloseoutAndBAUWarmHandoffPackage.md
+  - Templates:
+      - Overview: Templates/README.md
+      - AI Impact Assessment: Templates/AIImpactAssessment.md
+      - AI Use Case Card: Templates/AIUseCaseCard.md
+      - Pilot-to-Production Gate: Templates/PilotToProductionGate.md
+      - Architecture Decision Record (TAF): Templates/ArchitectureDecisionRecord.md
+      - Migration Wave Readiness Gate (TAF): Templates/MigrationWaveReadinessGate.md
+      - Template Data Dictionary: Templates/DataDictionary.md
+  - Worked Examples:
+      - Tier 2 Lifecycle Assistant:
+          - Overview: Examples/InternalEmployeeLifecycleAssistant/README.md
+          - Use Case Card: Examples/InternalEmployeeLifecycleAssistant/AIUseCaseCard.md
+          - AI Impact Assessment: Examples/InternalEmployeeLifecycleAssistant/AIImpactAssessment.md
+          - Pilot-to-Production Gate: Examples/InternalEmployeeLifecycleAssistant/PilotToProductionGate.md
+      - Tier 3 Financial Variance Agent:
+          - Overview: Examples/ApprovalGatedFinancialVarianceAgent/README.md
+          - Use Case Card: Examples/ApprovalGatedFinancialVarianceAgent/AIUseCaseCard.md
+          - AI Impact Assessment: Examples/ApprovalGatedFinancialVarianceAgent/AIImpactAssessment.md
+          - Pilot-to-Production Gate: Examples/ApprovalGatedFinancialVarianceAgent/PilotToProductionGate.md
+  - Reference & Project:
+      - References: References.md
+      - Contributing: CONTRIBUTING.md
+      - Code of Conduct: CODE_OF_CONDUCT.md
+      - Changelog: CHANGELOG.md
+      - License: LICENSE.md

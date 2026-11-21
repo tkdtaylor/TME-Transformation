@@ -2,9 +2,9 @@
 
 All notable changes to this project are recorded here.
 
-The format is inspired by Keep a Changelog, and this project uses calendar dates until formal versioning is introduced.
+The format is inspired by Keep a Changelog, using `YYYY-MM-DD` release dates and semantic versioning starting with `v1.0.0`.
 
-## 2026-11-21
+## [1.0.0] - 2026-11-21
 
 ### Added
 
@@ -16,6 +16,7 @@ The format is inspired by Keep a Changelog, and this project uses calendar dates
 - Added the [Program Delivery Kit](ProgramDelivery/README.md) (`01` through `04`) covering the executive kickoff outline, Day-0 readiness gates (`RDY-01` to `RDY-07`), `M0`-`M5` progression, bi-weekly health checks (`HC-01` to `HC-08`), 3-part Agent PRD template, and closeout / BAU warm handoff charter.
 - Added a second worked example at [Examples/ApprovalGatedFinancialVarianceAgent](Examples/ApprovalGatedFinancialVarianceAgent/README.md) illustrating a Tier 3 read-only tool-using scoped agent with deterministic Python/SQL math, inline guardrail hooks, OWASP `LLM01`-`LLM10` controls, a tested kill switch, and completed CSV registers.
 - Added standalone [Technology Adoption Framework](TechAdoptionFramework.md) templates: [WorkloadPortfolio7Rs.csv](Templates/WorkloadPortfolio7Rs.csv), [ArchitectureDecisionRecord.md](Templates/ArchitectureDecisionRecord.md), and [MigrationWaveReadinessGate.md](Templates/MigrationWaveReadinessGate.md), with schema definitions in [DataDictionary.md](Templates/DataDictionary.md).
+- Added zero-dependency repository validation ([scripts/validate_repo.py](scripts/validate_repo.py)), MkDocs Material documentation staging and site configuration ([scripts/build_docs_src.py](scripts/build_docs_src.py) and [mkdocs.yml](mkdocs.yml)), GitHub community health files ([CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), issue template, PR template), and CI validation plus GitHub Pages deployment workflows (`.github/workflows/validate.yml` and `.github/workflows/docs.yml`).
 
 ### Changed
 
@@ -23,6 +24,7 @@ The format is inspired by Keep a Changelog, and this project uses calendar dates
 - Linked the [AI Foundational Suite](AIFoundationalSuite) from [README.md](README.md) and across Phases 1 through 6 and the Pilot-to-Production Gate in [AIAdoptionFramework.md](AIAdoptionFramework.md).
 - Updated the EU AI Act staged implementation timeline (reflecting Aug 2026 Article 50 enforcement and Digital Omnibus on AI Regulation (EU) 2026/1744 high-risk compliance dates) and refreshed the `last reviewed` date in [AIAdoptionFramework.md](AIAdoptionFramework.md) and [References.md](References.md) to `2026-11-21`.
 - Linked the new base TAF templates across Phases 2, 3, and Portfolio Rationalization in [TechAdoptionFramework.md](TechAdoptionFramework.md), and expanded [README.md](README.md) and [CONTRIBUTING.md](CONTRIBUTING.md) with `ProgramDelivery/` and both Tier 2 and Tier 3 worked examples.
+- Adopted semantic versioning (`v1.0.0`) in [CHANGELOG.md](CHANGELOG.md) and linked [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) and local validation instructions from [README.md](README.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## 2026-05-15
 

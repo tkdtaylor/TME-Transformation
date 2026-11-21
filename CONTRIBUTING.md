@@ -16,6 +16,7 @@ Thank you for contributing to TME Transformation Frameworks. Improvements to the
 | [Examples/](Examples/InternalEmployeeLifecycleAssistant/README.md) | Worked single-use-case reference packages across Tier 2 Human Augmentation ([InternalEmployeeLifecycleAssistant](Examples/InternalEmployeeLifecycleAssistant/README.md)) and Tier 3 Tool-Using Scoped Agents ([ApprovalGatedFinancialVarianceAgent](Examples/ApprovalGatedFinancialVarianceAgent/README.md)) |
 | [Workshops/](Workshops/BusinessReadinessAssessment.md) | Facilitated Business Readiness Assessment workshop and Facilitator Guide |
 | [References.md](References.md) | Authoritative regulatory, standards, security, and framework references with review cadences |
+| [scripts/](scripts/validate_repo.py) + [mkdocs.yml](mkdocs.yml) | Zero-dependency repository validator, MkDocs staging builder, and static documentation configuration |
 
 ## Authoring & Style Guidelines
 
@@ -23,6 +24,22 @@ Thank you for contributing to TME Transformation Frameworks. Improvements to the
 2. **Modern punctuation (no em-dashes)**: Do not use em-dashes, spaced double-hyphens, or spaced en-dashes in prose. Use colons, parentheses, periods, or explicit conjunctions instead.
 3. **Deterministic formatting & anchor stability**: Format dates as `YYYY-MM-DD`, zero-pad sequential identifiers (`UC-001`, `ADR-001`, `TOOL-001`, `AIAF-DOC-01`), preserve Markdown heading slugs targeted by Table of Contents `#anchor` links, and keep [Templates/DataDictionary.md](Templates/DataDictionary.md) synchronized whenever CSV register columns change.
 4. **Evidence-backed regulatory references**: Prefer primary regulator and standards-body URLs in [References.md](References.md), and include a `last reviewed` date whenever timelines or obligations are staged.
+
+## Local Validation & Documentation Preview
+
+Run the zero-dependency repository check before opening a pull request:
+
+```sh
+python3 scripts/validate_repo.py
+```
+
+To preview the full documentation site locally using MkDocs Material:
+
+```sh
+python3 scripts/build_docs_src.py
+python3 scripts/validate_repo.py --check-nav mkdocs.yml
+mkdocs serve
+```
 
 ## License & Attribution
 

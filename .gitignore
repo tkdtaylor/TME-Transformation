@@ -17,3 +17,4 @@ venv/
 
 # Documentation build artifacts
 site/
+.docs_build/
