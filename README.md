@@ -58,25 +58,42 @@ The [AI Foundational Suite](AIFoundationalSuite) contains a 15-document (`00` th
 
 ---
 
+## Program Delivery Kit
+
+The [Program Delivery](ProgramDelivery) kit translates workshop discovery and CoE policy baselines into active rollout execution across milestones `M0` through `M5`:
+
+| Artifact | Purpose |
+|---|---|
+| [01_ExecutiveKickoffBriefingOutline.md](ProgramDelivery/01_ExecutiveKickoffBriefingOutline.md) | 10-slide Assertion-Evidence kickoff blueprint aligning Day-0 boundaries and upfront P2P Gate rules |
+| [02_Day0ReadinessAndBiWeeklyHealthCheck.md](ProgramDelivery/02_Day0ReadinessAndBiWeeklyHealthCheck.md) | 7 Day-0 readiness gates (`RDY-01` to `RDY-07`), `M0`-`M5` progression, blackout checks, 8 health signals (`HC-01` to `HC-08`), and RACI |
+| [03_AgentRequirementAndDesignSpec.md](ProgramDelivery/03_AgentRequirementAndDesignSpec.md) | 3-part Agent PRD specifying workflow SOPs, tool allowlists, inline guardrails, cost ceilings, and eval thresholds |
+| [04_CloseoutAndBAUWarmHandoffPackage.md](ProgramDelivery/04_CloseoutAndBAUWarmHandoffPackage.md) | 8-slide closeout briefing and 5-part BAU Warm Handoff Charter transferring steady-state accountability |
+
+---
+
 ## Templates
 
 The [Templates](Templates) folder contains vendor-neutral source templates intended to be converted into your preferred working format: documents, spreadsheets, forms, tickets, GRC records, or workflow tools. Markdown is used for judgment artifacts; CSV is used for operational registers.
 
-| Template | Use For |
-|---|---|
-| [AIImpactAssessment.md](Templates/AIImpactAssessment.md) | Tier 2+ AI Impact Assessments, risk review, mitigation evidence, and approval history |
-| [AIUseCaseCard.md](Templates/AIUseCaseCard.md) | Use case intake, prioritization, value framing, and pilot selection |
-| [PilotToProductionGate.md](Templates/PilotToProductionGate.md) | Production readiness review before a successful pilot moves to rollout |
-| [AIDecisionRegister.csv](Templates/AIDecisionRegister.csv) | Living register of where AI influences decisions, owners, guardrails, and review cadence |
-| [AIUseCaseBacklog.csv](Templates/AIUseCaseBacklog.csv) | Scored and sortable portfolio backlog of candidate AI use cases |
-| [ApprovedAIToolRegistry.csv](Templates/ApprovedAIToolRegistry.csv) | Approved, conditional, and prohibited AI tools with data handling and review metadata |
-| [DataDictionary.md](Templates/DataDictionary.md) | Column definitions and recommended values for CSV registers |
+| Template | Framework | Use For |
+|---|---|---|
+| [AIImpactAssessment.md](Templates/AIImpactAssessment.md) | AIAF | Tier 2+ AI Impact Assessments, risk review, mitigation evidence, and approval history |
+| [AIUseCaseCard.md](Templates/AIUseCaseCard.md) | AIAF | Use case intake, prioritization, value framing, and pilot selection |
+| [PilotToProductionGate.md](Templates/PilotToProductionGate.md) | AIAF | Production readiness review before a successful pilot moves to rollout |
+| [AIDecisionRegister.csv](Templates/AIDecisionRegister.csv) | AIAF | Living register of where AI influences decisions, owners, guardrails, and review cadence |
+| [AIUseCaseBacklog.csv](Templates/AIUseCaseBacklog.csv) | AIAF | Scored and sortable portfolio backlog of candidate AI use cases |
+| [ApprovedAIToolRegistry.csv](Templates/ApprovedAIToolRegistry.csv) | AIAF | Approved, conditional, and prohibited AI tools with data handling and review metadata |
+| [WorkloadPortfolio7Rs.csv](Templates/WorkloadPortfolio7Rs.csv) | TAF | Workload inventory, criticality tiers, 7 Rs migration strategies, and wave assignments |
+| [ArchitectureDecisionRecord.md](Templates/ArchitectureDecisionRecord.md) | TAF | Platform, landing zone, and workload architecture decision records |
+| [MigrationWaveReadinessGate.md](Templates/MigrationWaveReadinessGate.md) | TAF | Pre-cutover readiness gate for Phase 3 workload migration waves |
+| [DataDictionary.md](Templates/DataDictionary.md) | Shared | Column definitions and recommended values for CSV registers |
 
 ---
 
-## Worked Example
+## Worked Examples
 
-The [Internal Employee Lifecycle Assistant](Examples/InternalEmployeeLifecycleAssistant) example shows how to apply the AIAF to a common internal use case covering onboarding, role changes, and offboarding. It demonstrates a Tier 2, internal-only pattern that starts with Human Augmentation and narrow Task Automation rather than customer-facing or agentic autonomy.
+- **[Internal Employee Lifecycle Assistant](Examples/InternalEmployeeLifecycleAssistant)**: Demonstrates a Tier 2, internal-only Human Augmentation pattern (with narrow Task Automation) covering onboarding, role changes, and offboarding without autonomous tool execution.
+- **[Approval-Gated Financial Variance Agent](Examples/ApprovalGatedFinancialVarianceAgent)**: Demonstrates a Tier 3, High-Risk tool-using scoped agent querying read-only warehouse views with deterministic Python/SQL math, inline guardrail hooks, OWASP `LLM01`-`LLM10` controls, a tested kill switch, and mandatory controller sign-off.
 
 ---
 

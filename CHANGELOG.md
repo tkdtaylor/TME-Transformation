@@ -13,12 +13,16 @@ The format is inspired by Keep a Changelog, and this project uses calendar dates
 - Added a `License & Disclaimer` section to [README.md](README.md).
 - Added [CONTRIBUTING.md](CONTRIBUTING.md) covering repository scope, vendor-neutrality rules, modern punctuation, anchor stability, and CC BY 4.0 licensing, plus a standard [.gitignore](.gitignore).
 - Added workshop-to-suite handoff mappings in [FacilitatorGuide.md](Workshops/FacilitatorGuide.md) and [BusinessReadinessAssessment.md](Workshops/BusinessReadinessAssessment.md), and linked pre-populated baselines and worked examples from [Templates/README.md](Templates/README.md).
+- Added the [Program Delivery Kit](ProgramDelivery/README.md) (`01` through `04`) covering the executive kickoff outline, Day-0 readiness gates (`RDY-01` to `RDY-07`), `M0`-`M5` progression, bi-weekly health checks (`HC-01` to `HC-08`), 3-part Agent PRD template, and closeout / BAU warm handoff charter.
+- Added a second worked example at [Examples/ApprovalGatedFinancialVarianceAgent](Examples/ApprovalGatedFinancialVarianceAgent/README.md) illustrating a Tier 3 read-only tool-using scoped agent with deterministic Python/SQL math, inline guardrail hooks, OWASP `LLM01`-`LLM10` controls, a tested kill switch, and completed CSV registers.
+- Added standalone [Technology Adoption Framework](TechAdoptionFramework.md) templates: [WorkloadPortfolio7Rs.csv](Templates/WorkloadPortfolio7Rs.csv), [ArchitectureDecisionRecord.md](Templates/ArchitectureDecisionRecord.md), and [MigrationWaveReadinessGate.md](Templates/MigrationWaveReadinessGate.md), with schema definitions in [DataDictionary.md](Templates/DataDictionary.md).
 
 ### Changed
 
 - Replaced the short summary deed in [LICENSE](LICENSE) with the full verbatim Creative Commons Attribution 4.0 International (`CC-BY-4.0`) legalcode so repository tooling detects the SPDX license identifier cleanly.
 - Linked the [AI Foundational Suite](AIFoundationalSuite) from [README.md](README.md) and across Phases 1 through 6 and the Pilot-to-Production Gate in [AIAdoptionFramework.md](AIAdoptionFramework.md).
 - Updated the EU AI Act staged implementation timeline (reflecting Aug 2026 Article 50 enforcement and Digital Omnibus on AI Regulation (EU) 2026/1744 high-risk compliance dates) and refreshed the `last reviewed` date in [AIAdoptionFramework.md](AIAdoptionFramework.md) and [References.md](References.md) to `2026-11-21`.
+- Linked the new base TAF templates across Phases 2, 3, and Portfolio Rationalization in [TechAdoptionFramework.md](TechAdoptionFramework.md), and expanded [README.md](README.md) and [CONTRIBUTING.md](CONTRIBUTING.md) with `ProgramDelivery/` and both Tier 2 and Tier 3 worked examples.
 
 ## 2026-05-15
 

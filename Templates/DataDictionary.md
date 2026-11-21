@@ -21,6 +21,8 @@ This data dictionary explains the CSV operational registers in this folder. Use 
 | Lifecycle Phase | `Discover`, `Pilot`, `Deploy`, `Govern`, `Optimize`, `Scale` |
 | Review Cadence | `Monthly`, `Quarterly`, `Annual`, `On material change` |
 | Yes / No Fields | `Yes`, `No`, `Unknown`, `Not applicable` |
+| Criticality Tier | `Tier 0`, `Tier 1`, `Tier 2`, `Tier 3`, `Tier 4` |
+| Migration Strategy (7 Rs) | `Retain`, `Retire`, `Rehost`, `Replatform`, `Repurchase`, `Refactor`, `Rearchitect` |
 
 ## AIDecisionRegister.csv
 
@@ -87,3 +89,23 @@ This data dictionary explains the CSV operational registers in this folder. Use 
 | Security Review Date | Date of last security or vendor risk review |
 | Next Review | Next scheduled review date |
 | Notes | Additional context |
+
+## WorkloadPortfolio7Rs.csv
+
+| Column | Description |
+|---|---|
+| Workload ID | Stable identifier for the workload, e.g. `WKL-001` |
+| Workload Name | Short, descriptive application or workload name |
+| Business Unit | Owning business unit or function |
+| Workload Owner | Person accountable for workload migration and business validation |
+| Criticality Tier | Criticality tier assigned under TAF (`Tier 0` through `Tier 4`) |
+| Target RTO | Target Recovery Time Objective (e.g., `15 mins`, `4 hours`, `2 days`) |
+| Target RPO | Target Recovery Point Objective (e.g., `Zero`, `15 mins`, `24 hours`) |
+| Migration Strategy (7 Rs) | Chosen 7 Rs strategy (`Retain`, `Retire`, `Rehost`, `Replatform`, `Repurchase`, `Refactor`, `Rearchitect`) |
+| Migration Wave | Target wave identifier, e.g. `Wave 1`, `Wave 2`, `Wave 3` |
+| Dependencies | Upstream/downstream applications, identity, network, data, or vendor dependencies |
+| Security or Compliance Scope | Applicable compliance or data regimes (e.g., PCI DSS, HIPAA, GDPR, SOC 2, DORA) |
+| Current Annual Cost | Current annual infrastructure/licensing run-rate in consistent currency |
+| Target Environment | Target hosting platform or landing zone boundary |
+| Status | `Assessment`, `Planned`, `In Migration`, `Validated`, `Retired` |
+| Notes | Additional context, rollback notes, or deferral rationale |

@@ -258,6 +258,8 @@ The framework progresses through six sequential-but-iterative phases. Organizati
 - Workforce training program launched
 - Pilot scope defined and approved
 
+Record significant platform, network, and workload architecture choices using [ArchitectureDecisionRecord.md](Templates/ArchitectureDecisionRecord.md).
+
 ---
 
 ### Phase 3: Implement & Migrate
@@ -289,6 +291,8 @@ The framework progresses through six sequential-but-iterative phases. Organizati
 - Migrated/deployed workloads by wave
 - Updated runbooks and operational documentation
 - Hypercare completion sign-off per workload
+
+Validate wave cutover readiness before moving workloads into production using [MigrationWaveReadinessGate.md](Templates/MigrationWaveReadinessGate.md).
 
 ---
 
@@ -423,6 +427,8 @@ Not all workloads are equal. Classify every workload before making migration or 
 4. **Sequence**: Build migration waves (low risk → high complexity)
 5. **Execute**: Migrate per wave with gates between waves
 6. **Validate**: Confirm outcomes against targets post-migration
+
+Track workload inventories, 7 R classifications, criticality tiers, and wave assignments using [WorkloadPortfolio7Rs.csv](Templates/WorkloadPortfolio7Rs.csv) and [DataDictionary.md](Templates/DataDictionary.md).
 
 ---
 

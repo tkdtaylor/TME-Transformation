@@ -1,0 +1,2 @@
+Workload ID,Workload Name,Business Unit,Workload Owner,Criticality Tier,Target RTO,Target RPO,Migration Strategy (7 Rs),Migration Wave,Dependencies,Security or Compliance Scope,Current Annual Cost,Target Environment,Status,Notes
+WKL-001,,,,Tier 0 / Tier 1 / Tier 2 / Tier 3 / Tier 4,,,Retain / Retire / Rehost / Replatform / Repurchase / Refactor / Rearchitect,Wave 1 / Wave 2 / Wave 3,,,,,Assessment / Planned / In Migration / Validated / Retired,

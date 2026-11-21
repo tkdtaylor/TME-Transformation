@@ -11,8 +11,9 @@ Thank you for contributing to TME Transformation Frameworks. Improvements to the
 | [TechAdoptionFramework.md](TechAdoptionFramework.md) | Base Technology Adoption Framework (TAF) across six perspectives and six lifecycle phases |
 | [AIAdoptionFramework.md](AIAdoptionFramework.md) | AI Adoption Framework (AIAF) specialization across seven perspectives, six phases, maturity model, Responsible AI, and OWASP LLM controls |
 | [AIFoundationalSuite/](AIFoundationalSuite/README.md) | 15-document Center of Excellence (CoE) governance and operations starter kit (`00` through `14` plus `README.md`) |
-| [Templates/](Templates/README.md) + [Templates/DataDictionary.md](Templates/DataDictionary.md) | Standalone blank Markdown judgment forms, CSV operational registers, and controlled vocabularies |
-| [Examples/](Examples/InternalEmployeeLifecycleAssistant/README.md) | Complete worked single-use-case reference artifacts illustrating end-to-end AIAF application |
+| [ProgramDelivery/](ProgramDelivery/README.md) | Rollout execution kit (`01` through `04` plus `README.md`) covering executive kickoff, Day-0 gates, bi-weekly health checks, agent PRDs, and BAU handover |
+| [Templates/](Templates/README.md) + [Templates/DataDictionary.md](Templates/DataDictionary.md) | Standalone blank Markdown judgment forms, CSV operational registers, and controlled vocabularies across AIAF and TAF |
+| [Examples/](Examples/InternalEmployeeLifecycleAssistant/README.md) | Worked single-use-case reference packages across Tier 2 Human Augmentation ([InternalEmployeeLifecycleAssistant](Examples/InternalEmployeeLifecycleAssistant/README.md)) and Tier 3 Tool-Using Scoped Agents ([ApprovalGatedFinancialVarianceAgent](Examples/ApprovalGatedFinancialVarianceAgent/README.md)) |
 | [Workshops/](Workshops/BusinessReadinessAssessment.md) | Facilitated Business Readiness Assessment workshop and Facilitator Guide |
 | [References.md](References.md) | Authoritative regulatory, standards, security, and framework references with review cadences |
 
