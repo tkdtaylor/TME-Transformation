@@ -50,6 +50,7 @@ It draws on the structural strengths of three industry-leading frameworks:
 | **Microsoft Azure CAF** | End-to-end methodology from strategy through operations |
 
 The TAF is organized around two complementary dimensions:
+
 - **Horizontal axis**: Six core perspectives that span the organization (who is involved and what they own)
 - **Vertical axis**: Six lifecycle phases (when work happens and in what order)
 
@@ -88,6 +89,7 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 **Key Stakeholders:** CEO, CFO, COO, Board, Business Unit Leaders, Product Owners
 
 **Core Capabilities:**
+
 - Business case development and financial modeling (TCO, ROI, NPV)
 - Strategy alignment: connecting technology initiatives to corporate objectives
 - Value realization tracking: measuring whether expected benefits are delivered
@@ -95,6 +97,7 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 - Digital product and service portfolio management
 
 **Key Questions to Answer:**
+
 - What business outcomes are we funding?
 - What is the cost of inaction?
 - How will we measure success in 6, 12, and 24 months?
@@ -108,6 +111,7 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 **Key Stakeholders:** Head of HR, CIO, Transformation Officers, Team Leads, Learning & Development
 
 **Core Capabilities:**
+
 - Skills gap analysis and workforce planning
 - Training curricula and certification pathways
 - Change management and communication planning
@@ -116,6 +120,7 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 - Culture building toward psychological safety, experimentation, and continuous learning
 
 **Key Questions to Answer:**
+
 - Do we have the skills we need? Where are the gaps?
 - How will we prepare people for new ways of working?
 - How do we sustain momentum through change fatigue?
@@ -129,6 +134,7 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 **Key Stakeholders:** CIO, CFO, Chief Risk Officer, Chief Compliance Officer, Legal, Audit
 
 **Core Capabilities:**
+
 - Technology governance frameworks (policies, standards, guardrails)
 - Portfolio and program management (prioritization, funding gates, stage reviews)
 - Risk identification, assessment, and mitigation
@@ -138,6 +144,7 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 - Audit and accountability mechanisms
 
 **Key Questions to Answer:**
+
 - What guardrails prevent ungoverned sprawl or shadow IT?
 - How do we manage compliance across multiple environments?
 - Who approves technology spend, and against what criteria?
@@ -151,6 +158,7 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 **Key Stakeholders:** CTO, Enterprise Architects, Platform Engineers, Data Engineers, Site Reliability Engineers
 
 **Core Capabilities:**
+
 - Current-state architecture assessment (applications, data, infrastructure)
 - Target architecture design (on-premises, cloud, hybrid, multi-cloud, edge)
 - Platform foundation design: network topology, identity, tenancy boundaries (e.g., subscriptions, accounts, or projects in cloud; organizational units in on-premises)
@@ -160,6 +168,7 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 - Developer experience: internal developer platforms, CI/CD, toolchains
 
 **Key Questions to Answer:**
+
 - What is our target architecture, and what are the stepping stones to get there?
 - Which workloads move when, and by which migration strategy?
 - How do we enable development teams to move fast without creating risk?
@@ -173,6 +182,7 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 **Key Stakeholders:** CISO, Security Architects, Compliance Officers, Platform Security Teams
 
 **Core Capabilities:**
+
 - Identity and Access Management (IAM): Zero Trust architecture, least-privilege, MFA/SSO
 - Data protection: classification, encryption at rest and in transit, DLP
 - Network security: segmentation, perimeter controls, private connectivity
@@ -182,6 +192,7 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 - Business continuity and disaster recovery planning
 
 **Key Questions to Answer:**
+
 - What is our shared responsibility model, and what do we own?
 - How do we maintain a consistent security posture across all our environments?
 - How do we detect and respond to incidents faster than attackers can move?
@@ -195,6 +206,7 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 **Key Stakeholders:** VP of Infrastructure/Operations, Site Reliability Engineers (SRE), IT Service Managers, FinOps Teams
 
 **Core Capabilities:**
+
 - Observability: logging, metrics, tracing, alerting, and dashboards
 - Incident management and on-call operations (runbooks, playbooks, post-mortems)
 - Change and release management
@@ -204,6 +216,7 @@ Each perspective represents a capability domain with distinct stakeholders, conc
 - Automation of toil: reducing manual operational burden
 
 **Key Questions to Answer:**
+
 - How will we know when something is broken before users do?
 - How do we manage operational complexity as the environment scales?
 - How do we control and optimize spend continuously?
@@ -221,6 +234,7 @@ The framework progresses through six sequential-but-iterative phases. Organizati
 **Goal:** Establish baseline understanding of current state and define the transformation vision, business case, and priorities.
 
 **Key Activities:**
+
 - Technology landscape and portfolio inventory
 - Business driver and stakeholder interviews
 - Technology readiness assessment across all six perspectives
@@ -230,6 +244,7 @@ The framework progresses through six sequential-but-iterative phases. Organizati
 - Establish executive sponsorship and program governance structure
 
 **Outputs:**
+
 - Current-state assessment report
 - Approved business case
 - High-level transformation roadmap (6–12 month horizon)
@@ -243,6 +258,7 @@ The framework progresses through six sequential-but-iterative phases. Organizati
 **Goal:** Develop detailed plans for the transformation and build the foundational capabilities required to execute.
 
 **Key Activities:**
+
 - Detailed roadmap with workstreams, milestones, and resource requirements
 - Platform foundation design and build
 - Identity, access, and network baseline configuration
@@ -253,6 +269,7 @@ The framework progresses through six sequential-but-iterative phases. Organizati
 - Pilot workload(s) selected for proof-of-concept
 
 **Outputs:**
+
 - Detailed project/program plan
 - Deployed platform foundation: the baseline environment in which all subsequent workloads will run, including network topology, identity baseline, tenancy structure, core security controls, observability wiring, and policy guardrails. In cloud contexts this is often called the "landing zone"; in on-premises or hybrid contexts the equivalents are the reference environment, platform baseline, or core infrastructure pattern
 - Workforce training program launched
@@ -267,6 +284,7 @@ Record significant platform, network, and workload architecture choices using [A
 **Goal:** Execute migrations, new deployments, and workload onboarding in a structured, repeatable manner.
 
 **Key Activities:**
+
 - Wave-based migration execution (starting with low-risk, iterating to complex)
 - Application rationalization decisions (7 Rs) made per workload
 - CI/CD pipelines and deployment automation established
@@ -288,6 +306,7 @@ Record significant platform, network, and workload architecture choices using [A
 | **Rearchitect** | Rebuild from scratch | Strategic differentiation workloads |
 
 **Outputs:**
+
 - Migrated/deployed workloads by wave
 - Updated runbooks and operational documentation
 - Hypercare completion sign-off per workload
@@ -301,6 +320,7 @@ Validate wave cutover readiness before moving workloads into production using [M
 **Goal:** Operationalize governance, security, and compliance controls across the transformed environment at scale.
 
 **Key Activities:**
+
 - Policy-as-Code deployment (guardrails enforced automatically)
 - Continuous compliance scanning and drift detection
 - Privileged access reviews and Zero Trust maturity advancement
@@ -310,6 +330,7 @@ Validate wave cutover readiness before moving workloads into production using [M
 - Incident response tabletop exercises and playbook validation
 
 **Outputs:**
+
 - Automated governance and compliance dashboard
 - Risk register with remediation status
 - Security posture improvement metrics
@@ -322,6 +343,7 @@ Validate wave cutover readiness before moving workloads into production using [M
 **Goal:** Improve performance, reliability, and cost-efficiency of the operating environment while building operational excellence.
 
 **Key Activities:**
+
 - Performance benchmarking against target KPIs
 - Cost optimization: rightsizing, reserved instances, spot/preemptible usage, hardware purchase
 - Reliability engineering: SLOs, SLAs, error budgets
@@ -331,6 +353,7 @@ Validate wave cutover readiness before moving workloads into production using [M
 - Well-Architected and design review assessments for key workloads (see [AWS Well-Architected](https://aws.amazon.com/architecture/well-architected/), [Azure Well-Architected](https://learn.microsoft.com/en-us/azure/well-architected/), or [Google Cloud Architecture Framework](https://cloud.google.com/architecture/framework) for vendor-specific pillar guidance)
 
 **Outputs:**
+
 - Cost reduction and performance improvement reports
 - Updated architecture decision records (ADRs)
 - Automation coverage metrics
@@ -343,6 +366,7 @@ Validate wave cutover readiness before moving workloads into production using [M
 **Goal:** Leverage the transformed platform to drive competitive differentiation through modernization, AI, and net-new modern application development (cloud-native, container-based, serverless, or event-driven patterns as appropriate).
 
 **Key Activities:**
+
 - Application modernization (containers, serverless, microservices)
 - Data platform maturation: real-time analytics, data mesh, ML/AI pipelines
 - AI and generative AI adoption: model deployment, RAG pipelines, AI agents
@@ -352,6 +376,7 @@ Validate wave cutover readiness before moving workloads into production using [M
 - Contribution back to platform capabilities based on learnings
 
 **Outputs:**
+
 - Modernized application portfolio
 - Active AI/ML use cases in production
 - Internal developer platform in operation
@@ -398,6 +423,7 @@ As maturity increases, the central Technology CoE's role must shift. A CoE stuck
 **Naming note:** This pattern is often called "CCoE" (Cloud Center of Excellence) in cloud-specific contexts, "Platform CoE" in platform-engineering contexts, and simply "CoE" in technology-agnostic contexts. The same operating-model evolution applies regardless of the domain label.
 
 **How to use the maturity model:**
+
 - Assess current level per perspective at the start of each phase
 - Set target maturity levels that are appropriate to organizational size, risk, and ambition; not every organization needs Level 4 in every perspective
 - Use maturity gaps to prioritize roadmap items and investments

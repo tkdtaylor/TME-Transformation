@@ -17,6 +17,7 @@ This assessment gives you a clear picture of where you are today and a structure
 This assessment is designed to be run as a **facilitated workshop** with cross-functional leadership. Its outputs serve as the direct input to AIAF Phase 1 (Discover & Assess), creating the baseline needed before selecting pilots or designing production guardrails.
 
 **What it produces:**
+
 - A documented inventory of your business capabilities, classified by strategic importance
 - A data asset inventory with AI-readiness classification
 - A thin work / valued work classification for each capability
@@ -48,6 +49,7 @@ This assessment is designed to be run as a **facilitated workshop** with cross-f
 | Weekly sprint | One module per session | 8 weeks |
 
 **Facilitator notes:**
+
 - Each module includes a **worksheet** (fill in during session) and **discussion prompts** (use to drive conversation)
 - Answers do not need to be perfect: honest and approximate is more valuable than polished and incomplete
 - Disagreement between participants is a signal, not a problem; capture it
@@ -181,6 +183,7 @@ Document any hard constraints that will shape your adoption approach:
 A **capability** is something your organization can do, a combination of people, process, technology, and knowledge that delivers a repeatable outcome. Capabilities are described as nouns or gerunds, not as organizational units.
 
 **Examples:**
+
 - Customer order processing
 - Financial reporting
 - Software development
@@ -235,12 +238,14 @@ Work through your value chain from left to right: start with what the customer e
 For each capability, assign two ratings:
 
 **Strategic Importance**: How critical is this to delivering your value proposition?
+
 - **Core**: Without this, the business cannot function or deliver its product
 - **Strategic**: Differentiates you from competitors; a source of competitive advantage
 - **Supporting**: Necessary but not differentiating; competitors also have this
 - **Commodity**: Indistinguishable from how any organization would do it; could be outsourced
 
 **Current Execution Quality**: How well do you perform this today?
+
 - **Leading**: Best-in-class; competitors cannot match this
 - **Competitive**: At market standard; equivalent to peers
 - **Lagging**: Below market standard; a known weakness
@@ -369,6 +374,7 @@ For data assets you intend to use with AI (for RAG pipelines, fine-tuning, analy
 | &nbsp; | | | | | | |
 
 **Scoring guide:**
+
 - **5**: Excellent; no remediation needed
 - **3**: Adequate; minor issues to address
 - **1**: Poor; significant remediation required before AI use
@@ -549,6 +555,7 @@ AI-assisted development has shifted the economics of custom software. For system
 | &nbsp; | | | | | |
 
 **Guidance:**
+
 - **Keep**: Commodity tool; no competitive advantage in owning it; build and maintenance cost exceeds value
 - **Evaluate**: Ownership would deliver differentiation, cost savings, or reduced vendor dependency; worth a scoping exercise
 - **Build**: Clear strategic or financial case; AI-assisted development makes this achievable with current team capacity
@@ -581,11 +588,13 @@ AI-assisted development has shifted the economics of custom software. For system
 A Wardley Map is a strategic tool that plots **what your organization does** (capabilities and components) against two axes:
 
 **Y-axis: Visibility (Value Chain)**
+
 - Top: directly visible to and valued by the customer/user
 - Bottom: invisible infrastructure the customer never sees but which must exist
 - This reflects your value chain; things at the top depend on things below them
 
 **X-axis: Evolution**
+
 - Left: **Genesis**: novel, poorly understood, custom-built, high uncertainty
 - Moving right: **Custom Built**: understood but still bespoke per organization
 - Further right: **Product**: available as an off-the-shelf product or service
@@ -810,11 +819,13 @@ For each capability from Module 2, complete this analysis:
 | *(continue for all capabilities)* | | | | | | | | |
 
 **Likelihood scoring:**
+
 - 5 = AI tools capable of this already exist and are deployed by competitors
 - 3 = Clear path to disruption within the timeline; actively developing
 - 1 = Speculative; technically possible but no clear near-term route
 
 **Business Impact scoring:**
+
 - 5 = Affects core revenue, competitive position, or existential risk
 - 3 = Meaningful operational or cost impact
 - 1 = Marginal effect on the business
@@ -834,6 +845,7 @@ For capabilities identified as Automate, Augment, or Displace, assess the workfo
 | &nbsp; | | | | | |
 
 **Nature of impact:**
+
 - **Role eliminated**: this specific job function ceases to exist
 - **Role changed**: the job exists but is substantially different; requires reskilling
 - **Role expanded**: AI handles routine aspects, freeing the person for higher-value work
@@ -955,12 +967,14 @@ Score each of the six TAF perspectives on the 1–4 scale. Use the scoring rubri
 Answer each question honestly. Each "No" is a gap to address before or during AI adoption.
 
 **Governance & Policy**
+
 - [ ] An AI acceptable use policy exists and has been communicated to all employees
 - [ ] A process exists to evaluate and approve new AI tools before organizational use
 - [ ] Data classification rules for AI usage are defined (what data can go to which tools)
 - [ ] An AI-specific incident response plan exists
 
 **Data**
+
 - [ ] A data inventory exists with owners identified for major data assets
 - [ ] PII / regulated data is identified and segregated from data that can be used with AI
 - [ ] Data quality has been assessed for the top AI use cases being considered
@@ -968,17 +982,20 @@ Answer each question honestly. Each "No" is a gap to address before or during AI
 - [ ] Grounding data (used at inference, e.g. RAG) and training data are distinguished and governed separately
 
 **People**
+
 - [ ] Leadership has a shared understanding of what AI can and cannot do today
 - [ ] Employees have received at least basic AI literacy training
 - [ ] A process exists for employees to report AI quality or safety concerns
 - [ ] The workforce impact of AI on specific roles has been assessed
 
 **Process**
+
 - [ ] Standard operating procedures (SOPs) exist for the top candidate workflows being considered for AI
 - [ ] Decision points, exceptions, and handoffs are documented for those workflows
 - [ ] Work within key capabilities has been classified as thin work (machine-ready) vs. valued work (human-required)
 
 **Technology**
+
 - [ ] AI API keys / credentials are managed centrally (not embedded in individual accounts)
 - [ ] Logging of AI interactions is possible for regulated use cases
 - [ ] At least one AI use case has been piloted in a controlled way
@@ -1261,6 +1278,7 @@ This assessment should be repeated to measure progress:
 ### Evolution Stage Definitions in Detail
 
 **Genesis**
+
 - Truly novel; the organization may be inventing the approach
 - High uncertainty; methods change frequently
 - Requires significant experimentation and tolerance for failure
@@ -1268,6 +1286,7 @@ This assessment should be repeated to measure progress:
 - Competitive advantage is high if it's in your core value chain, but only while it stays in Genesis
 
 **Custom Built**
+
 - Well understood within your organization or industry
 - Built bespoke by skilled practitioners
 - Expensive and slow to replicate
@@ -1275,6 +1294,7 @@ This assessment should be repeated to measure progress:
 - AI is currently accelerating the migration of many Custom Built capabilities toward Product stage
 
 **Product (or Rental)**
+
 - Available from vendors as a product or SaaS service
 - Can be purchased, configured, and used without custom development
 - Industry standard options exist; pricing is transparent
@@ -1282,6 +1302,7 @@ This assessment should be repeated to measure progress:
 - Differentiating on this stage is difficult; competitors can buy the same thing
 
 **Commodity (or Utility)**
+
 - Interchangeable; selection based on price and availability
 - Infrastructure-like; expected to "just work"
 - No competitive advantage from building your own

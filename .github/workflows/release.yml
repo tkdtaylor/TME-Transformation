@@ -1,0 +1,67 @@
+# Copyright 2026 The TME-Transformation Authors. Licensed under CC-BY-4.0 (SPDX-License-Identifier: CC-BY-4.0).
+
+name: Release Starter Bundles
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag (e.g. v1.0.1)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run repository integrity validator
+        run: python3 scripts/validate_repo.py
+
+      - name: Build starter kit zip bundles
+        run: python3 scripts/build_release_bundles.py --out-dir dist
+
+      - name: Extract changelog release notes
+        env:
+          TAG: ${{ inputs.tag || github.ref_name }}
+        run: |
+          python3 - << 'EOF'
+          import os, re
+          from pathlib import Path
+
+          tag = os.environ["TAG"].strip()
+          ver = tag.lstrip("v")
+          text = Path("CHANGELOG.md").read_text(encoding="utf-8")
+          pattern = re.compile(rf"^## \[{re.escape(ver)}\][^\n]*\n(.*?)(?=^## |\Z)", re.M | re.S)
+          m = pattern.search(text)
+          body = m.group(1).strip() if m else f"Release {tag} of TME Transformation Frameworks."
+          Path("/tmp/release_notes.md").write_text(body + "\n", encoding="utf-8")
+          EOF
+
+      - name: Create or update GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag || github.ref_name }}
+          TARGET_SHA: ${{ github.sha }}
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" dist/*.zip --clobber
+          else
+            gh release create "$TAG" dist/*.zip \
+              --target "$TARGET_SHA" \
+              --title "$TAG: TME Transformation Frameworks" \
+              --notes-file /tmp/release_notes.md
+          fi

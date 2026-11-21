@@ -1,0 +1,24 @@
+# Copyright 2026 The TME-Transformation Authors. Licensed under CC-BY-4.0 (SPDX-License-Identifier: CC-BY-4.0).
+
+cff-version: 1.2.0
+title: "TME Transformation Frameworks"
+message: "If you use or adapt these frameworks, workshops, governance baselines, or templates, please cite them using this metadata."
+type: dataset
+authors:
+  - name: "TME Transformation (@tkdtaylor)"
+    website: "https://github.com/tkdtaylor"
+repository-code: "https://github.com/tkdtaylor/TME-Transformation"
+url: "https://tkdtaylor.github.io/TME-Transformation/"
+abstract: "Vendor-agnostic adoption frameworks, readiness workshops, AI Center of Excellence (CoE) governance baselines, program delivery kits, and operational templates for technology and AI transformation."
+keywords:
+  - ai-adoption
+  - ai-governance
+  - responsible-ai
+  - cloud-adoption-framework
+  - technology-transformation
+  - genaiops
+  - owasp-llm-top-10
+  - wardley-mapping
+license: CC-BY-4.0
+version: 1.0.1
+date-released: "2026-11-21"

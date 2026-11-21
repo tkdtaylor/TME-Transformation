@@ -1,0 +1,47 @@
+/* Copyright 2026 The TME-Transformation Authors. Licensed under CC-BY-4.0 (SPDX-License-Identifier: CC-BY-4.0). */
+
+th[role="columnheader"]:not(.no-sort) {
+  cursor: pointer;
+}
+
+@media print {
+  .md-header,
+  .md-tabs,
+  .md-sidebar,
+  .md-footer,
+  .md-top,
+  .md-content__button,
+  .headerlink,
+  .md-search {
+    display: none !important;
+  }
+
+  .md-main__inner,
+  .md-content {
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .md-content__inner {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body {
+    font-size: 10pt;
+  }
+
+  table,
+  tr,
+  pre,
+  blockquote {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  pre,
+  code {
+    font-size: 8.5pt;
+    white-space: pre-wrap;
+  }
+}

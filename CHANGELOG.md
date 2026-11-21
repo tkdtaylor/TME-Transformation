@@ -4,6 +4,20 @@ All notable changes to this project are recorded here.
 
 The format is inspired by Keep a Changelog, using `YYYY-MM-DD` release dates and semantic versioning starting with `v1.0.0`.
 
+## [1.0.1] - 2026-11-21
+
+### Added
+
+- Added machine-readable citation metadata in [CITATION.cff](CITATION.cff) (`1.2.0`) and a security vulnerability and control-defect reporting policy in [SECURITY.md](SECURITY.md).
+- Added downloadable starter-kit `.zip` packager ([scripts/build_release_bundles.py](scripts/build_release_bundles.py)) and GitHub Release workflow (`.github/workflows/release.yml`) producing `TME-AI-Foundational-Suite.zip`, `TME-Templates-and-Program-Delivery.zip`, and `TME-Workshops.zip`.
+- Added MkDocs Material UX enhancements in [mkdocs.yml](mkdocs.yml) and `scripts/docs_assets/` (`navigation.instant`, `navigation.path`, `toc.follow`, `content.action.view`, `admonition`, `pymdownx.details`, `pymdownx.superfences`, `pymdownx.tasklist` interactive checkboxes, sortable Markdown tables via `tablesort.js`, and a `@media print` PDF export stylesheet in `extra.css`).
+- Added live documentation site, CI status, latest release, and license badges plus a direct Releases download callout to [README.md](README.md), alongside links to [SECURITY.md](SECURITY.md) and [CITATION.cff](CITATION.cff).
+- Added a Markdown list spacing validator (`check_list_blank_lines`) and nested image-badge link parsing to [scripts/validate_repo.py](scripts/validate_repo.py) and [scripts/build_docs_src.py](scripts/build_docs_src.py).
+
+### Fixed
+
+- Fixed all 83 Markdown lists lacking a preceding blank line across [AIAdoptionFramework.md](AIAdoptionFramework.md), [TechAdoptionFramework.md](TechAdoptionFramework.md), [Workshops/BusinessReadinessAssessment.md](Workshops/BusinessReadinessAssessment.md), and [README.md](README.md) so `python-markdown` renders every list cleanly instead of collapsing items into paragraphs.
+
 ## [1.0.0] - 2026-11-21
 
 ### Added

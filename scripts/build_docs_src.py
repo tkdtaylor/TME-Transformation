@@ -16,6 +16,7 @@ ROOT_FILES = [
     "References.md",
     "CONTRIBUTING.md",
     "CODE_OF_CONDUCT.md",
+    "SECURITY.md",
     "CHANGELOG.md",
 ]
 
@@ -29,7 +30,9 @@ ROOT_DIRS = [
 
 GITHUB_BLOB_BASE = "https://github.com/tkdtaylor/TME-Transformation/blob/main"
 INLINE_CODE_RE = re.compile(r"(`[^`]*`)")
-LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
+COMBINED_LINK_RE = re.compile(
+    r"\[(!\[[^\]]*\])\(([^)]+)\)\]\(([^)]+)\)|(!?\[[^\]]*\])\(([^)]+)\)"
+)
 
 
 def rewrite_link_target(target: str, md_dir: Path, docs_dir: Path, root: Path) -> str:
@@ -73,13 +76,21 @@ def rewrite_link_target(target: str, md_dir: Path, docs_dir: Path, root: Path) -
 
 
 def transform_line(line: str, md_dir: Path, docs_dir: Path, root: Path) -> str:
-    """Rewrite Markdown links outside inline code spans."""
+    """Rewrite Markdown links and nested image badges outside inline code spans."""
     parts = INLINE_CODE_RE.split(line)
+
+    def _replace(match: re.Match[str]) -> str:
+        if match.group(1) is not None:
+            img_label = match.group(1)
+            img_src = rewrite_link_target(match.group(2), md_dir, docs_dir, root)
+            href = rewrite_link_target(match.group(3), md_dir, docs_dir, root)
+            return f"[{img_label}({img_src})]({href})"
+        label = match.group(4)
+        href = rewrite_link_target(match.group(5), md_dir, docs_dir, root)
+        return f"{label}({href})"
+
     for idx in range(0, len(parts), 2):
-        parts[idx] = LINK_RE.sub(
-            lambda m: f"[{m.group(1)}]({rewrite_link_target(m.group(2), md_dir, docs_dir, root)})",
-            parts[idx],
-        )
+        parts[idx] = COMBINED_LINK_RE.sub(_replace, parts[idx])
     return "".join(parts)
 
 
@@ -132,6 +143,10 @@ def build_docs_src(root: Path) -> Path:
         src_dir = root / rel_dir
         if src_dir.is_dir():
             shutil.copytree(src_dir, docs_dir / rel_dir)
+
+    assets_src = root / "scripts" / "docs_assets"
+    if assets_src.is_dir():
+        shutil.copytree(assets_src, docs_dir / "assets")
 
     license_src = root / "LICENSE"
     if license_src.is_file():

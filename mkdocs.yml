@@ -5,6 +5,7 @@ site_description: Vendor-agnostic adoption frameworks, workshops, CoE governance
 site_url: https://tkdtaylor.github.io/TME-Transformation/
 repo_url: https://github.com/tkdtaylor/TME-Transformation
 repo_name: tkdtaylor/TME-Transformation
+edit_uri: blob/main/
 
 docs_dir: .docs_build
 site_dir: site
@@ -28,18 +29,34 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   features:
+    - navigation.instant
+    - navigation.path
     - navigation.tabs
     - navigation.sections
     - navigation.top
+    - toc.follow
     - search.suggest
     - search.highlight
+    - content.action.view
     - content.code.copy
 
 markdown_extensions:
+  - admonition
+  - attr_list
   - tables
-  - fenced_code
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - toc:
       permalink: true
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - assets/javascripts/tablesort.js
 
 nav:
   - Home: README.md
@@ -95,5 +112,6 @@ nav:
       - References: References.md
       - Contributing: CONTRIBUTING.md
       - Code of Conduct: CODE_OF_CONDUCT.md
+      - Security Policy: SECURITY.md
       - Changelog: CHANGELOG.md
       - License: LICENSE.md

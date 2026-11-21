@@ -1,5 +1,12 @@
 # TME Transformation Frameworks
 
+[![Documentation Site](https://img.shields.io/badge/docs-tkdtaylor.github.io-indigo)](https://tkdtaylor.github.io/TME-Transformation/)
+[![Validate Repository](https://github.com/tkdtaylor/TME-Transformation/actions/workflows/validate.yml/badge.svg)](https://github.com/tkdtaylor/TME-Transformation/actions/workflows/validate.yml)
+[![Latest Release](https://img.shields.io/github/v/release/tkdtaylor/TME-Transformation)](https://github.com/tkdtaylor/TME-Transformation/releases/latest)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+> **Documentation Site:** Browse and search the full library at **[tkdtaylor.github.io/TME-Transformation](https://tkdtaylor.github.io/TME-Transformation/)**, or download ready-to-use `.zip` starter kits from [Releases](https://github.com/tkdtaylor/TME-Transformation/releases/latest).
+
 A library of vendor-agnostic adoption frameworks for technology and AI transformation initiatives. These documents are distilled from leading cloud and AI guidance (AWS CAF, Google Cloud AF, Microsoft Azure CAF) augmented and adapted with my personal experience for practical organizational use.
 
 ---
@@ -11,6 +18,7 @@ A library of vendor-agnostic adoption frameworks for technology and AI transform
 A comprehensive guide for technology transformations (cloud adoption, platform modernization, and data initiatives). It organizes work across **six perspectives** (Business, People & Culture, Governance & Risk, Platform & Technology, Security & Compliance, Operations & Management) and a **six-phase lifecycle** from initial assessment through continuous innovation.
 
 Key elements:
+
 - **Maturity model** with four levels: Tactical → Defined → Managed → Optimizing
 - **Workload classification** across five tiers (Mission Critical through Legacy/Candidate) with corresponding migration strategies using the 7 Rs
 - **Governance layers** covering enterprise policy, platform controls, workload controls, and FinOps
@@ -28,6 +36,7 @@ TAF is the base framework. The AI Adoption Framework below inherits its structur
 A specialization of TAF for AI initiatives: LLMs, AI assistants, AI coding tools, autonomous agents, and AI-embedded products. It inherits TAF's six-phase lifecycle and four-level maturity model but expands to **seven perspectives** by elevating Data & Knowledge to first-class status, and adapts every element for AI-specific governance, responsible use, and operational quality.
 
 Key elements:
+
 - **Eight guiding principles** including governing shadow AI rather than prohibiting it, human accountability for consequential outputs, and continuous evaluation
 - **AI-specific perspective content**: prompt management, RAG infrastructure, grounding vs training data governance, AI Impact Assessments, prompt injection defense, agentic action boundaries, token cost management
 - **AI maturity model**: Exploring → Piloting → Scaling → Transforming, assessed independently per perspective
@@ -105,6 +114,8 @@ The [Templates](Templates) folder contains vendor-neutral source templates inten
 | [CHANGELOG.md](CHANGELOG.md) | Project change history |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Scope, vendor-neutrality rules, formatting conventions, and licensing |
 | [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) | Community participation standards and maintainer reporting channel |
+| [SECURITY.md](SECURITY.md) | Reporting security-control guidance defects or workflow vulnerabilities |
+| [CITATION.cff](CITATION.cff) | Machine-readable citation metadata (APA and BibTeX) |
 | [FacilitatorGuide.md](Workshops/FacilitatorGuide.md) | Running the AIAF-grounded Business Readiness Assessment workshop |
 
 ---

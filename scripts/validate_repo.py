@@ -10,13 +10,14 @@ import re
 import sys
 from pathlib import Path
 
-SKIP_DIRS = {".git", ".docs_build", "site", ".venv", "venv", "__pycache__"}
+SKIP_DIRS = {".git", ".docs_build", "site", "dist", ".venv", "venv", "__pycache__"}
 
 SPDX_MARKER = "SPDX-License-Identifier: CC-BY-4.0"
 
 SPDX_REQUIRED_FILES = [
     "CONTRIBUTING.md",
     "CODE_OF_CONDUCT.md",
+    "SECURITY.md",
     "Templates/ArchitectureDecisionRecord.md",
     "Templates/MigrationWaveReadinessGate.md",
 ]
@@ -26,6 +27,12 @@ SPDX_REQUIRED_DIRS = [
     "ProgramDelivery",
     "Examples/ApprovalGatedFinancialVarianceAgent",
 ]
+
+LIST_RE = re.compile(r"^(?:[-*]|\d+\.)\s+")
+SUBLIST_RE = re.compile(r"^\s+(?:[-*]|\d+\.)\s+")
+COMBINED_LINK_RE = re.compile(
+    r"\[!\[[^\]]*\]\(([^)]+)\)\]\(([^)]+)\)|!?\[[^\]]*\]\(([^)]+)\)"
+)
 
 
 def github_slug(heading_text: str) -> str:
@@ -133,30 +140,70 @@ def check_markdown_links_and_boxes(
                 continue
 
             cleaned = strip_inline_code(line)
-            for match in re.finditer(r"\[([^\]]+)\]\(([^)]+)\)", cleaned):
-                target = match.group(2).strip()
-                if not target or target.startswith(("http://", "https://", "mailto:")):
-                    continue
-                link_count += 1
-                if target.startswith("#"):
-                    anchor = target[1:]
-                    if anchor not in heading_cache[md_path.resolve()]:
-                        issues.append(f"{rel_src}:{idx}: Broken same-file anchor '{target}'")
-                    continue
+            for match in COMBINED_LINK_RE.finditer(cleaned):
+                targets = (
+                    [match.group(1).strip(), match.group(2).strip()]
+                    if match.group(1) is not None
+                    else [match.group(3).strip()]
+                )
+                for target in targets:
+                    if not target or target.startswith(("http://", "https://", "mailto:")):
+                        continue
+                    link_count += 1
+                    if target.startswith("#"):
+                        anchor = target[1:]
+                        if anchor not in heading_cache[md_path.resolve()]:
+                            issues.append(f"{rel_src}:{idx}: Broken same-file anchor '{target}'")
+                        continue
 
-                if "#" in target:
-                    file_part, anchor = target.split("#", 1)
-                else:
-                    file_part, anchor = target, None
+                    if "#" in target:
+                        file_part, anchor = target.split("#", 1)
+                    else:
+                        file_part, anchor = target, None
 
-                resolved = (src_dir / file_part).resolve()
-                if not resolved.exists():
-                    issues.append(f"{rel_src}:{idx}: Broken relative link '{target}'")
-                elif anchor is not None and resolved.is_file() and resolved.suffix == ".md":
-                    if anchor not in heading_cache.get(resolved, set()):
-                        issues.append(f"{rel_src}:{idx}: Broken cross-file anchor '{target}'")
+                    resolved = (src_dir / file_part).resolve()
+                    if not resolved.exists():
+                        issues.append(f"{rel_src}:{idx}: Broken relative link '{target}'")
+                    elif anchor is not None and resolved.is_file() and resolved.suffix == ".md":
+                        if anchor not in heading_cache.get(resolved, set()):
+                            issues.append(f"{rel_src}:{idx}: Broken cross-file anchor '{target}'")
 
     return issues, len(md_files), link_count if not check_boxes else link_count + (box_count * 0)
+
+
+def check_list_blank_lines(root: Path) -> list[str]:
+    """Ensure top-level lists after paragraph/label lines are preceded by a blank line."""
+    issues: list[str] = []
+    for md_path in iter_files(root, ".md"):
+        rel_src = md_path.relative_to(root)
+        lines = md_path.read_text(encoding="utf-8").splitlines()
+        in_fence = False
+        fence_char = ""
+        for idx, line in enumerate(lines):
+            stripped = line.strip()
+            if stripped.startswith(("```", "~~~")):
+                marker = stripped[:3]
+                if not in_fence:
+                    in_fence = True
+                    fence_char = marker[0]
+                elif marker[0] == fence_char:
+                    in_fence = False
+                continue
+            if in_fence or idx == 0:
+                continue
+            if LIST_RE.match(line):
+                prev = lines[idx - 1]
+                prev_s = prev.strip()
+                if (
+                    prev_s != ""
+                    and not LIST_RE.match(prev)
+                    and not SUBLIST_RE.match(prev)
+                    and not prev.startswith(("#", ">", "|", "---", "***", "<!--"))
+                ):
+                    issues.append(
+                        f"{rel_src}:{idx + 1}: Missing blank line before list item after '{prev_s[:60]}'"
+                    )
+    return issues
 
 
 def validate_ascii_boxes(rel_src: Path, fence_lines: list[tuple[int, str]]) -> list[str]:
@@ -321,6 +368,24 @@ def check_mkdocs_nav(root: Path, nav_file: Path) -> tuple[list[str], int]:
     for item in docs_link_issues:
         issues.append(f".docs_build/{item}")
 
+    for asset_key in ("extra_css", "extra_javascript"):
+        in_section = False
+        for idx, line in enumerate(lines, 1):
+            if re.match(rf"^{asset_key}:\s*$", line):
+                in_section = True
+                continue
+            if in_section:
+                if line and not line[0].isspace() and not line.lstrip().startswith("#"):
+                    break
+                m = re.match(r"^\s+-\s+([^\s#]+)\s*(?:#.*)?$", line)
+                if m:
+                    val = m.group(1).strip("'\"")
+                    if not val.startswith(("http://", "https://")):
+                        if not (docs_build / val).is_file():
+                            issues.append(
+                                f"{nav_file.name}:{idx}: Asset '{val}' missing in .docs_build/"
+                            )
+
     return issues, len(nav_paths)
 
 
@@ -343,6 +408,8 @@ def main() -> int:
 
     md_issues, md_count, link_count = check_markdown_links_and_boxes(root, github_slug, check_boxes=True)
     all_issues.extend(md_issues)
+
+    all_issues.extend(check_list_blank_lines(root))
 
     csv_issues, csv_count = check_csvs(root)
     all_issues.extend(csv_issues)

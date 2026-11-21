@@ -127,6 +127,7 @@ Each perspective defines who is responsible for what throughout the AI adoption 
 **Key Stakeholders:** CEO, CFO, COO, Business Unit Leaders, Product Owners, Strategy Teams
 
 **Core Capabilities:**
+
 - AI opportunity identification: systematic scanning of workflows for high-value AI use cases
 - Business case development: quantifying productivity gains, cost reduction, revenue uplift, and risk reduction
 - Use case prioritization: scoring opportunities by value, feasibility, and risk
@@ -136,6 +137,7 @@ Each perspective defines who is responsible for what throughout the AI adoption 
 - Build vs. buy reassessment: evaluating current SaaS and enterprise software spend against AI-assisted build alternatives; identifying where custom-built solutions now deliver better value, differentiation, or strategic control than purchased software
 
 **Key Questions to Answer:**
+
 - Which business problems are we solving, and why is AI the right solution for each?
 - What does success look like in 90 days, 12 months, and 3 years?
 - How do we ensure AI spend is producing measurable returns, not just activity?
@@ -150,6 +152,7 @@ Each perspective defines who is responsible for what throughout the AI adoption 
 **Key Stakeholders:** Head of HR, L&D Leaders, Team Managers, Union Representatives (where applicable), Internal Communications
 
 **Core Capabilities:**
+
 - Workforce impact assessment: identifying roles and tasks most affected by AI adoption
 - Skills gap analysis: mapping required AI literacy, prompt engineering, and critical evaluation skills against current workforce capabilities
 - Tiered training programs: role-specific learning paths (executive awareness, practitioner proficiency, builder/developer depth)
@@ -160,6 +163,7 @@ Each perspective defines who is responsible for what throughout the AI adoption 
 - Feedback culture: creating mechanisms for employees to report when AI tools are underperforming or producing harmful outputs
 
 **Key Questions to Answer:**
+
 - What tasks are being automated, and how do affected employees transition to higher-value work?
 - How do we build AI literacy across all roles, not just technical teams?
 - How do we address the fear that AI will replace jobs while being honest about changing role requirements?
@@ -174,6 +178,7 @@ Each perspective defines who is responsible for what throughout the AI adoption 
 **Key Stakeholders:** CIO, Chief Risk Officer, Chief Compliance Officer, Legal, Privacy Officer, Internal Audit, AI Ethics Officer
 
 **Core Capabilities:**
+
 - AI policy framework: acceptable use policies, data handling rules, approved tool registry, prohibition list
 - AI risk taxonomy: classifying AI risks by type: accuracy, bias, privacy, security, legal, reputational, operational
 - AI Impact Assessment (AIIA) process: mandatory evaluation before deploying AI to consequential use cases
@@ -185,6 +190,7 @@ Each perspective defines who is responsible for what throughout the AI adoption 
 - AI cost governance: token usage budgets, cost allocation, and FinOps for AI APIs
 
 **Key Questions to Answer:**
+
 - What data can and cannot be sent to external AI APIs, and how is this enforced?
 - Which of our AI use cases fall into the EU AI Act's high-risk categories, and which staged obligations or transition timelines apply to each? Are we aligning controls with NIST AI RMF? Is ISO/IEC 42001 certification a customer, partner, or procurement requirement we need to plan for?
 - How do we detect and govern AI tools that employees are using outside of sanctioned channels?
@@ -199,6 +205,7 @@ Each perspective defines who is responsible for what throughout the AI adoption 
 **Key Stakeholders:** Chief Data Officer, Data Stewards, Knowledge Managers, Information Architects, Data Engineering Leads, Records Management
 
 **Core Capabilities:**
+
 - Data classification for AI: maintaining authoritative classification (public, internal, confidential, restricted, regulated) with explicit rules for which classes may be used in prompts, retrieval, training, or fine-tuning
 - Grounding data design: managing the corpora that AI retrieves from at inference time, including knowledge bases, document indexes, and vector stores. Concerns include freshness, source-of-truth designation, retrieval-time access scoping, and redaction
 - Training and fine-tuning data design: separately governing the datasets used to train, fine-tune, or distill models. Concerns include consent, provenance, IP rights, opt-out handling, and contamination prevention
@@ -227,6 +234,7 @@ Treating these as the same concern leads to one of two failures: applying traini
 **Access & Reuse Principle:** Assume every AI artifact your organization produces (prompts, eval sets, retrieval indexes, embeddings, fine-tuned models) will be useful to more than one team. If it cannot be discovered, attributed, and reused, it will be silently rebuilt, resulting in duplicate spend, inconsistent quality, and divergent governance. Discoverability is a governance control, not a nice-to-have.
 
 **Key Questions to Answer:**
+
 - For each AI use case, which data sources are grounding (retrieved at inference time) and which are training (baked into the model)? Are they governed accordingly?
 - Where are our prompt libraries, eval datasets, and retrieval indexes published so other teams can discover and reuse them rather than rebuild?
 - What is our retention policy for prompts, completions, and AI-generated artifacts, and how is it enforced technically?
@@ -242,6 +250,7 @@ Treating these as the same concern leads to one of two failures: applying traini
 **Key Stakeholders:** CTO, AI/ML Platform Engineers, Enterprise Architects, Data Engineers, Developer Experience Teams
 
 **Core Capabilities:**
+
 - AI gateway / API management: centralized routing, rate limiting, logging, and model-switching without application changes
 - RAG infrastructure: vector databases, embedding pipelines, document ingestion services, and retrieval runtime (the *technology platform* for grounding; corpus ownership, classification, and reuse belong to the Data & Knowledge perspective)
 - Identity and access for AI: ensuring AI agents and APIs use scoped, auditable credentials with least-privilege access
@@ -252,6 +261,7 @@ Treating these as the same concern leads to one of two failures: applying traini
 - Developer platform for AI: self-service tooling that lets teams build AI features safely within guardrails
 
 **Key Questions to Answer:**
+
 - How do we prevent every team from independently integrating the same AI APIs with no shared governance?
 - How do we ensure that when a model provider changes their API or pricing, we can respond quickly?
 - How do teams evaluate whether their AI integration is actually working well?
@@ -265,6 +275,7 @@ Treating these as the same concern leads to one of two failures: applying traini
 **Key Stakeholders:** CISO, AI Security Engineers, Privacy Engineers, Red Team / Offensive Security, Compliance
 
 **Core Capabilities:**
+
 - Data classification for AI: determining what data classes (PII, confidential, IP) can be processed by which AI tools
 - Prompt injection defense: detecting and preventing adversarial inputs that attempt to hijack AI behavior or exfiltrate data
 - Output filtering and content safety: post-processing AI outputs to detect harmful, sensitive, or policy-violating content before surfacing to users
@@ -275,6 +286,7 @@ Treating these as the same concern leads to one of two failures: applying traini
 - Model reliability and availability: ensuring AI dependencies have fallback behavior and do not create single points of failure
 
 **Key Questions to Answer:**
+
 - What happens if a user or attacker crafts a prompt that causes the AI to leak confidential data?
 - How do we detect when an AI agent is about to take an action outside its intended scope?
 - What is our incident response process when an AI system produces harmful or incorrect outputs at scale?
@@ -307,6 +319,7 @@ The [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-p
 **Key Stakeholders:** AI Operations Teams, SRE, FinOps, Product Managers, Quality Assurance
 
 **Core Capabilities:**
+
 - AI observability: monitoring latency, error rates, token usage, and model availability across all AI integrations
 - Output quality measurement: evaluation frameworks (LLM-as-judge, human review panels, task-specific evals) to measure accuracy, relevance, and safety
 - Feedback loops: structured collection of user ratings and corrections to identify quality drift and improvement opportunities
@@ -333,6 +346,7 @@ Classical MLOps centers on the training pipeline: feature engineering, experimen
 Both disciplines coexist: an organization fine-tuning a model and serving it via RAG runs both. Treat them as peers, not as one replacing the other. Own each with clear capabilities, pipelines, and promotion gates.
 
 **Key Questions to Answer:**
+
 - How do we know when an AI tool's output quality has degraded?
 - How do we track and control AI API costs as usage scales across the organization?
 - How do we manage the operational impact of a model provider's deprecation or pricing change?
@@ -353,6 +367,7 @@ For teams standing up an AI Center of Excellence, the [AI Foundational Suite](AI
 **Goal:** Build a shared understanding of the AI landscape, identify high-value opportunities, assess organizational readiness, and establish the governance foundation before any deployment.
 
 **Key Activities:**
+
 - AI opportunity workshops with business units: systematic identification of use cases by workflow. Match candidates to the [Reference Scenarios](#reference-scenarios-canonical-patterns) library to inherit classification as a starting point
 - Backlog ranking: apply the [Use Case Prioritization Rubric](#use-case-prioritization-rubric) to rank candidates reproducibly rather than by stakeholder enthusiasm
 - Workforce readiness survey: AI literacy, awareness, and sentiment baseline
@@ -365,12 +380,14 @@ For teams standing up an AI Center of Excellence, the [AI Foundational Suite](AI
 - Establish AI governance body: steering committee, working groups, accountability structure. Record the initial operating mode per the [CoE Operating Model Evolution](#ai-center-of-excellence-operating-model-evolution)
 
 **Gate Criteria to Proceed:**
+
 - Approved AI Policy Framework (v1) published
 - Approved tool registry established (even if small)
 - Executive sponsor named
 - At least one high-value, low-risk pilot use case selected
 
 **Outputs:**
+
 - AI opportunity map with prioritized use case backlog
 - Shadow AI inventory and remediation plan
 - Organizational AI readiness assessment
@@ -386,6 +403,7 @@ Companion baselines in [AIFoundationalSuite](AIFoundationalSuite/README.md): [01
 **Goal:** Run structured, time-boxed pilots of selected AI use cases to validate value, test governance controls, and build organizational confidence before broad rollout.
 
 **Key Activities:**
+
 - Define pilot scope: specific use case, target user group, success criteria, and time boundary
 - Document target workflow as SOP: before any AI tool is applied, the target process must be documented with its steps, decision points, exceptions, and handoffs. If the process is not documented, it is not ready to automate or augment. Classify each step as thin work (repetitive, machine-ready) or valued work (judgment-intensive, human-required)
 - Stand up AI platform foundation: API gateway, logging, access controls, data boundary enforcement
@@ -398,6 +416,7 @@ Companion baselines in [AIFoundationalSuite](AIFoundationalSuite/README.md): [01
 - Document learnings: what worked, what failed, what needs governance adjustment
 
 **Gate Criteria to Proceed:**
+
 - Target workflow documented as SOP with decision points, exceptions, and handoffs identified
 - Pilot outcomes meet or exceed pre-defined success thresholds
 - No unresolved critical security or compliance findings
@@ -405,6 +424,7 @@ Companion baselines in [AIFoundationalSuite](AIFoundationalSuite/README.md): [01
 - Rollout plan approved by AI governance body
 
 **Outputs:**
+
 - Pilot evaluation report with go/no-go recommendation
 - Updated AI Impact Assessment for the use case
 - Refined prompts, configurations, and integration patterns
@@ -442,6 +462,7 @@ Use [PilotToProductionGate.md](Templates/PilotToProductionGate.md) as the source
 **Goal:** Roll out validated AI use cases to broader populations in a structured, wave-based approach with active monitoring and user support.
 
 **Key Activities:**
+
 - Wave-based rollout: pilot group → department → organization (gated by adoption and quality metrics)
 - Integration with existing tools and workflows (chat platforms, IDEs, ticketing systems, document management)
 - Employee onboarding: role-specific training, acceptable use policy acknowledgment, feedback channels
@@ -462,6 +483,7 @@ Use [PilotToProductionGate.md](Templates/PilotToProductionGate.md) as the source
 | Autonomous/agentic actions (critical) | Narrow scope, sandboxed, manual escalation | CISO + Legal + Board-level awareness |
 
 **Outputs:**
+
 - Deployed AI use case with active monitoring
 - Training completion records
 - AI service catalog entry
@@ -476,6 +498,7 @@ Companion baselines in [AIFoundationalSuite](AIFoundationalSuite/README.md): [04
 **Goal:** Operationalize AI governance at scale, ensuring policies are enforced, risks are tracked, and accountability is maintained across all active AI use cases.
 
 **Key Activities:**
+
 - Activate centralized AI audit logging for regulated use cases
 - Establish and maintain the AI Decision Register: a living record of every point where AI is making, shaping, or influencing decisions; who owns each decision; what guardrails apply; and how exceptions are escalated. Review the register quarterly with the governance body
 - Enforce data classification rules via AI gateway (block, redact, or alert on policy violations)
@@ -501,6 +524,7 @@ Companion baselines in [AIFoundationalSuite](AIFoundationalSuite/README.md): [04
 | AI use case registry review | Governance body review of active use cases | Quarterly |
 
 **Outputs:**
+
 - AI governance dashboard (policy compliance, incidents, cost, quality)
 - Updated risk register with AI-specific entries
 - Regulatory compliance evidence package
@@ -515,6 +539,7 @@ Companion baselines in [AIFoundationalSuite](AIFoundationalSuite/README.md): [13
 **Goal:** Improve the quality, efficiency, and business impact of AI use cases based on operational data, user feedback, and evolving model capabilities.
 
 **Key Activities:**
+
 - Analyze quality metrics: identify use cases with high error rates, low satisfaction, or drift from baseline
 - Prompt optimization: systematic improvement of prompts based on evaluation data; all prompt changes flow through the [GenAIOps](#genaiops-vs-mlops) promotion pipeline (eval-gated, versioned, rollback-capable)
 - Cost optimization: apply the detailed [Cost Optimization Levers](#cost-optimization-levers-detailed), prioritizing prompt caching, model tier routing, and agent workflow cost controls
@@ -555,6 +580,7 @@ AI costs behave unlike traditional cloud costs: they scale with *content* (token
 **Agent cost amplification, specifically:** An autonomous agent making five reasoning steps, each with retrieval and tool use, can cost 20–50× a single direct call to the same model for the same user intent. This is the most common source of unexpected AI cost blowouts. Every agentic use case must have a per-task cost budget enforced technically, not just monitored in dashboards after the fact.
 
 **Outputs:**
+
 - AI use case performance reports (quality, cost, adoption, business impact)
 - Updated prompt library with versioned improvements
 - Model selection decisions with supporting evidence
@@ -569,6 +595,7 @@ Companion baselines in [AIFoundationalSuite](AIFoundationalSuite/README.md): [09
 **Goal:** Extend AI adoption across the organization, enable teams to build new AI capabilities with guardrails, and explore next-generation patterns like autonomous agents and AI-native workflows.
 
 **Key Activities:**
+
 - Self-service AI platform: enable teams to build and deploy AI integrations within pre-approved guardrails without central team bottlenecks. By this phase, the CoE should be operating at the Platform / Self-service stage of the [CoE Evolution model](#ai-center-of-excellence-operating-model-evolution)
 - Agent framework adoption: structured approach to deploying AI agents with defined action scopes, escalation paths, and audit trails. Every agent is registered as an [Agent or System Persona](#non-human-actors-agent-and-system-personas) with its own principal, scope, and named human owner. Agentic deployment is a *graduation*, not a starting point: a use case must have demonstrated reliability at the Task Automation or Human Augmentation stage before progressing to Agentic Autonomy (see Use Case Maturity Progression)
 - AI-native workflow design: redesigning processes around AI capabilities, not just adding AI to existing processes
@@ -592,6 +619,7 @@ Before deploying AI agents that take autonomous actions, the following must be t
 - [ ] Named human owner accountable for agent behavior
 
 **Outputs:**
+
 - Self-service AI platform available to development teams
 - Active AI community of practice
 - Innovation pipeline with quarterly review
@@ -699,6 +727,7 @@ Most AI initiatives in most organizations resolve to a small number of recurring
 | **AI-Embedded Product Feature** — customer-facing AI inside an existing product (generation, personalization, smart search) | Generation / Analysis | Tier 2–3 | Business Value (strategic fit), Governance & Risk (disclosure, regulated outputs), Operations & Quality (product-grade SLAs) | Treated as a feature launch rather than a governed AI use case; no rollback path; provider outages become product outages |
 
 **Using the library:**
+
 - In Phase 1, match each candidate use case to the nearest pattern and inherit its classification as a starting point.
 - Adjust the tier upward based on data sensitivity, decision consequence, or external exposure; adjust downward only with justification documented in the AIIA.
 - The list is non-exhaustive. When your organization deploys a pattern not listed, capture it here so the next team inherits the learnings rather than rediscovering them.
@@ -799,12 +828,14 @@ An AIIA is required for all Tier 2, 3, and 4 use cases before deployment.
 Use [AIImpactAssessment.md](Templates/AIImpactAssessment.md) as the source template for the assessment. Convert it into your preferred working format (document, form, ticket, GRC record, or approval workflow) while preserving the risk rationale, evidence links, and review history.
 
 **Step 1: Use Case Description**
+
 - What problem is being solved?
 - Who are the users and who is affected by outputs?
 - What data is processed?
 - What actions or decisions does the output influence?
 
 **Step 2: Risk Identification**
+
 - Accuracy risks: What happens if the AI is wrong?
 - Bias risks: Are there identifiable groups who could be unfairly affected?
 - Privacy risks: What sensitive data is involved, and how is it handled?
@@ -812,16 +843,19 @@ Use [AIImpactAssessment.md](Templates/AIImpactAssessment.md) as the source templ
 - Operational risks: What happens if the AI is unavailable?
 
 **Step 3: Mitigation Design**
+
 - What controls reduce each identified risk to acceptable levels?
 - What is the human review or override mechanism?
 - What monitoring will detect if risks materialize post-deployment?
 
 **Step 4: Approval**
+
 - Risk tier confirmed
 - Required approvers sign off (per tier)
 - Review cadence scheduled
 
 **Step 5: Ongoing Review**
+
 - Scheduled reassessment (quarterly for Tier 3/4, annually for Tier 2)
 - Triggered reassessment if: use case scope changes, model is upgraded, incident occurs, or regulation changes
 
